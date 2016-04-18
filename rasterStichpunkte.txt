@@ -1,0 +1,83 @@
+Rastertunnelmikroskop - Stichpunkte
+
+Literatur:
+
+Allgemeines zur STM:
+- Zu überwindende Potentialbarriere für Tunneleffekt in diesem Versuch ist das Vakuum
+- Relevanz des Tunneleffekts: Für Abstände in atomischer Skala
+- Grund für die Sensitivität des Versuchsaufbaus: Exponentielle Abhängigkeit des Abstands und der Austrittsarbeit (Energie, die mindestens aufgewandt werden muss, um ein Elektron aus einem ungeladenen Festkörper zu lösen!)
+- Was ist die Laus: Eine piezoelektrische Platte, die von drei elektrostatischen Klammern gehalten wird
+- Wie groß ist eine typische Probe: 100x100 Angström
+- Beim Anlegen einer Spannung von 1/10V kann eine Genauigkeit von ca 1A für die Spitze erreicht werden
+- Die Laus dient der Grobjustierung der Probe (Bringt die Probe in Reichweite der Spitze)
+- Die piezoelektrischen Träger dienen der Feinjustierung der Probe
+- Was ist der Scanner: ein piezoelektrischer Stab mit einer Spitze (Elektrode)
+- Beim Anlegen einer Spannung an die Elektroden der Scanner/Träger biegen sich die Stäbe
+- Zwei Schwierigkeiten:
+1. Dämpfen der mechanischen Vibrationen des gesamten Versuchsaufbaus (auf <1A)
+2. Erstellen/Präparieren einer brauchbaren Spitze
+- Richtung des Tunnelstroms abhängig von Vorzeichen der Spannung (kann von Spitze zu Probe und andersrum fließen)
+- Piezoelektrischer Effekt: Durch zusammenpressen des Kristalls werden die Schichten gegeneinander gedrückt und es entsteht eine Verschiebung der Ladungsschwerpunkte => mikroskopische Dipole => makroskopische Spannung (geht auch andersrum)
+- 5 Fehlerquellen: Hysterese, Alterung, Kriechen, thermischer Drift, ?
+- Alterung: Durch Anlegen einer Spannung an einen Piezo-Kristall wird die Affinität für die Anordnung der Dipole erhöht, andersrum durch monatelanges Warten altert der Kristall und die Ladungen richten sich nur schwerfällig aus (kann durch Anlegen einer sehr hohen Spannung behoben werden, aber vorsichtig)
+- Rasterkraftmikroskop (Abstandsabhängige Van-der-Waals-Kraft zwischen Spitze und Probe (falls zu nah, setzt repulsive WW ein))
+
+Graphit:
+- Gitterkonstante: 2,64 A
+- Kohlenstoffatome sind kovalent gebunden
+- Abstand zum nächsten Nachbarn 1,42 A
+- Die Stapel werden durch die Van-der-Waals Kraft zusammengehalten
+- Stapel Struktur ABABAB
+- Wieso HOPG: Größe (3-10 µm), hohe Orientierung der c-Achse (Fehler <2°)
+
+Anleitung:
+
+Versuchsdurchführung:
+- Werkzeuge(Seitenschneider, Pinzette)/PtIr-Draht reinigen mit
+
+-> Aceton: hoher Dampfdruck, geringere Polarität als 1-Propanol (Wasser hat von den dreien die höchste), löst lipopholen Dreck (Fett, Öle) und verdampft
+-> 1-Propanol: wirkt desinfizierend, wird von Wasser gelöst
+-> VE-Wasser: vollentsalztes Wasser löst Salze
+=> Reihenfolge egal
+
+- STM Spitze reißen und in Vertiefung unter Bügel positionieren
+- STM einschalten
+- Messung über Software starten:
+-> more -> imaging -> imaging modes -> measurement mode: Scan Fw. & Bw.
+- "Advance" schiebt den Messkopf in Richtung der Spitze
+- Finale Annäherung durch "Approach"
+- Bild exportieren:
+-> Gallery -> save as
+- Spitze wird aus dem Tunnelbereich durch "Withdraw" gefahren
+
+Messung von HOPG:
+- HOPG: highly oriented pyrolytic graphite
+- Graphit: Mineral, natürliche Erscheinungsform von C, hcp-Gitter
+- Bildgröße: 2-5 nm
+- Scangeschwindigkeit 0,05-0,15 s/line
+- So lange scannen bis Up- und Down-Bilder sich nicht mehr unterscheiden (minimierung des thermischen drifts)
+- Ausreichend viele Atome sollten sichtbar sein -> Vektoren können dann über mehrere Einheitszellen gelegt werden
+- Messbilder driftfrei => Leerlaufscan ca. 1h
+
+Messung von Gold(111):
+- Atome können nicht einzeln aufgelöst werden
+- Oberfläche zeigt Stufenkanten -> Höhe dieser bestimmen
+- Bildgröße 300-500nm
+- Regelschiefe verlangsamen -> saubere Abbildung
+- Viele Punkte aufnehmen => genauere Auflösung der Stufenkanten
+
+Auswertung von HOPG:
+- Gittervektoren durch Mittelung über mehrere Einheitszellen bestimmen
+- Vier Bilder: up, down, jeweils fw. & bw.
+- Gittervektoren durch Division bestimmen + Winkel
+- Fehler durch Alterung der Piezokristalle und Fehlkalibrierung
+- Skalierungsfaktoren für x- und y-Piezo angeben
+
+Auswertung von Gold:
+- Höhe der Stufenkanten über Software (WSxM)
+- Linienprofiel der Stufenkanten anfertigen -> Gerade gefolgt von Sprung & weitere Gerade
+- Hysterese-Effekte der Piezo-Kristalle?
+- Gitterkonstante von Gold mit Höhe der Stufenkanten vergleichen
+
+Hinweise:
+- Alle Fehlerquellen angeben
