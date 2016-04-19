@@ -1,0 +1,86 @@
+\documentclass[paper=a4]{scrartcl}
+
+\usepackage[german]{babel}
+\usepackage{bookmark}
+\usepackage{booktabs, dcolumn}
+\usepackage{icomma}
+\usepackage{amsmath, amssymb}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf}
+\usepackage[
+	locale=DE,                   % deutsche Einstellungen
+	separate-uncertainty=true,   % Immer Fehler mit \pm
+	per-mode=symbol-or-fraction, % m/s im Text, sonst Brüche
+	]{siunitx}
+
+\begin{document}
+\section{Auswertung}
+\subsection{HOPG}
+
+Die Abbildungen \ref{fig:down-backward} bis \ref{fig:up-forward} zeigen die mit dem Rastertunnelmikroskop aufgenommenen Bilder der HOPG-Oberfläche.
+In den Bildern wurden jeweils die zwei Vektoren $\vec{h}_1$ und $\vec{h}_2$ eingezeichnet, die sich über mehrere Gitterzellen erstrecken.
+Die Längen dieser Vektoren, geteilt durch die Anzahl der Gitterzellen, sind in Tabelle \ref{fig:t1}, zusammen mit dem Winkel zwischen beiden Vektoren, angeben.
+
+Aus den Messungen der vier Bilder lassen sich Mittelwerte für die Gitterkonstante $g$ und den Winkel $\alpha$ bestimmen.
+
+\begin{align}
+	\bar{g} &= \SI{0,226 \pm 0,2}{\nano \meter}\\
+	\bar{\alpha} &= \SI{82 \pm 5,4}{\degree}
+\end{align}
+
+\begin{figure}
+	\centering
+	\resizebox{12cm}{!}{
+		\input{script/down-backward.pgf}
+	}
+	\caption{Aufnahme des HOPG-Kristalls, down-backward}
+	\label{fig:down-backward}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{12cm}{!}{
+		\input{script/down-forward.pgf}
+	}
+	\caption{Aufnahme des HOPG-Kristalls, down-forward}
+	\label{fig:down-forward}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{12cm}{!}{
+		\input{script/up-backward.pgf}
+	}
+	\caption{Aufnahme des HOPG-Kristalls, up-backward}
+	\label{fig:up-backward}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\resizebox{12cm}{!}{
+		\input{script/up-forward.pgf}
+	}
+	\caption{Aufnahme des HOPG-Kristalls, up-forward}
+	\label{fig:up-forward}
+\end{figure}
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{c c c c}
+			\toprule
+			Messung & $|\vec{g}_1| / \mathrm{nm}$ & $|\vec{g_2}| / \mathrm{nm}$ & $\alpha /^\circ $ \\
+			\midrule
+			down-backward & \si{0,222} & \si{0,220} & 76,2 \\
+			down-forward & \si{0,222} & \si{0,215} & 77,0 \\
+			up-backward & \si{0,263} & \si{0,206} & 86,7 \\
+			up-forward & \si{0,257} & \si{0,202} & 88,0 \\
+			\bottomrule
+		\end{tabular}
+		\caption{Gittervektoren und Winkel}
+		\label{fig:t1}
+	\end{center}
+\end{table}
+
+\subsection{Gold}
+\end{document}
+
