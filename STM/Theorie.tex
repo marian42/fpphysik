@@ -58,3 +58,35 @@ Dieser Fehler ergibt sich aus der Längenänderung des Scanners (piezo-elektrisc
 \end{figure}
 
 \noindent Die Reichweite einer typischen Nichtlinearität erstreckt sich von 2\% bis 25\%.
+
+\subsubsection{Hysterese}
+Bei der Ausdehnung eines Piezokristalls unter Anlegen einer Spannung tritt Hysterese auf.
+Das bedeutet für die Messung, dass bei einer Bewegung der Spitze in positiver X-Richtung andere Werte gemessen werden als in negativer X-Richtung.
+
+Um dennoch sinnvolle Ergebnisse zu erhalten, werden alle Messwerte bei gleicher Bewegungsrichtung aufgenommen.
+
+\subsubsection{Kriechen}
+Die Reatkion des Piezokristalls auf eine Spannungsänderung findet im Idealfall instantan statt.
+In der Realität lässt sich die Bewegung in zwei Teile aufteilen.
+Der erste Teil der Bewegung findet in weniger als einer Millisekunde statt, während der zweite Teil länger dauert.
+Der Kriechfaktor gibt das Verhältnis der Strecken vom ersten und zweiten Teil an.
+
+Eine Folge dieses Effekts ist, dass Messungen, die mit unterschiedlicher Geschwindigkeit durchgeführt werden, unterschiedliche Ergebnisse liefern.
+
+\subsubsection{Alterung}
+Die Ausrichtung der Dipole im Piezokristall wird durch Anlegen von Spannung beeinflusst.
+Ebenso hebt sich die Ausrichtung der Dipole bei längerer Lagerung auf.
+Als Folge davon ändert sich der Belastungskoeffizient des Piezokristalls und die Position auf der X, Y und Z-Achse wird verfälscht.
+
+\subsubsection{Kreuzkopplung}
+
+Die Aufhängung der Spitze besteht aus drei Piezo-Röhren, die am Ende verbunden sind.
+Das Strecken oder Stauchen einer Röhre führt deshalb nicht, wie gewünscht, zu einer Translationsbewegung auf einer Achse, sondern zu einer Art Schwenkbewegung auf mehreren Achsen.
+Die ungewünschte Bewegung entlang der anderen Achsen wird als Kreuzkopplung bezeichnet.
+
+Die Kreuzkopplung wird entweder durch Software korrigiert oder die Spitze wird durch eine Regelschleife an die korrekte Stelle gefahren.
+
+\subsubsection{Thermische Effekte}
+Erwärmung und Abkühlung der Messspitze bzw. der Probe können den Tunnelstrom verändern und somit die Messung verfälschen.
+Deshalb sollten die Spitze und Probe nicht berührt werden.
+Außerdem wird ein Glasgefäß über das Mikroskop gestülpt, um Luftaustausch zu vermeiden.
