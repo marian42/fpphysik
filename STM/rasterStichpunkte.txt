@@ -23,7 +23,7 @@ Allgemeines zur STM:
 - Rasterkraftmikroskop (Abstandsabhängige Van-der-Waals-Kraft zwischen Spitze und Probe (falls zu nah, setzt repulsive WW ein))
 
 Graphit:
-- Gitterkonstante: 2,64 A
+- Gitterkonstante: 2,46 A
 - Kohlenstoffatome sind kovalent gebunden
 - Abstand zum nächsten Nachbarn 1,42 A
 - Die Stapel werden durch die Van-der-Waals Kraft zusammengehalten
