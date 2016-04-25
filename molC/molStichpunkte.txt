@@ -16,14 +16,38 @@ Theorie:
 - Für kleine Temperaturen wird die Molwärme im Debye-Modell T³ abhänging
 - Leitungselektronen spielen erst bei ganz tiefen Temperaturen eine Rolle bei der Molwärme, da Molwärme der Ionenrümpfe praktisch verschwindet (Beitrag proportional zu T <= Fermi-Dirac-Statistik)
 
+Gitterkräfte:
+- Van-der-Waals-Kraft (anziehend), repulsive-WW (abstoßend), elektrostatisches Potential (Madelung-Energie)
+
+Dulong-Petit-Gesetz:
+
+Debye-Temperatur (Herleitung in Worten):
+
+
 Experiment:
-- Rezipienten evakuieren -> bei Barometerdruck? mit Helium auffüllen -> auf ca. 80K abkühlen (durch auffüllen des Dewar-Gefäßes mit flüssigem Stickstoff)
+- Rezipienten evakuieren -> bei Luftdruck (Atmosphärendruck) mit Helium auffüllen -> auf ca. 80K abkühlen (durch auffüllen des Dewar-Gefäßes mit flüssigem Stickstoff)
 - Endtemperatur ca. nach 1h erreicht => Vakuumpumpe wieder einschalten + Innendruck verringern (möglichst niedrig)
 - Rezipientengehäuse möglichst konstant auf Stickstofftemperatur halten
-- Eine Heizwicklung ist im innern der Probe installiert, die eine elektrische Energie zuführt (zum Messen der Temperaturerhöhung), Probe wiegt ca. 342g
+- Eine Heizwicklung ist im innern der Probe installiert (zum Messen der Temperaturerhöhung), Probe wiegt ca. 342g
 - Berechnung der zugeführten Energie der Heizwicklung: Spannung, Strom und Heizdauer müssen bekannt sein 
 - Temperaturänderung sollte zwischen 7°-11° liegen
 - Elektrische Energie wird nur zur Erwärmung der Probe verbraucht
 - Energieverluste -> Konvektion, Wärmestrahlung, Wärmeleitung => Vermeidung durch Punkt eins
 - Thermometer: Pt-100-Widerstand, Widerstand ist monotone Funktion der Temperatur
 
+Rezipient:
+- Gefäß aus der Vakuumtechnik
+- Es werden Gase durch Pumpen abgesaugt und ein Vakuum im Innern geschaffen
+- besteht aus Edelstahl
+- Abgedichtet durch Indiumdichtungen für tiefe Temperaturen (zur Stabilisierung des Vakuums)
+
+Dewargefäß:
+- Verspiegeltes doppelwandiges evakuiertes Edelstahlgefäß (in Thermoskannen verwendet)
+- Dient der guten thermischen Isolierung
+- Beinhaltet kalte oder heiße Flüssigkeiten
+
+Heizwicklung:
+- Elektrisches Bauelement, das elektrische Energie in thermische Energie umwandelt (im Wesentlichen lediglich ein Widerstand)
+
+-Pt-100-Widerstand:
+- Platin-Messwiderstand, 100 Ohm
