@@ -1,0 +1,29 @@
+Stichpunkte zur Molwärme von C:
+
+Theorie:
+- Äquipartitionstheorem <=> Gleichverteilungssatz
+- Atome sind im Festkörper durch Gitterkräfte an Ruhelage gebunden
+- Klassische Theorie -> keine Temperatur- und Materialabhängigkeit der Molwärme (Widerspruch zur Erfahrung) -> Schwingungsenergie der Phononen ist quantisiert
+- Dulong-Petitsches-Gesetz (3R wird bei hinreichend hohen Temperaturen erreicht)
+- Einstein Theorie -> Alle Atome schwingen mit der gleichen Frequenz -> können nur Energien aufnehmen/abgeben, die ein ganzzahliges Vielfaches von \hbar\omega sind
+- In dieser Theorie ist die Energie Boltzmann-Verteilt
+- "Einstein-Funktion" geht für T->\infty auch gegen 3R (Beschreibt die Molwärme; fällt mit Temperatur ab)
+- Molwärme im Allgemeinen: Änderung der Energie bezüglich der Temperatur
+- Abweichungen der Experimentellen Kurve zur Einstein-Funktion treten insbesondere bei tiefen Temperaturen auf (wg. Annahme, dass alle Phononen die gleiche Frequenz haben <=> grobe Näherung)
+- Debye-Modell -> Statt einheitlicher Frequenz wird eine Zustandsdichte eingeführt (Verteilung der Zustände einer bestimmten Frequenz)
+- Näherung: Phasengeschwindigkeit hängt nicht von Frequenz und Ausbreichtungsrichtung ab
+- Debye-Frequenz: Zustandsdichte über alle Frequenzen von 0 bis zur Debye-Frequenz integriert ergibt 3N (Longitudinale Freiheitsgrade)
+- Für kleine Temperaturen wird die Molwärme im Debye-Modell T³ abhänging
+- Leitungselektronen spielen erst bei ganz tiefen Temperaturen eine Rolle bei der Molwärme, da Molwärme der Ionenrümpfe praktisch verschwindet (Beitrag proportional zu T <= Fermi-Dirac-Statistik)
+
+Experiment:
+- Rezipienten evakuieren -> bei Barometerdruck? mit Helium auffüllen -> auf ca. 80K abkühlen (durch auffüllen des Dewar-Gefäßes mit flüssigem Stickstoff)
+- Endtemperatur ca. nach 1h erreicht => Vakuumpumpe wieder einschalten + Innendruck verringern (möglichst niedrig)
+- Rezipientengehäuse möglichst konstant auf Stickstofftemperatur halten
+- Eine Heizwicklung ist im innern der Probe installiert, die eine elektrische Energie zuführt (zum Messen der Temperaturerhöhung), Probe wiegt ca. 342g
+- Berechnung der zugeführten Energie der Heizwicklung: Spannung, Strom und Heizdauer müssen bekannt sein 
+- Temperaturänderung sollte zwischen 7°-11° liegen
+- Elektrische Energie wird nur zur Erwärmung der Probe verbraucht
+- Energieverluste -> Konvektion, Wärmestrahlung, Wärmeleitung => Vermeidung durch Punkt eins
+- Thermometer: Pt-100-Widerstand, Widerstand ist monotone Funktion der Temperatur
+
