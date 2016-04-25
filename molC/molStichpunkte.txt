@@ -23,6 +23,9 @@ Dulong-Petit-Gesetz:
 
 Debye-Temperatur (Herleitung in Worten):
 
+Allgemeines zu Kupfer (Cu):
+- Ordnungszahl 29
+- Spezifische Wärmekapazität: 385 J/(kg * K)
 
 Experiment:
 - Rezipienten evakuieren -> bei Luftdruck (Atmosphärendruck) mit Helium auffüllen -> auf ca. 80K abkühlen (durch auffüllen des Dewar-Gefäßes mit flüssigem Stickstoff)
