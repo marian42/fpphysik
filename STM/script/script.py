@@ -2,6 +2,7 @@ import matplotlib.pyplot as plt
 from matplotlib.cbook import get_sample_data
 import numpy as np
 import numpy.linalg as la
+import scipy.stats
 
 lattice_constants = []
 angles = []
@@ -46,33 +47,33 @@ def create_image(name, h1, h2, n1, n2):
 	angles.append(angle)
 
 	plt.savefig(name + '.pgf')
+	#plt.show()
 	plt.clf()
-	#plt.show()	
 
 create_image('down-backward',
-	h1 = [[0.17356, 0.07949], [1.91527, 0.414226]], 
-	h2 = [[0.17356, 0.07949], [0.26255, 1.83682]],
+	h1 = [[1.91527, 0.414226], [0.17356, 0.07949]], 
+	h2 = [[1.91527, 0.414226], [0.65883, 1.50984]],
 	n1 = 8,
-	n2 = 8)
+	n2 = 6)
 
 create_image('down-forward',
-	h1 = [[0.246862, 0.116109], [1.77929, 0.382845]], 
-	h2 = [[0.246862, 0.116109], [0.341004, 1.83682]],
+	h1 = [[1.77929, 0.382845], [0.246862, 0.116109]], 
+	h2 = [[1.77929, 0.382845], [0.330782, 1.63013]],
 	n1 = 7,
-	n2 = 8)
+	n2 = 7)
 
 create_image('up-backward',
 	h1 = [[0.356695, 0.142259], [1.91527, 0.403766]], 
-	h2 = [[0.356695, 0.142259], [0.17887, 1.78452]],
+	h2 = [[0.356695, 0.142259], [0.166758, 1.33215]],
 	n1 = 6,
-	n2 = 8)
+	n2 = 6)
 
 create_image('up-forward',
 	h1 = [[0.325314, 0.15795], [1.84728, 0.403766]], 
-	h2 = [[0.325314, 0.15795], [0.121339, 1.75837]],
+	h2 = [[0.325314, 0.15795], [0.164024, 1.14079]],
 	n1 = 6,
-	n2 = 8)
+	n2 = 5)
 
 print ""
-print "g:", np.mean(lattice_constants), np.std(lattice_constants) # Literatur 0.246nm
-print "alpha:", np.mean(angles), np.std(angles) # Literatur: 60
+print "g:", np.mean(lattice_constants), scipy.stats.sem(lattice_constants) # Literatur 0.246nm
+print "alpha:", np.mean(angles), scipy.stats.sem(angles) # Literatur: 60
