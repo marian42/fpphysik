@@ -88,3 +88,10 @@ Die Kreuzkopplung wird entweder durch Software korrigiert oder die Spitze wird d
 Erwärmung und Abkühlung der Messspitze bzw. der Probe können den Tunnelstrom verändern und somit die Messung verfälschen.
 Deshalb sollten die Spitze und Probe nicht berührt werden.
 Außerdem wird ein Glasgefäß über das Mikroskop gestülpt, um Luftaustausch zu vermeiden.
+
+\subsection{PID-Regelschleife}
+Beim Rastern der Probe wird der Abstand zwischen Probe und Spitze (Z-Achse) variiert und der Tunnelstrom konstant gehalten.
+Dies passiert mit einer PID-Regelschleife.
+Dabei wird ein Fehlersignal, in diesem Fall die Differenz zwischen dem tatsächlichen und dem gewünschten Tunnelstrom, minimiert.
+Das Signal, das der PID-Regler generiert, setzt sich aus drei Komponenten zusammen. Eine Komponente ist proportional zum Fehlersignal, eine ist proportional zum Integral und eine ist proportional zur Ableitung.
+Die Eigenschaften des PID-Reglers können angepasst werden, indem die Gewichtungsfaktoren der P-, I-, und D-Komponente verändert werden.
