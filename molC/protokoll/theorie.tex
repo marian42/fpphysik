@@ -1,2 +1,49 @@
 \section{Theorie}
 
+Die Wärmekapazität eines Körpers gibt an, wie groß die Temperaturänderung beim Zuführen von Wärmeenergie ist.
+Die Wärmekapazität wird bei konstantem Volumen oder bei konstantem Druck angegeben.
+
+\begin{align}
+	C_v &= \left( \frac{\partial U}{\partial T} \right)_V \\
+	C_p &= \left( \frac{\partial U}{\partial T} \right)_p
+\end{align}
+
+Teilt man die Wärmekapazität durch die molare Masse der Probe, erhält man die molare Wärmekapazität, auch Molwärme genannt, des Körpers.
+Die Molwärme ist vom verwendeten Material und von der Temperatur abhängig.
+
+Im Folgenden werden drei Modelle beschrieben, die die Molwärme von Festkörpern erklären.
+
+\subsection{Das klassische Modell}
+Die klassische Theorie geht davon aus, dass Atome im Festkörper auf drei Achsen harmonisch um eine feste Ruhelage schwingen.
+Es wird außerdem das Äquipartitionstheorem zugrunde gelegt, das besagt, dass sich die Wärmeenergie gleichmäßig auf die Freiheitsgrade des Atoms verteilt.
+
+Für die Molwärme ergibt sich aus diesen Annahmen:
+\begin{align}
+	C_v = 3R
+\end{align}
+Dabei ist $R$ die allgemeine Gaskonstante.
+
+\subsection{Das Einstein-Modell}
+Beim Einstein-Modell wird die Energiequantelung der Atomschwingungen berücksichtigt.
+Es wird angenommen, dass alle Atome mit der gleichen Kreisfrequenz schwingen, die ein Vielfaches von $\bar{h}\omega$ ist.
+
+Im Einstein-Modell ergibt sich für die Molwärme:
+\begin{align}
+	C_v = 3R \frac{\bar{h}^2 \omega^2}{k^2}\frac{1}{T^2}\frac{\exp \left(\frac{\bar{h}\omega}{k T}\right)}{\left(\exp\left(\frac{\bar{h}\omega}{k T}\right) - 1\right)^2}
+\end{align}
+
+Dabei ist $R$ die allgemeine Gaskonstante, $k$ die Boltzmann-Konstante und $\omega$ die Phononenkreisfrequenz.
+
+\subsection{Das Debye-Modell}
+
+Im Debye-Modell wird statt einer festen Schwingungsfrequenz ein Frequenzspektrum angenommen.
+Für das Frequenzspektrum wird weiterhin angenommen, dass keine Dispersion stattfindet und dass die Frequenz nicht von der Ausbreitungsrichtung abhängt.
+
+Im Debye-Modell ergibt sich für die Molwärme:
+
+\begin{align}
+	C_v = 9R \left(\frac{T}{\theta_D}\right)^3 \int_0^\frac{\theta_D}{T} \frac{x^4 e^x}{\left(e^x - 1\right)^2} \mathrm{d}x
+\end{align}
+
+Dabei ist R die allgemeine Gaskonstante, $x = \frac{\bar{h} \omega}{kT}$, und $\theta_D = \frac{\bar{h} \omega_D}{k}$ die Debye-Temperatur.
+Die Debye-Temperatur ist die einzige Materialkonstante der Molwärme im Debye-Modell.
