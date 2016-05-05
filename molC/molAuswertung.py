@@ -126,8 +126,9 @@ vlong = 4.7e3
 vtrans = 2.26e3
 masse = 0.342
 mAtom = 63.55 * 1.66e-27
+dichte = 8.92e3
 teilchenzahl = masse / mAtom
-volumen = v0 * 6.02e23
+volumen = masse / dichte
 omegaD = ((18 * (np.pi**2) * teilchenzahl) / volumen) * (1 / ((1/(vlong**3)) + (1/(vtrans**3))))
 thetaD = (const.hbar * omegaD) / const.k
 
