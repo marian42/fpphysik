@@ -129,10 +129,5 @@ mAtom = 63.55 * 1.66e-27
 dichte = 8.92e3
 teilchenzahl = masse / mAtom
 volumen = masse / dichte
-omegaD = ((18 * (np.pi**2) * teilchenzahl) / volumen) * (1 / ((1/(vlong**3)) + (1/(vtrans**3))))
+omegaD = ( ((18 * (np.pi**2) * teilchenzahl) / volumen) * (1 / ((1/(vlong**3)) + (1/(vtrans**3)))) )**(1/3)
 thetaD = (const.hbar * omegaD) / const.k
-
-print('Teilchenzahl: ', teilchenzahl)
-print('Volumen: ', volumen)
-print('omegaD: ', omegaD)
-print('thetaD: ', thetaD)

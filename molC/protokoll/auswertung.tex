@@ -1,6 +1,22 @@
 \section{Auswertung}
 \subsection{Isobare Molwärme}
-Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen, muss zunächst die Zeitdifferenz für alle gemessenen Zeiten bestimmt werden. Aus dieser kann dann die elektrische Energie mit der Formel \ref{ENERGIE} berechnet werden. Dann wird die Temperatur aus dem Widerstand bestimmt mit Hilfe der Formel \ref{WIDERSTAND ZU TEMPERATUR}. Mit diesen Werten kann nun die spezifische Wärme berechnet werden. Da hier die Molwärme betrachtet wird, muss die spezifische Wärme lediglich mit dem Verhältnis aus dem molekular Gewichts zur Gesamtmasse multipliziert werden wie in Formel \ref{MOLWÄRME}.
+Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen, muss zunächst die Zeitdifferenz für alle gemessenen Zeiten bestimmt werden. Aus dieser kann dann die elektrische Energie mit der Formel
+
+\begin{equation}
+E=U\cdot I\cdot\Delta t
+\end{equation}
+
+berechnet werden. Dann wird die Temperatur aus dem Widerstand mit Hilfe der Formel 
+
+\begin{equation}
+T=0,00134\cdot R^2+2,296\cdot R-243,02
+\end{equation}
+
+bestimmt. Mit diesen Werten kann nun die spezifische Wärme berechnet werden. Da hier die Molwärme betrachtet wird, muss die spezifische Wärme lediglich mit dem Verhältnis aus dem molekular Gewicht zur Gesamtmasse multipliziert werden wie in Formel
+
+\begin{equation}
+C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
+\end{equation}
 
 \noindent Die benutzten Messwerte sind Tabelle \ref{fig:tab1} zu entnehmen.   
 
@@ -56,7 +72,7 @@ Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen,
 \noindent Die Messunsicherheit für die Molwärme ebenso:
 
 \begin{equation}
-\sigma_{C_p}=\sqrt{(\frac mM\cdot\frac{1}{\Delta t}\cdot\sigma_E)^2 + (-\frac mM\cdot\frac{E}{(\Delta t)^2}\cdot\sigma_t)^2 }
+\sigma_{C_p}=\sqrt{\left(\frac mM\cdot\frac{1}{\Delta t}\cdot\sigma_E\right)^2+\left(-\frac mM\cdot\frac{E}{\Delta t^2}\cdot\sigma_t\right)^2 }
 \end{equation}
 
 \noindent Die Ergebnisse für die Molwärme und Energie sind Tabelle \ref{fig:tab2} zu entnehmen.
@@ -100,7 +116,13 @@ Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen,
 \end{table}
 
 \subsection{Isochore Molwärme}
-Die Molwärme bei konstantem Volumen wird über die Korrekturformel \ref{KORREKTURFORMEL} berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten von Relevanz. In Abbildung \ref{fig:abb1} sind Werte für \(\alpha\) für bestimmte Temperaturen angegeben.
+Die Molwärme bei konstantem Volumen wird über die Korrekturformel
+
+\begin{equation}
+C_V=C_p-9\alpha^2\kappa V_0T
+\end{equation}
+
+berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten von Relevanz. In Abbildung \ref{fig:abb1} sind Werte für \(\alpha\) für bestimmte Temperaturen angegeben.
 
 \begin{figure}
 	\centering
@@ -169,7 +191,7 @@ Die Debye-Temperatur wird aus der Molwärme bei konstantem Volumen und der Tempe
 	\centering
 		\includegraphics[width=0.5\textwidth]{debye.png}
 	\caption{Debye-Temperatur für bestimmte Molwärme}
-	\label{fig:abb2}
+	\label{fig:abb3}
 \end{figure}
 
 \begin{table}[H]
@@ -199,7 +221,7 @@ Die Debye-Temperatur wird aus der Molwärme bei konstantem Volumen und der Tempe
 \noindent Der Mittelwert dieser Werte für die Debye-Temperatur lautet:
 
 \begin{equation}
-\sum\limits_{i=1}^{11}{\theta_{\text{D}}}_i=187,54
+\frac{1}{11}\sum\limits_{i=1}^{11}{\theta_{\text{D}}}_i=\overline{\theta_\text{D}}=187,54
 \end{equation}
 
 \noindent Die Standardabweichung ist dann:
@@ -209,7 +231,19 @@ Die Debye-Temperatur wird aus der Molwärme bei konstantem Volumen und der Tempe
 \end{equation}
 
 \subsection{Debye-Frequenz}
-Zur Berechnung der theoretischen Debye-Frequenz wird die Forderung \ref{FORDERUNG} betrachtet. Aus dieser folgt der Ausdruck \ref{DEBYEFREQUENZ}, mit dem es möglich ist, die Debye-Frequenz analytisch zu bestimmen.
+Zur Berechnung der theoretischen Debye-Frequenz wird die Forderung
+
+\begin{equation}
+\int\limits_0^{\omega_\text{D}}D(\omega)\text{d}\omega=3N_L
+\end{equation}
+
+betrachtet. Aus dieser folgt der Ausdruck:
+
+\begin{equation}
+\omega_\text{D}=\sqrt[3]{\frac{18\pi^2N_L}{L^3}\frac{1}{\left(\frac{1}{v_{\text{long}}^3}+\frac{1}{v_\text{trans}^3}\right)}}
+\end{equation}
+
+mit dem es möglich ist, die Debye-Frequenz analytisch zu bestimmen.
 
 \noindent Die noch zu bestimmenden Größen sind die Anzahl der Freiheitsgrade und das Volumen der Probe.
 
@@ -218,7 +252,7 @@ N_L=\frac{m}{m_\text{Atom}}=\frac{0,342\text{kg}}{63,55\cdot 1,66\cdot10^{-27}\t
 \end{equation*}
 
 \begin{equation*}
-L^3=V_0\cdot n=7,11\cdot10^{-6}\frac{\text{m}^3}{\text{mol}}\cdot6,02\cdot10^{23}=
+L^3=\frac{m}{\rho_\text{Kupfer}}=\frac{0,342\text{kg}}{8,92\cdot10^3\frac{kg}{\text{m}^3}}=3,83\cdot10^{-5}\text{m}^3
 \end{equation*}
 
 \noindent Dabei ist \(m_\text{Atom}\) die Masse eines einzelnen Kupferatoms. Für die Geschwindigkeiten wird \(v_\text{long}=4,7\cdot10^3\frac{\text{m}}{\text{s}}\) und \(v_\text{trans}=2,26\cdot10^3\frac{\text{m}}{\text{s}}\) verwendet.
@@ -226,11 +260,17 @@ L^3=V_0\cdot n=7,11\cdot10^{-6}\frac{\text{m}^3}{\text{mol}}\cdot6,02\cdot10^{23
 \noindent Daraus ergibt sich für die Debye-Frequenz:
 
 \begin{equation*}
-\omega_\text{D}=
+\omega_\text{D}=5,38\cdot10^{13}\frac{1}{\text{s}}
 \end{equation*}
 
-\noindent Daraus lässt sich auch die theoretische Debye-Temperatur berechnen. Mit Formel \ref{THEORETISCHE DEBYE TEMPERATUR} lautet die theoretische Temperatur:
+\noindent Daraus lässt sich auch die theoretische Debye-Temperatur berechnen. Mit Formel
+
+\begin{equation}
+\theta_\text{D}=\frac{\hbar\omega_\text{D}}{k_\text{B}}
+\end{equation}
+
+lautet die theoretische Temperatur:
 
 \begin{equation*}
-\theta_\text{D}=
+\theta_\text{D}=411,22\text{K}
 \end{equation*}
