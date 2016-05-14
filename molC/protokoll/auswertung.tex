@@ -1,22 +1,8 @@
 \section{Auswertung}
 \subsection{Isobare Molwärme}
-Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen, muss zunächst die Zeitdifferenz für alle gemessenen Zeiten bestimmt werden. Aus dieser kann dann die elektrische Energie mit der Formel
+Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen, muss zunächst die Zeitdifferenz für alle gemessenen Zeiten errechnet werden. Aus dieser kann dann die elektrische Energie mit der Formel \ref{ELEKTRISCHEENERGIE} berechnet werden. Die Temperatur aus dem Widerstand mit Hilfe der Formel \ref{TEMPERATUR} bestimmt.
 
-\begin{equation}
-E=U\cdot I\cdot\Delta t
-\end{equation}
-
-berechnet werden. Dann wird die Temperatur aus dem Widerstand mit Hilfe der Formel 
-
-\begin{equation}
-T=0,00134\cdot R^2+2,296\cdot R-243,02
-\end{equation}
-
-bestimmt. Mit diesen Werten kann nun die spezifische Wärme berechnet werden. Da hier die Molwärme betrachtet wird, muss die spezifische Wärme lediglich mit dem Verhältnis aus dem molekular Gewicht zur Gesamtmasse multipliziert werden wie in Formel
-
-\begin{equation}
-C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
-\end{equation}
+\noincent Mit diesen Werten kann nun die spezifische Wärme berechnet werden. Die Molwärme ergibt sich dann aus Formel \ref{MOLWÄRME}.
 
 \noindent Die benutzten Messwerte sind Tabelle \ref{fig:tab1} zu entnehmen.   
 
@@ -24,7 +10,7 @@ C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
 	\begin{center}
 		\begin{tabular}{c c c c c c}
 			\toprule
-			\(t\)/s & \(R\)/\(\Omega\) & \(I\)/mA & \(U\)/V & \(T\)/K & \(\sigma_T\) \\
+			\(t\)/s & \(R\)/\(\Omega\) & \(I\)/mA & \(U\)/V & \(T\)/K & \(\sigma_T\)/K\\
 			\midrule
 			0		&22,2		&133,9	&14,14	&81,76	&0,24 \\
 			300		&25,2		&136,0	&14,24	&88,84	&0,24 \\
@@ -69,7 +55,7 @@ C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
 \sigma_E=\sqrt{(I\Delta t\cdot\sigma_U)^2 + (U\Delta t\cdot\sigma_I)^2 + (UI\cdot\sigma_t)^2}
 \end{equation}
 
-\noindent Die Messunsicherheit für die Molwärme ebenso:
+\noindent Die Messunsicherheit für die Molwärme errechnet sich zu:
 
 \begin{equation}
 \sigma_{C_p}=\sqrt{\left(\frac mM\cdot\frac{1}{\Delta t}\cdot\sigma_E\right)^2+\left(-\frac mM\cdot\frac{E}{\Delta t^2}\cdot\sigma_t\right)^2 }
@@ -81,7 +67,7 @@ C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
 	\begin{center}
 		\begin{tabular}{c c c c c c}
 			\toprule
-			\(E\)/J & \(\sigma_E\) & \(\Delta t\)/s & \(\Delta T\)/K & \(C_p\)/\(\frac{\text{J mol}}{\text{K}}\) & \(\sigma_{C_p}\) \\
+			\(E\)/J & \(\sigma_E\)/J & \(\Delta t\)/s & \(\Delta T\)/K & \(C_p\)/\(\frac{\text{J mol}}{\text{K}}\) & \(\sigma_{C_p}\)/							\(\frac{\text{J mol}}{\text{K}}\) \\
 			\midrule
 			568,00	&2,68	&300	&81,76	&14,91	&0,71\\
 			580,99	&2,74	&300	&88,84	&19,00	&1,12\\
@@ -110,28 +96,63 @@ C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
 			1445,25	&4.86	&420	&290,11	&28,84	&1,14\\
 			\bottomrule
 		\end{tabular}
-		\caption{Energie und Molwärme}
+		\caption{Werte für die zugeführte Energie und die davon errechnete Molwärme}
 		\label{fig:tab2}
 	\end{center}
 \end{table}
 
 \subsection{Isochore Molwärme}
-Die Molwärme bei konstantem Volumen wird über die Korrekturformel
+Die Molwärme bei konstantem Volumen wird über die Korrekturformel \ref{KORREKTURFORMEL} berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten von Relevanz. In Abbildung \ref{fig:tab3} sind Werte für \(\alpha\) für bestimmte Temperaturen angegeben.
 
-\begin{equation}
-C_V=C_p-9\alpha^2\kappa V_0T
-\end{equation}
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{c c}
+			\toprule
+			\(T\)/K & \(\alpha/\text{K}\cdot10^{-6}\)\\
+			\midrule
+			70	&7,00\\
+			80	&8,50\\
+			90	&9,75\\
+			100	&10,70\\
+			110	&11,50\\
+			120	&12,10\\
+			130	&12,65\\
+			140	&13,15\\
+			150	&13,60\\
+			160	&13,90\\
+			170	&14,25\\
+			180	&14,50\\
+			190	&14,75\\
+			200	&14,95\\
+			210	&15,20\\
+			220	&15,40\\
+			230	&15,60\\
+			240	&15,75\\
+			250	&15,90\\
+			260	&16,10\\
+			270	&16,25\\
+			280	&16,35\\
+			290	&16,50\\
+			300	&16,65\\
+			\bottomrule
+		\end{tabular}
+		\caption{Linearer Ausdehnungskoeffizient \(\alpha\) von Kupfer in Abhängigkeit von der Temperatur}
+		\label{fig:tab3}
+	\end{center}
+\end{table}
 
-berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten von Relevanz. In Abbildung \ref{fig:abb1} sind Werte für \(\alpha\) für bestimmte Temperaturen angegeben.
+\noindent Um Werte für die gegebenen Temperaturen aus Tabelle \ref{fig:tab1} zu bekommen, werden die Werte aus Tabelle \ref{fig:tab3} als Stützstellen mit Hilfe eines Polynoms sechsten Grades interpoliert:
+
+\begin{equation*}
+p(x)=ax^6+bx^5+cx^4+dx^3+ex^2+fx+g\quad.
+\end{equation*}
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.5\textwidth]{alpha.png}
-	\caption{Ausdehnungskoeffizent für bestimmte Temperaturen}
+		\includegraphics[width=0.5\textwidth]{inter.png}
+	\caption{Interpolation des Polynoms}
 	\label{fig:abb1}
 \end{figure}
-
-\noindent Um Werte für die gegebenen Temperaturen aus Tabelle \ref{fig:tab1} zu bekommen, werden die Werte aus Tabelle \ref{fig:tab3} als Stützstellen mit Hilfe eines Polynoms sechsten Grades interpoliert. 
 
 \noindent Für die Korrekturformel wird noch der Kompressionsmodul und das Molvolumen benötigt. Hierfür werden Literaturwerten verwendet: \(\kappa=1,378\cdot10^{11}\frac{\text{N}}{\text{m}^2}\), \(V_0=7,11\cdot10^{-6}\frac{\text{m}^3}{\text{mol}}\). 
 
@@ -139,53 +160,65 @@ berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten vo
 
 \begin{table}[H]
 	\begin{center}
-		\begin{tabular}{c c c}
+		\begin{tabular}{c c c c c}
 			\toprule
-			\(\alpha/\text{K}\cdot10^{-6}\) & \(C_V\)/\(\frac{\text{J mol}}{\text{K}}\) & \(\sigma_{C_V}\) \\
+			\(T\)/K & \(\alpha/\text{K}\cdot10^{-6}\) & \(\sigma_\alpha/\text{K}\cdot10^{-5}\) & \(C_V\)/\(\frac{\text{J mol}}{\text{K}}\) & \(\sigma_{C_V}\)\(\frac{\text{J mol}}{\text{K}}\) \\
 			\midrule
-			8,75		&14,85	&0,72\\
-			9,59		&18,93	&1,14\\
-			10,18	&21,82	&1,33\\
-			10,71	&20,19	&1,01\\
-			13,10	&21,77	&1,13\\
-			11,82	&25,04	&1,38\\
-			12,27	&13,73	&0,95\\
-			12,97	&20,05	&1,56\\
-			13,37	&19,85	&1,97\\
-			13,73	&21,44	&2,54\\
-			14,02	&21,96	&3,16\\
-			14,29	&21,86	&3,89\\
-			14,52	&23,10	&4,80\\
-			14,73	&23,98	&5,79\\
-			14,95	&31,41	&7,30\\
-			15,11	&20,01	&8,42\\
-			15,34	&28,17	&10,82\\
-			15,49	&22,66	&12,76\\
-			15,69	&26,21	&16,21\\
-			15,84	&25,33	&19,22\\
-			15,98	&24,50	&22,84\\
-			16,12	&24,37	&27,18\\
-			16,26	&31,39	&32,25\\
-			16,37	&24,76	&36,70\\
-			16,51	&28,14	&44,23\\
+			81,76&	8,75		&1,38	&14,85	&0,72\\
+			88,84&	9,59		&1,63	&18,93	&1,14\\
+			94,52&	10,18	&1,85	&21,82	&1,33\\
+			100,22&	10,71	&2,11	&20,19	&1,01\\
+			107,60&	13,10	&2,48	&21,77	&1,13\\
+			115,00&	11,82	&2,90	&25,04	&1,38\\
+			122,19&	12,27	&3,37	&13,73	&0,95\\
+			135,92&	12,97	&4,44	&20,05	&1,56\\
+			145,37&	13,37	&5,34	&19,85	&1,97\\
+			154,85&	13,73	&6,38	&21,44	&2,54\\
+			163,64&	14,02	&7,49	&21,96	&3,16\\
+			172,22&	14,29	&8,73	&21,86	&3,89\\
+			180,84&	14,52	&10,15	&23,10	&4,80\\
+			188,99&	14,73	&11,65	&23,98	&5,79\\
+			198,41&	14,95	&13,63	&31,41	&7,30\\
+			205,63&	15,11	&15,32	&20,01	&8,42\\
+			216,87&	15,34	&18,32	&28,17	&10,82\\
+			224,89&	15,49	&20,74	&22,66	&12,76\\
+			236,48&	15,69	&24,71	&26,21	&16,21\\
+			245,09&	15,84	&28,04	&25,33	&19,22\\
+			253,98&	15,98	&31,89	&24,50	&22,84\\
+			263,15&	16,12	&36,30	&24,37	&27,18\\
+			272,36&	16,26	&41,23	&31,39	&32,25\\
+			279,55&	16,37	&45,46	&24,76	&36,70\\
+			290,11&	16,51	&52,33	&28,14	&44,23\\
 			\bottomrule
 		\end{tabular}
 		\caption{Ausdehnungskoeffizient für gemessene Temperaturen und Molwärme bei konstantem Volumen}
-		\label{fig:tab3}
+		\label{fig:tab4}
 	\end{center}
 \end{table}
+
+\noindent Die Messunsicherheit \(\sigma_\alpha\) ergibt sich aus:
+
+\begin{equation}
+\sigma_\alpha=\sqrt{((6aT^5+5bT^4+4cT^3+3ddT^2+2eT+f)\sigma_T)^2+(T^5\cdot\sigma_a)^2+(T^4\cdot\sigma_b)^2+(T^3\cdot\sigma_c)^2+(T^2\cdot\sigma_d)^2+(T\cdot\sigma_e)^2+(\sigma_f)^2+(0\cdot\sigma_g)^2}
+\end{equation}
+
+\noindent Die Messunsicherheit für die isochore Molwärme ergibt sich aus:
+
+\begin{equation}
+\sigma_{C_V}=\sqrt{(\Delta\sigma_{C_p})^2 + (9\alpha^2\kappa V_0\cdot\sigma_T)^2 + (18\alpha\kappa V_0T\cdot\sigma_\alpha)^2}
+\end{equation}
 
 \noindent Die Molwärme bei konstantem Volumen gegen die Temperatur im linearen Diagramm wird in Abbildung \ref{fig:abb2} dargestellt.
 
 \begin{figure}
 	\centering
 		\includegraphics[width=0.5\textwidth]{cv.png}
-	\caption{Molwärme über Temperatur}
+	\caption{Isochore Molwärme und Grenzwert}
 	\label{fig:abb2}
 \end{figure}
 
 \subsection{Debye-Temperatur}
-Die Debye-Temperatur wird aus der Molwärme bei konstantem Volumen und der Temperaturen bis zu 170K bestimmt, indem die Werte der Molwärme an die, aus Abbildung \ref{fig:abb3} angepasst werden. Die Zahlen der linken Spalte bilden dabei die Mantisse und die Zahlen der oberen Zeile die Werte für \(\frac{\theta_\text{D}}{T}\). Die Debye-Temperatur wird dann durch Multiplikation mit der Temperatur berechnet. Das Ergebnis ist Tabelle \ref{fig:tab4} zu entnehmen.
+Die Werte für\(\frac{\theta_\text{D}}{T}\) werden aus Tabelle \ref{tab4} bestimmt. Dabei sind die Zahlen der ersten Spalte die Nachkommastellen. Die Debye-Temperatur wird dann durch Multiplikation mit der Temperatur berechnet. Das Ergebnis ist Tabelle \ref{fig:tab5} zu entnehmen.
 
 \begin{figure}
 	\centering
@@ -200,52 +233,42 @@ Die Debye-Temperatur wird aus der Molwärme bei konstantem Volumen und der Tempe
 			\toprule
 			\(T\)/K & \(C_V\)/\(\frac{\text{J mol}}{\text{K}}\) & \(\frac{\theta_\text{D}}{T}\) & \(\theta_D\)/K \\
 			\midrule
-			81,76	&14,85	&3,4		&277,98\\
-			88,84	&18,93	&2,4		&213,22\\
-			94,52	&21,82	&1,7		&160,68\\
-			100,22	&20,19	&2,1		&210,46\\
-			107,60	&21,77	&1,7		&182,92\\
+			81,76	&14,85	&4,3		&351,57\\
+			88,84	&18,93	&4,2		&373,13\\
+			94,52	&21,82	&7,1		&671,09\\
+			100,22	&20,19	&1,2		&120,26\\
+			107,60	&21,77	&7,1		&763,96\\
 			115,00	&25,04	&0,0		&0,00\\
-			122,19	&13,73	&1,8		&219,94\\
-			135,93	&20,05	&1,6		&217,47\\
-			145,37	&19,85	&1,7		&247,13\\
-			154,85	&21,44	&1,2		&185,82\\
-			163,64	&21,96	&0,9		&147,28\\
+			122,19	&13,73	&7,3		&891,99\\
+			135,93	&20,05	&2,2		&299,02\\
+			145,37	&19,85	&2,2		&319,81\\
+			154,85	&21,44	&8,1		&1254,29\\
+			163,64	&21,96	&6,1		&998,20\\
 			\bottomrule
 		\end{tabular}
-		\caption{Debye-Temperatur Anpassung}
-		\label{fig:tab4}
+		\caption{Ergebnisse für die Debye-Temperatur}
+		\label{fig:tab5}
 	\end{center}
 \end{table}
 
-\noindent Der Mittelwert dieser Werte für die Debye-Temperatur lautet:
+\noindent Der Wert \(C_V\) ist offensichtlich ein Messfehler, weswegen er nicht in die Berechnung des Mittelwerts eingeht.
+
+\noindent Der Mittelwert dieser Werte für die Debye-Temperatur lautet dann:
 
 \begin{equation}
-\frac{1}{11}\sum\limits_{i=1}^{11}{\theta_{\text{D}}}_i=\overline{\theta_\text{D}}=187,54
+\frac{1}{10}\sum\limits_{i=1}^{10}{\theta_{\text{D}}}_i=\overline{\theta_\text{D}}=549,39
 \end{equation}
 
 \noindent Die Standardabweichung ist dann:
 
 \begin{equation}
-\sigma_\theta=\sqrt{\frac{1}{10}\sum\limits_{i=1}^{11}({\theta_{\text{D}}}_i-\overline \theta_{\text{D}})^2}=21,83
+\sigma_\theta=\sqrt{\frac{1}{9}\sum\limits_{i=1}^{10}({\theta_{\text{D}}}_i-\overline \theta_{\text{D}})^2}=118,63
 \end{equation}
 
 \subsection{Debye-Frequenz}
-Zur Berechnung der theoretischen Debye-Frequenz wird die Forderung
+Zur Berechnung der theoretischen Debye-Frequenz wird die Forderung \ref{FORDERUNG} betrachtet. Aus dieser folgt der Ausdruck \ref{OMEGADEBYE}, mit dem es möglich ist, die Debye-Frequenz analytisch zu bestimmen.
 
-\begin{equation}
-\int\limits_0^{\omega_\text{D}}D(\omega)\text{d}\omega=3N_L
-\end{equation}
-
-betrachtet. Aus dieser folgt der Ausdruck:
-
-\begin{equation}
-\omega_\text{D}=\sqrt[3]{\frac{18\pi^2N_L}{L^3}\frac{1}{\left(\frac{1}{v_{\text{long}}^3}+\frac{1}{v_\text{trans}^3}\right)}}
-\end{equation}
-
-mit dem es möglich ist, die Debye-Frequenz analytisch zu bestimmen.
-
-\noindent Die noch zu bestimmenden Größen sind die Anzahl der Freiheitsgrade und das Volumen der Probe.
+\noindent Die noch zu bestimmenden Größen sind die Anzahl der Freiheitsgrade \(N_L\) und das Volumen der Probe \(L\).
 
 \begin{equation*}
 N_L=\frac{m}{m_\text{Atom}}=\frac{0,342\text{kg}}{63,55\cdot 1,66\cdot10^{-27}\text{kg}}=3,24\cdot10^{24}
@@ -263,14 +286,8 @@ L^3=\frac{m}{\rho_\text{Kupfer}}=\frac{0,342\text{kg}}{8,92\cdot10^3\frac{kg}{\t
 \omega_\text{D}=5,38\cdot10^{13}\frac{1}{\text{s}}
 \end{equation*}
 
-\noindent Daraus lässt sich auch die theoretische Debye-Temperatur berechnen. Mit Formel
-
-\begin{equation}
-\theta_\text{D}=\frac{\hbar\omega_\text{D}}{k_\text{B}}
-\end{equation}
-
-lautet die theoretische Temperatur:
+\noindent Daraus lässt sich auch die theoretische Debye-Temperatur berechnen. Mit der Formel \ref{THETADEBYE} lautet die theoretische Temperatur:
 
 \begin{equation*}
-\theta_\text{D}=411,22\text{K}
+\theta_\text{D}=411,22\text{K}\quad.
 \end{equation*}

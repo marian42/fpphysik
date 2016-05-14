@@ -71,6 +71,18 @@ params, covariance = curve_fit(poly, temptab, alpha * 1e-6) #1e-6 wegen Tabellen
 
 errors = np.sqrt(np.diag(covariance))
 
+"""
+x_plot = np.linspace(70, 300)
+
+plt.figure(figsize=(12,8))
+plt.plot(temptab, alpha, 'rx', label='Werte Aus Tabelle 3')
+plt.plot(x_plot, poly(x_plot, *params), 'b-', label='Fit')
+plt.legend(loc='best')
+plt.xlabel('$T$/K')
+plt.ylabel('$\\alpha$/$10^{-6}K$')
+plt.grid()
+"""
+
 alphaFit = poly(np.array(temp), 
     ufloat(params[0], errors[0]),
     ufloat(params[1], errors[1]),   
@@ -83,6 +95,7 @@ alphaFit = poly(np.array(temp),
 
 alphaFit2 = alphaFit[0:len(alphaFit) - 1]
 
+####################################
 alphaNominal = np.zeros(25)
 for i in range(0, len(alphaFit2)):
     alphaNominal[i] = alphaFit2[i].n
@@ -95,15 +108,32 @@ cpNominal = np.zeros(25)
 for i in range(0, len(cp)):
     cpNominal[i] = cp[i].n
 
+####################################
+alphaS = np.zeros(25)
+for i in range(0, len(alphaFit2)):
+    alphaS[i] = alphaFit2[i].s
+
+tempS = np.zeros(25)
+for i in range(0, len(temp2)):
+    tempS[i] = temp2[i].s
+
+cpS = np.zeros(25)
+for i in range(0, len(cp)):
+    cpS[i] = cp[i].s
+####################################
+
 #Isochore Molwärme
+cvS = molIsochor(cpS, tempS, alphaS)
 cvErr = molIsochor(cp, temp2, alphaFit2)
 cv = molIsochor(cpNominal, tempNominal, alphaNominal)
 
-plt.plot(tempNominal, cv, 'r.', label='Isochore Molwärme')
+plt.figure(figsize=(12,8))
+plt.plot(np.array([50,300]), np.array([3*const.Avogadro*const.k, 3*const.Avogadro*const.k]), 'r-', label='3R')
+plt.plot(tempNominal, cv, 'bo', label='Isochore Molwärme')
+plt.errorbar(tempNominal, cv, cvS, fmt='o')
 plt.xlabel('$T/K$')
 plt.ylabel('$C_V/\\frac{Jmol}{K}$')
 plt.legend(loc='best')
-plt.grid()
 
 '''
 np.savetxt('5bCV.txt', cvErr)
@@ -117,6 +147,8 @@ np.savetxt('5bAlpha.txt', alphaFit2)
 tempTheta, thetaT = np.genfromtxt('debyeDaten.txt', unpack=True)
 
 debye = tempTheta * thetaT
+meanDebye = np.mean(debye)
+semDebye = sem(debye)
 
 ############
 ### 5 d) ###
