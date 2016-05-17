@@ -152,7 +152,7 @@ p(x)=ax^6+bx^5+cx^4+dx^3+ex^2+fx+g\quad.
 	\label{fig:abb1}
 \end{figure}
 
-\noindent Für die Korrekturformel wird noch der Kompressionsmodul und das Molvolumen benötigt. Hierfür werden Literaturwerten verwendet: \(\kappa=1,378\cdot10^{11}\frac{\text{N}}{\text{m}^2}\), \(V_0=7,11\cdot10^{-6}\frac{\text{m}^3}{\text{mol}}\). 
+\noindent Für die Korrekturformel wird noch der Kompressionsmodul und das Molvolumen benötigt. Hierfür werden Literaturwerten verwendet: \(\kappa=1,378\cdot10^{11}\frac{\text{N}}{\text{m}^2}\) \cite{cu}, \(V_0=7,11\cdot10^{-6}\frac{\text{m}^3}{\text{mol}}\) \cite{v47}. 
 
 \noindent Die Werte für die Molwärme und die passenden Ausdehnungskoeffizienten sind der Tabelle \ref{fig:tab4} zu entnehmen.
 
@@ -196,9 +196,10 @@ p(x)=ax^6+bx^5+cx^4+dx^3+ex^2+fx+g\quad.
 
 \noindent Die Messunsicherheit \(\sigma_\alpha\) ergibt sich aus:
 
-\begin{equation}
-\sigma_\alpha=\sqrt{((6aT^5+5bT^4+4cT^3+3ddT^2+2eT+f)\sigma_T)^2+(T^5\cdot\sigma_a)^2+(T^4\cdot\sigma_b)^2+(T^3\cdot\sigma_c)^2+(T^2\cdot\sigma_d)^2+(T\cdot\sigma_e)^2+(\sigma_f)^2+(0\cdot\sigma_g)^2}
-\end{equation}
+\begin{align}
+\sigma_\alpha = & \sqrt{((6aT^5+5bT^4+4cT^3+3ddT^2+2eT+f)\sigma_T)^2+(T^5\cdot\sigma_a)^2} \\
+& \overline{+(T^4\cdot\sigma_b)^2+(T^3\cdot\sigma_c)^2+(T^2\cdot\sigma_d)^2+(T\cdot\sigma_e)^2+(\sigma_f)^2+(0\cdot\sigma_g)^2}
+\end{align}
 
 \noindent Die Messunsicherheit für die isochore Molwärme ergibt sich aus:
 
@@ -218,12 +219,12 @@ p(x)=ax^6+bx^5+cx^4+dx^3+ex^2+fx+g\quad.
 \subsection{Debye-Temperatur}
 Die Werte für\(\frac{\theta_\text{D}}{T}\) werden aus Tabelle \ref{fig:tab4} bestimmt. Dabei sind die Zahlen der ersten Spalte die Nachkommastellen. Die Debye-Temperatur wird dann durch Multiplikation mit der Temperatur berechnet. Das Ergebnis ist Tabelle \ref{fig:tab5} zu entnehmen.
 
-\begin{figure}
+\begin{table}
 	\centering
 		\includegraphics[width=0.8\textwidth]{debye.png}
 	\caption{Debye-Temperatur für bestimmte Molwärme \cite{v47}}
 	\label{fig:abb3}
-\end{figure}
+\end{table}
 
 \begin{table}[H]
 	\begin{center}
@@ -276,7 +277,7 @@ N_L=\frac{m}{m_\text{Atom}}=\frac{0,342\text{kg}}{63,55\cdot 1,66\cdot10^{-27}\t
 L^3=\frac{m}{\rho_\text{Kupfer}}=\frac{0,342\text{kg}}{8,92\cdot10^3\frac{kg}{\text{m}^3}}=3,83\cdot10^{-5}\text{m}^3
 \end{equation*}
 
-\noindent Dabei ist \(m_\text{Atom}\) die Masse eines einzelnen Kupferatoms. Für die Geschwindigkeiten wird \(v_\text{long}=4,7\cdot10^3\frac{\text{m}}{\text{s}}\) und \(v_\text{trans}=2,26\cdot10^3\frac{\text{m}}{\text{s}}\) verwendet.
+\noindent Dabei ist \(m_\text{Atom}\) die Masse eines einzelnen Kupferatoms. Für die Geschwindigkeiten wird \(v_\text{long}=4,7\cdot10^3\frac{\text{m}}{\text{s}}\) und \(v_\text{trans}=2,26\cdot10^3\frac{\text{m}}{\text{s}}\) verwendet \cite{v47}.
 
 \noindent Daraus ergibt sich für die Debye-Frequenz:
 
