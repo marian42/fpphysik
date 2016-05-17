@@ -1,14 +1,14 @@
 \section{Theorie}
 
 Die Wärmekapazität eines Körpers gibt an, wie groß die Temperaturänderung beim Zuführen von Wärmeenergie ist.
-Die Wärmekapazität wird bei konstantem Volumen oder bei konstantem Druck angegeben.
+Die Wärmekapazität wird bei konstantem Volumen oder bei konstantem Druck angegeben:
 
 \begin{align}
 	C_v &= \left( \frac{\partial U}{\partial T} \right)_V \\
-	C_p &= \left( \frac{\partial U}{\partial T} \right)_p
+	C_p &= \left( \frac{\partial U}{\partial T} \right)_p.
 \end{align}
 
-Teilt man die Wärmekapazität durch die molare Masse der Probe, erhält man die molare Wärmekapazität, auch Molwärme genannt, des Körpers.
+Die Wärmekapazität geteilt durch die molare Masse der Probe heißt molare Wärmekapazität oder Molwärme des Körpers.
 Die Molwärme ist vom verwendeten Material und von der Temperatur abhängig.
 
 Im Folgenden werden drei Modelle beschrieben, die die Molwärme von Festkörpern erklären.
@@ -17,33 +17,95 @@ Im Folgenden werden drei Modelle beschrieben, die die Molwärme von Festkörpern
 Die klassische Theorie geht davon aus, dass Atome im Festkörper auf drei Achsen harmonisch um eine feste Ruhelage schwingen.
 Es wird außerdem das Äquipartitionstheorem zugrunde gelegt, das besagt, dass sich die Wärmeenergie gleichmäßig auf die Freiheitsgrade des Atoms verteilt.
 
-Für die Molwärme ergibt sich aus diesen Annahmen:
+Im Festkörper hat jedes Atom pro Freiheitsgrad die mittlere Energie $\frac{1}{2}kT$.
+Bei drei Freiheitsgraden und kinetischer und potentieller Energie hat ein Atom das Sechsfache dieser Energie:
 \begin{align}
-	C_v = 3R
+	\langle u \rangle = 6\frac{1}{2}kT.
 \end{align}
-Dabei ist $R$ die allgemeine Gaskonstante.
+Für eine Teilchenmenge von \SI{1}{\mol} ist die Energie
+\begin{align}
+	U = 3kN_L \cdot T = 3RT.
+\end{align}
+Dabei ist $R$ die allgemeine Gaskonstante und $N_L$ die Loschmidsche Zahl.
+
+Für die Molwärme ergibt sich daraus:
+\begin{align}
+	C_V = \left(\frac{\partial U}{\partial T}\right)_V = 3R.
+\end{align}
+
+Dieser konstante Zusammenhang heißt ,,Dulong-Petit-Gesetzt" und macht nur für große Temperaturen eine korrekte Vorhersage.
 
 \subsection{Das Einstein-Modell}
-Beim Einstein-Modell wird die Energiequantelung der Atomschwingungen berücksichtigt.
-Es wird angenommen, dass alle Atome mit der gleichen Kreisfrequenz schwingen, die ein Vielfaches von $\bar{h}\omega$ ist.
+Beim Einstein-Modell wird gegenüber dem klassischen Modell die Energiequantelung der Atomschwingungen berücksichtigt.
+Es wird angenommen, dass alle Atome mit der gleichen Kreisfrequenz schwingen, die ein Vielfaches von $\hbar\omega$ ist, und auch nur gequantelte Energien aufnehmen oder abgeben können.
 
-Im Einstein-Modell ergibt sich für die Molwärme:
+Ausgehend von einer Boltzmann-Verteilung für die Wahrscheinlichkeiten des Vorkommens von Energiequantenzahlen ergibt sich für die mittlere Atomenergie
 \begin{align}
-	C_v = 3R \frac{\bar{h}^2 \omega^2}{k^2}\frac{1}{T^2}\frac{\exp \left(\frac{\bar{h}\omega}{k T}\right)}{\left(\exp\left(\frac{\bar{h}\omega}{k T}\right) - 1\right)^2}
+	\langle u \rangle = \frac{\hbar \omega}{\exp \left( \frac{\hbar \omega}{kT} \right)-1}.
 \end{align}
 
-Dabei ist $R$ die allgemeine Gaskonstante, $k$ die Boltzmann-Konstante und $\omega$ die Phononenkreisfrequenz.
+Daraus ergibt sich für die Molwärme:
+\begin{align}
+	C_V = \frac{\partial}{\partial T} 3N_L \langle u \rangle = 3R \frac{\hbar^2 \omega^2}{k^2}\frac{1}{T^2}\frac{\exp \left(\frac{\hbar\omega}{k T}\right)}{\left(\exp\left(\frac{\hbar\omega}{k T}\right) - 1\right)^2}
+\end{align}
+
+Wie im klassischen Modell wird für große Temperaturen eine konstante Molwärme $C_V = 3R$ vorhergesagt.
+Für kleine Temperaturen nimmt die Wärmekapazität exponentiell ab, im Grenzfall $t \rightarrow 0$ ist $C_V = 0$.
+Dazwischen ist die Vorhersage des Einstein-Modells für die Wärmekapazität kleiner als der tatsächliche Wert.
 
 \subsection{Das Debye-Modell}
 
 Im Debye-Modell wird statt einer festen Schwingungsfrequenz ein Frequenzspektrum angenommen.
-Für das Frequenzspektrum wird weiterhin angenommen, dass keine Dispersion stattfindet und dass die Frequenz nicht von der Ausbreitungsrichtung abhängt.
-
-Im Debye-Modell ergibt sich für die Molwärme:
-
+Mit dem gleichen Ansatz wie im Einstein-Modell wird nun über alle Frequenzen integriert und die Atomenergie mit der Spektralverteilung $Z(\omega)$ gewichtet:
 \begin{align}
-	C_v = 9R \left(\frac{T}{\theta_D}\right)^3 \int_0^\frac{\theta_D}{T} \frac{x^4 e^x}{\left(e^x - 1\right)^2} \mathrm{d}x
+	\label{debye1}
+	C_V = \frac{\partial}{\partial T} \int\limits_{0}^{\omega_\mathrm{max}} Z(\omega) \frac{\hbar \omega}{\exp \left( \frac{\hbar \omega}{kT} \right)-1} \mathrm{d}\omega.
+\end{align}
+Für die Spektralverteilung wird ein Modell verwendet, dass einige Vereinfachungen einführt.
+Es wird angenommen, dass im Kristall keine Dispersion stattfindet und dass die Phasengeschwindigkeit einer Welle unabhängig von der Ausbreitungsrichtung ist.
+
+Aus diesen Voraussetzungen und weiteren geometrischen Betrachtungen kann die spektrale Dichte der Gitterschwingungen angegeben werden:
+\begin{align}
+	\label{spektraldichte1}
+	Z(\omega) \mathrm{d}\omega = \frac{L^3}{2 \pi^2} \omega^2 \left(\frac{1}{v_\mathrm{l}^3} + \frac{2}{v_\mathrm{tr}^3}\right)\mathrm{d}\omega.
+\end{align} 
+Für den Fall, dass Longitudinalwellen und Transversalwellen die gleiche Phasengeschwindigkeit haben, $v_\mathrm{l} = v_\mathrm{tr}$, vereinfacht sich dies zu
+\begin{align}
+	\label{spektraldichte2}
+	Z(\omega)\mathrm{d}\omega = \frac{3L^3}{2 \pi^2v^3}\omega^2 \mathrm{d}\omega.
+\end{align}
+In einem endlich großen Kristall mit $N_L$ Atomen kann es nur $3N_L$ Eigenschwingungen gegben.
+Dadurch ist auch die Schwingfrequenz begrenzt.
+Die größtmögliche Schwingfrequenz heißt Debye-Frequenz $\omega_D$.
+Dies ist auch die maximale Frequenz und somit die Grenze für das Integral in \eqref{debye1}.
+Aus der Anzahl der Eigenschwingungen lässt sich eine Gleichung für die Debye-Frequenz aufstellen.
+\begin{align}
+	\int_{0}^{\omega_D}Z(\omega)\mathrm{d}\omega = 3N_L
+\end{align}
+Mit der Spektraldichte \eqref{spektraldichte1} lässt sich daraus die Debye-Frequenz ausrechnen:
+\begin{align}
+	\omega_D^3 = \frac{6 \pi^2 v^3 N_L}{L^3}
+\end{align}
+Mit der vereinfachten Spektraldichte \eqref{spektraldichte2} ergibt sich
+\begin{align}
+	\omega_D^3 = \frac{18 \pi^2 N_L}{L^3} \frac{1}{\left(\frac{1}{v_\mathrm{l}^3} + \frac{2}{v_\mathrm{tr}^3}\right)}.s
+\end{align}
+Die Gleichungen \eqref{spektraldichte1} und \eqref{spektraldichte2} können vereinfacht werden zu
+\begin{align}
+	Z(\omega)\mathrm{d}\omega = \frac{9N_L}{\omega_D^3} \omega^2 \mathrm{d}\omega.
 \end{align}
 
-Dabei ist R die allgemeine Gaskonstante, $x = \frac{\bar{h} \omega}{kT}$, und $\theta_D = \frac{\bar{h} \omega_D}{k}$ die Debye-Temperatur.
+So ergibt sich für die Molwärme aus \eqref{debye1}:
+\begin{align}
+	C_V & = \frac{\partial}{\partial T}\frac{9N_L \hbar}{\omega_D^3}  \int\limits_{0}^{\omega_\mathrm{max}} \frac{\omega^3}{\exp \left( \frac{\hbar \omega}{kT} \right)-1} \mathrm{d}\omega \\
+	& = 9R \left(\frac{T}{\theta_D}\right)^3 \int_0^\frac{\theta_D}{T} \frac{x^4 e^x}{\left(e^x - 1\right)^2} \mathrm{d}x
+\end{align}
+
+Dabei ist R die allgemeine Gaskonstante, $x = \frac{\hbar \omega}{kT}$, und $\theta_D = \frac{\hbar \omega_D}{k}$ die Debye-Temperatur.
 Die Debye-Temperatur ist die einzige Materialkonstante der Molwärme im Debye-Modell.
+
+Für große Temperaturen verhält sich das Debye-Modell wie das Einstein-Modell.
+Bei kleineren Temperaturen ist es jedoch genauer:
+\begin{align}
+	C_V \propto T^3.
+\end{align}
