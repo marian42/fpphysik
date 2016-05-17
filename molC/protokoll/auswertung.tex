@@ -1,8 +1,8 @@
 \section{Auswertung}
 \subsection{Isobare Molwärme}
-Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen, muss zunächst die Zeitdifferenz für alle gemessenen Zeiten errechnet werden. Aus dieser kann dann die elektrische Energie mit der Formel \ref{ELEKTRISCHEENERGIE} berechnet werden. Die Temperatur aus dem Widerstand mit Hilfe der Formel \ref{TEMPERATUR} bestimmt.
+Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen, muss zunächst die Zeitdifferenz für alle gemessenen Zeiten errechnet werden. Aus dieser kann dann die elektrische Energie mit der Formel \eqref{eenergie} berechnet werden. Die Temperatur aus dem Widerstand mit Hilfe der Formel \eqref{pt100} bestimmt.
 
-\noincent Mit diesen Werten kann nun die spezifische Wärme berechnet werden. Die Molwärme ergibt sich dann aus Formel \ref{MOLWÄRME}.
+\noindent Mit diesen Werten kann nun die spezifische Wärme berechnet werden. Die Molwärme ergibt sich dann aus Formel \eqref{cp_mol}.
 
 \noindent Die benutzten Messwerte sind Tabelle \ref{fig:tab1} zu entnehmen.   
 
@@ -50,13 +50,11 @@ Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen,
 \noindent Da in der Molwärme und Energie Differenzen auftreten, wird der letzte Messwert nicht mehr in die Berechnung eingehen.
 
 \noindent Die Messunsicherheit der Energie berechnet sich aus der Formel für die Gauß'sche Fehlerfortpflanzung:
-
 \begin{equation}
 \sigma_E=\sqrt{(I\Delta t\cdot\sigma_U)^2 + (U\Delta t\cdot\sigma_I)^2 + (UI\cdot\sigma_t)^2}
 \end{equation}
 
 \noindent Die Messunsicherheit für die Molwärme errechnet sich zu:
-
 \begin{equation}
 \sigma_{C_p}=\sqrt{\left(\frac mM\cdot\frac{1}{\Delta t}\cdot\sigma_E\right)^2+\left(-\frac mM\cdot\frac{E}{\Delta t^2}\cdot\sigma_t\right)^2 }
 \end{equation}
@@ -102,7 +100,7 @@ Um die Molwärme bei konstantem Druck aus den gegebenen Messwerten zu bestimmen,
 \end{table}
 
 \subsection{Isochore Molwärme}
-Die Molwärme bei konstantem Volumen wird über die Korrekturformel \ref{KORREKTURFORMEL} berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten von Relevanz. In Abbildung \ref{fig:tab3} sind Werte für \(\alpha\) für bestimmte Temperaturen angegeben.
+Die Molwärme bei konstantem Volumen wird über die Korrekturformel \eqref{kf} berechnet. Hierzu ist das Wissen über die Werte des Ausdehnungskoeffizienten von Relevanz. In Abbildung \ref{fig:tab3} sind Werte für \(\alpha\) für bestimmte Temperaturen angegeben.
 
 \begin{table}[H]
 	\begin{center}
@@ -218,7 +216,7 @@ p(x)=ax^6+bx^5+cx^4+dx^3+ex^2+fx+g\quad.
 \end{figure}
 
 \subsection{Debye-Temperatur}
-Die Werte für\(\frac{\theta_\text{D}}{T}\) werden aus Tabelle \ref{tab4} bestimmt. Dabei sind die Zahlen der ersten Spalte die Nachkommastellen. Die Debye-Temperatur wird dann durch Multiplikation mit der Temperatur berechnet. Das Ergebnis ist Tabelle \ref{fig:tab5} zu entnehmen.
+Die Werte für\(\frac{\theta_\text{D}}{T}\) werden aus Tabelle \ref{fig:tab4} bestimmt. Dabei sind die Zahlen der ersten Spalte die Nachkommastellen. Die Debye-Temperatur wird dann durch Multiplikation mit der Temperatur berechnet. Das Ergebnis ist Tabelle \ref{fig:tab5} zu entnehmen.
 
 \begin{figure}
 	\centering
@@ -266,9 +264,9 @@ Die Werte für\(\frac{\theta_\text{D}}{T}\) werden aus Tabelle \ref{tab4} bestim
 \end{equation}
 
 \subsection{Debye-Frequenz}
-Zur Berechnung der theoretischen Debye-Frequenz wird die Forderung \ref{FORDERUNG} betrachtet. Aus dieser folgt der Ausdruck \ref{OMEGADEBYE}, mit dem es möglich ist, die Debye-Frequenz analytisch zu bestimmen.
+Zur Berechnung der theoretischen Debye-Frequenz wird die Forderung \eqref{debyeintegral} betrachtet. Aus dieser folgt der Ausdruck \eqref{debyefreq}, mit dem es möglich ist, die Debye-Frequenz analytisch zu bestimmen.
 
-\noindent Die noch zu bestimmenden Größen sind die Anzahl der Freiheitsgrade \(N_L\) und das Volumen der Probe \(L\).
+\noindent Die noch zu bestimmenden Größen sind die Teilchenzahl \(N_L\) und das Volumen der Probe \(L^3\).
 
 \begin{equation*}
 N_L=\frac{m}{m_\text{Atom}}=\frac{0,342\text{kg}}{63,55\cdot 1,66\cdot10^{-27}\text{kg}}=3,24\cdot10^{24}
@@ -286,7 +284,7 @@ L^3=\frac{m}{\rho_\text{Kupfer}}=\frac{0,342\text{kg}}{8,92\cdot10^3\frac{kg}{\t
 \omega_\text{D}=5,38\cdot10^{13}\frac{1}{\text{s}}
 \end{equation*}
 
-\noindent Daraus lässt sich auch die theoretische Debye-Temperatur berechnen. Mit der Formel \ref{THETADEBYE} lautet die theoretische Temperatur:
+\noindent Daraus lässt sich auch die theoretische Debye-Temperatur berechnen. Gemäß $\theta_\text{D}=\frac{\hbar\omega_\text{D}}{k}$ lautet die theoretische Temperatur:
 
 \begin{equation*}
 \theta_\text{D}=411,22\text{K}\quad.

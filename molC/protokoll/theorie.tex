@@ -1,19 +1,35 @@
 \section{Theorie}
 
+\subsection{Wärmekapazität}
 Die Wärmekapazität eines Körpers gibt an, wie groß die Temperaturänderung beim Zuführen von Wärmeenergie ist.
 Die Wärmekapazität wird bei konstantem Volumen oder bei konstantem Druck angegeben:
 
 \begin{align}
 	C_v &= \left( \frac{\partial U}{\partial T} \right)_V \\
+	\label{cp}
 	C_p &= \left( \frac{\partial U}{\partial T} \right)_p.
 \end{align}
 
 Die Wärmekapazität geteilt durch die molare Masse der Probe heißt molare Wärmekapazität oder Molwärme des Körpers.
-Die Molwärme ist vom verwendeten Material und von der Temperatur abhängig.
+Sie ist vom verwendeten Material und von der Temperatur abhängig.
 
-Im Folgenden werden drei Modelle beschrieben, die die Molwärme von Festkörpern erklären.
+Wird die Wärme mit konstanter Leistung zugeführt, lässt sich die molare Wärmekapazität \eqref{cp} insbesondere schreiben als
+\begin{equation}
+\label{cp_mol}
+	C_p=\frac{m_\text{mol}}{m}\frac{E}{\Delta T}\quad.
+\end{equation}
 
-\subsection{Das klassische Modell}
+Mit der Korrekturformel
+\begin{equation}
+	\label{kf}
+	C_V=C_p-9\alpha^2\kappa V_0T
+\end{equation}
+lässt sich zwischen den Molwärmen bei konstantem Volumen und Druck umrechnen.
+Dabei ist  $\alpha$ der Ausdehnungskoeffizient und $\kappa$ der Kompressionsmodul.
+
+Im Folgenden werden drei theoretische Modelle beschrieben, die die Molwärme von Festkörpern erklären.
+
+\subsubsection{Das klassische Modell}
 Die klassische Theorie geht davon aus, dass Atome im Festkörper auf drei Achsen harmonisch um eine feste Ruhelage schwingen.
 Es wird außerdem das Äquipartitionstheorem zugrunde gelegt, das besagt, dass sich die Wärmeenergie gleichmäßig auf die Freiheitsgrade des Atoms verteilt.
 
@@ -35,7 +51,7 @@ Für die Molwärme ergibt sich daraus:
 
 Dieser konstante Zusammenhang heißt ,,Dulong-Petit-Gesetzt" und macht nur für große Temperaturen eine korrekte Vorhersage.
 
-\subsection{Das Einstein-Modell}
+\subsubsection{Das Einstein-Modell}
 Beim Einstein-Modell wird gegenüber dem klassischen Modell die Energiequantelung der Atomschwingungen berücksichtigt.
 Es wird angenommen, dass alle Atome mit der gleichen Kreisfrequenz schwingen, die ein Vielfaches von $\hbar\omega$ ist, und auch nur gequantelte Energien aufnehmen oder abgeben können.
 
@@ -49,11 +65,13 @@ Daraus ergibt sich für die Molwärme:
 	C_V = \frac{\partial}{\partial T} 3N_L \langle u \rangle = 3R \frac{\hbar^2 \omega^2}{k^2}\frac{1}{T^2}\frac{\exp \left(\frac{\hbar\omega}{k T}\right)}{\left(\exp\left(\frac{\hbar\omega}{k T}\right) - 1\right)^2}
 \end{align}
 
+Dabei ist $N_L$ die Teilchenzahl und $k$ die Boltzmann-Konstante.
+
 Wie im klassischen Modell wird für große Temperaturen eine konstante Molwärme $C_V = 3R$ vorhergesagt.
 Für kleine Temperaturen nimmt die Wärmekapazität exponentiell ab, im Grenzfall $t \rightarrow 0$ ist $C_V = 0$.
 Dazwischen ist die Vorhersage des Einstein-Modells für die Wärmekapazität kleiner als der tatsächliche Wert.
 
-\subsection{Das Debye-Modell}
+\subsubsection{Das Debye-Modell}
 
 Im Debye-Modell wird statt einer festen Schwingungsfrequenz ein Frequenzspektrum angenommen.
 Mit dem gleichen Ansatz wie im Einstein-Modell wird nun über alle Frequenzen integriert und die Atomenergie mit der Spektralverteilung $Z(\omega)$ gewichtet:
@@ -68,8 +86,10 @@ Aus diesen Voraussetzungen und weiteren geometrischen Betrachtungen kann die spe
 \begin{align}
 	\label{spektraldichte1}
 	Z(\omega) \mathrm{d}\omega = \frac{L^3}{2 \pi^2} \omega^2 \left(\frac{1}{v_\mathrm{l}^3} + \frac{2}{v_\mathrm{tr}^3}\right)\mathrm{d}\omega.
-\end{align} 
-Für den Fall, dass Longitudinalwellen und Transversalwellen die gleiche Phasengeschwindigkeit haben, $v_\mathrm{l} = v_\mathrm{tr}$, vereinfacht sich dies zu
+\end{align}
+Die Probe wird als würfelförmig angenommen mit der Kantenlänge $L$.
+$v_\mathrm{l}$ und $v_\mathrm{tr}$ sind die Phasengeschwindigkeiten der longitudinalen und transversalen Gitterschwingungen.
+Für den Fall, dass Longitudinalwellen und Transversalwellen die gleiche Phasengeschwindigkeit haben, $v_\mathrm{l} = v_\mathrm{tr}$, vereinfacht sich \eqref{spektraldichte1} zu
 \begin{align}
 	\label{spektraldichte2}
 	Z(\omega)\mathrm{d}\omega = \frac{3L^3}{2 \pi^2v^3}\omega^2 \mathrm{d}\omega.
@@ -80,10 +100,12 @@ Die größtmögliche Schwingfrequenz heißt Debye-Frequenz $\omega_D$.
 Dies ist auch die maximale Frequenz und somit die Grenze für das Integral in \eqref{debye1}.
 Aus der Anzahl der Eigenschwingungen lässt sich eine Gleichung für die Debye-Frequenz aufstellen.
 \begin{align}
+	\label{debyeintegral}
 	\int_{0}^{\omega_D}Z(\omega)\mathrm{d}\omega = 3N_L
 \end{align}
 Mit der Spektraldichte \eqref{spektraldichte1} lässt sich daraus die Debye-Frequenz ausrechnen:
 \begin{align}
+	\label{debyefreq}
 	\omega_D^3 = \frac{6 \pi^2 v^3 N_L}{L^3}
 \end{align}
 Mit der vereinfachten Spektraldichte \eqref{spektraldichte2} ergibt sich
@@ -109,3 +131,23 @@ Bei kleineren Temperaturen ist es jedoch genauer:
 \begin{align}
 	C_V \propto T^3.
 \end{align}
+
+\subsection{Elektrische Bauteile}
+Im Versuch wir eine Heizwicklung verwendet.
+Für die elektrische Leistung gilt allgemein
+\begin{align}
+	P = U \cdot I.
+\end{align}
+Bei konstanter Leistung ist die abgegebene Energie
+\begin{align}
+	\label{eenergie}
+	E = P \cdot \Delta t = U \cdot I \cdot \Delta t.
+\end{align}
+Weiterhin wird zur Messung von Temperaturen Pt-100-Widerstände benutzt.
+Diese haben einen temperaturabhängigen Widerstand.
+Mit folgender Gleichung\cite{v47} kann die Temperatur berechnet werden:
+\begin{equation}
+	\label{pt100}
+	T=0,00134\cdot R^2+2,296\cdot R-243,02
+\end{equation}
+Dabei ist $T$ in \SI{}{\celsius} und $R$ in \SI{}{\ohm}.
