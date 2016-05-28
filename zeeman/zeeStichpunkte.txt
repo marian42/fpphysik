@@ -1,0 +1,45 @@
+Stichpunkte zu V27 - Zeeman-Effekt:
+
+Theorie:
+- Zeeman-Effekt ist die Aufspaltung & Polarisation von Spektrallinien
+- Spektrallinien die von Atomen unter Einfluss eines Magnetfeldes emmitiert werden
+- Quasi eine Aufspaltung der Energieniveaus im Magnetfeld
+- Hüllenelektron hat zwei Drehimpulse (Bahndrehimpuls + Spin (l, s))
+- Drehimpulse sind wegen Ladung des Elektrons mit magnetischem Moment verbunden
+- Bohrsches Magneton: 
+-> Betrag des magnetischen Moments, das ein Elektron mit l=1 durch seinen Bahndrehimpuls erzeugt
+- Folge des Stern-Gerlach-Experimentes:
+-> Es gehört ein magnetsiches Moment zum Spin
+- Landé-Faktor:
+-> Verhältnis des gemessenen magnetischen Moments zu dem magnetischen Moment, das bei vorliegendem Drehimupls nach klassischer Physik zu erwarten ist
+- m.M. für Spin ist doppelt so groß wie das m.M. für Bahndrehimpuls => magnetomechanische Anomalie des Elektrons
+- WW zwischen den beiden Drehimpulsen und den beiden m.M. eines Einzelelektrons und den WW dieser Größen zwischen den verschiedenen Elektronen in der Hülle
+- Bahndrehimpuls addiert sich zum Gesamtdrehimpuls für Atome mit niedriger Kernladungszahl (WW zwischen Bahndrehimpulsen ist sehr groß); gilt auch für Spin
+- Nur Elektronen unabgeschlossener Schalen werden betrachtet (bei abgeschlossenen Schalen ist der Drehimpuls immer null)
+=> LS-Kopplung für nicht zu starke Magnetfelder (J = L + S)
+- J hat eigene Drehimpulsquantenzahl J (Kann ganz- oder halbzahlig sein, abhängig von S)
+- Zwei Grenzfälle:
+-> Atome mit 1. niedriger, 2. hoher Kernladungszahl
+- hohe Kernladungszahl führt auf j-j-Kopplung
+-> WW zwischen Spin und Bahndrehimpuls des Einzelelektrons ist groß gegenüber der WW der einzelnen Drehimpulse untereinander
+=> Kein Gesamtdrehimpuls/Gesamtspin mehr
+- Es wird das zugehörige m.M. zum Gesamtdrehimpuls benötigt
+- Richtung des Moments und des Drehimpulses fallen im allgemeinen nicht zusammen
+-> Es existiert eine parallele Komponente von mu und eine senkrechte
+=> Senkrechte Komponente verschwindet (wg. Quantenmechanik; präzession umd Feldrichtungsachse => Moment verschwindet im zeitlichen Mittel, klassisch)
+- Richtungsquantelung: Winkel zwischen m.M. und B-Feld nur erlaubt, wenn Komponente vom m.M._{J_z} in Feldrichtung ein ganzzahliges Vielfaches vom Landé-Faktor * Bohrsches-Magneton ist
+=> Orientierungsquantenzahl m -> -J ... 0 ... J
+- 2J + 1 Einstellmöglichkeiten
+- Berechnung der Zusatzenergie E_mag (Energie, die ein Moment im äußeren B-Feld erhält)
+- Anzahl der entstehenden Spektrallinien hängt davon ab, zwischen welchen Energieniveaus Übergänge möglich sind
+- Betrachte Strahlungsübergang zwischen zwei Lösungen der zeitabh. Schrödingergleichung
+- Dichteverteilung ist zeitabhängige Größe, die Schwingungen eines Elektrons beschreibt (Frequenz festgelegt durch Energieunterschied der beiden Zustände)
+- Intensität der Strahlung erhält man aus dem Dipolmoment (Aus den Integralen bekommt man die Matrixelemente)-> Poynting-Vektor (Winkelabhängigkeit)
+=> Auswahlregeln: Spektrallinien werden emittiert, wenn Orientierungsquantenzahlen sich nicht unterscheiden oder um +/-1 unterscheiden
+- Gibt es keinen Unterschied, ist nur das Matrixelement in z-Richtung von 0 verschieden => Richtung des schwingenden Dipols ist parallel zur Magnetfeldrichtung
+-> Wegen Winkelabhängigkeit der Strahlungsintensität (Poynting-Vektor) strahlt der Dipol nicht in Feldrichtung (am stärksten senkrecht zur Feldrichtung)
+=> Bei Delta m = 0 ist die Strahlung linear-polarisiert
+=> Bei Delta m = -1 ist die Strahlung um z-Achse zirkularpolarisiert
+=> Analog für Delta m = +1 (allerdings entgegengesetzte Drehrichtung)
+- Ergebnisse gelten zunächst nur für S=0 (Weil der Elektronenspin nicht in der zeitabh. SGL auftaucht) => normaler Zeeman-Effekt
+- 

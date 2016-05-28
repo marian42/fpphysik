@@ -1,61 +1,60 @@
 \section{Theorie}
+\subsection{Tunneleffekt}
+Die Funktionsweise des Rastertunnelmikroskops basiert auf dem quantenmechanischen Phänomen des Tunneleffekts. Ist ein Wellenpaket von einer endlich hohen Potentialbarriere eingeschlossen, kann es diese im klassischen Fall nicht durchdringen. Quantenmechanisch ist dies jedoch möglich, da das Wellenpaket durch eine Lösung der Schrödingergleichung beschrieben werden kann, die im Betragsquadrat lediglich Information über die Aufenthaltswahrscheinlichkeit des Wellenpakets liefert. Diese Wahrscheinlichkeit ist außerhalb der Potentialbarriere ungleich null, sodass das Wellenpaket durchaus hinter der Barriere auffindbar sein kann. 
+
+\noindent Bei der STM wird ein elektrisch leitender oder mit einem solchen Material überzogener Festkörper untersucht, indem eine leitende Drahtspitze an eine Probe genähert wird, die dann über diese rastert. Die zu überwindende Potentialbarriere für den Tunneleffekt in diesem Versuch ist Luft. Der Effekt ist nur für Abstände in atomarer Skala relevant, weswegen der Versuchsaufbau sensitiv gegenüber dem Abstand zwischen Spitze und Probe ist.
+
+\noindent Wird eine Spitze in die Nähe einer Probe gebracht, kann der Tunneleffekt für die Elektronen der Spitze oder für die der Probe eintreten, was davon abhänging ist, welches Vorzeichen die zwischen Probe und Spitze angelegte Spannung hat. Es entsteht ein Tunnelstrom, der gemessen werden kann.
+
+\noindent Die Sensitivität gegenüber dem Abstand wird in der Formel \eqref{strom} dargestellt. Darin fällt der Strom exponentiell mit dem Abdstand \(d\) .
+
+\begin{equation} 
+\label{strom}
+I_\text{T}=\frac{U}{d}\exp{(-Kd\sqrt{\Phi})},\quad K\approx1,025\frac{1}{\text{\r{A}}\text{eV}^\frac12}
+\cite{hopg}
+\end{equation}
+
+\noindent Daraus ergeben sich direkt die zwei Hauptschwierigkeiten dieses Versuchs. Zum einen muss der gesamte Versuchsaufbau bezüglich mechanischer Vibrationen in der Größenordnung von \(<1\)\,\r{A} gedämpft werden, da der Abstand \(d\approx0,5\)\,\r{A} \cite{hopg} anfällig auf sehr schwache Schwingungen ist.  
+
+\noindent Zum anderen muss die Drahtspitze möglichst spitz und sauber präpariert sein.
+
+\noindent Da es bei der STM zwei Modi gibt, einmal die Variation des Abstandes und das konstant Halten des Tunnelstroms und einmal die Variation des Stromes und das konstant Halten des Abstandes, wobei letzteres als Rasterkraftmikroskopie bekannt ist, für welche die Van-der-Waals-Kraft sowie die repulsive Wechselwirkung eine Rolle spielen, soll auf diese noch kurz eingegangen werden.
+ 
 \subsection{Bindungstypen in Kristallen}
 \subsubsection{Van-der-Waals-Wechselwirkung}
-Diese Kraft ist relativ schwach und wird erst bei vielen Atomen relevant. Sie entsteht durch ein gegenseitig induziertes Dipolmoment als Wirkung von Fluktuationen in der Ladungsverteilung der Atome. Das rührt daher, dass die Ladungsverteilung nicht starr ist.
+Diese Kraft ist relativ schwach und wird erst bei einer großen Anzahl von Atomen relevant. Sie entsteht durch ein gegenseitig induziertes Dipolmoment als Wirkung von Fluktuationen in der Ladungsverteilung der Atome. Das rührt daher, dass die Ladungsverteilung nicht starr ist.
 
 \noindent Die Kraft fällt mit der negativ reziproken sechsten Potenz des Abstandes und ist somit sensitiv gegenüber Schwankungen.
 
-\noindent Da es bei der STM zwei Modi gibt, einmal die Variation des Abstandes und das konstant Halten des Tunnelstroms und einmal die Variation des Stromes und das konstant Halten des Abstandes, wobei erstes als Rasterkraftmikroskopie gilt, ist die Van-der-Waals-Kraft auch nur für diese wichtig.
-
 \subsubsection{Repulsive Wechselwirkung}
-Wird die Spitze bei der Rasterkraftmikroskpie zu nah an die Probe gefahren, tritt eine abstoßende Kraft zwischen Spitze und Probe ein. Diese wird repulsive Wechselwirkung genannt. Sie entsteht durch das Überlappen der Elektronenladungsverteilungen unter Berücksichtigung des Paulischen Ausschließungsprinzips.
+Wird die Spitze zu nah an die Probe gefahren, tritt eine abstoßende Kraft zwischen Spitze und Probe ein. Diese wird repulsive Wechselwirkung genannt. Sie entsteht durch das Überlappen der Elektronenladungsverteilungen unter Berücksichtigung des Paulischen Ausschließungsprinzips.
 
-\noindent Ein empirisch abgeleitetes Potential, welches die Herkunft dieser Kraft beschreibt, ist das Lennard-Jones-Potential.
+\noindent Ein empirisch abgeleitetes Potential, welches die Herkunft dieser Kraft beschreibt, ist das Lennard-Jones-Potential \cite{kittel}.
 
 \begin{equation}
 U_\text{LJ}(R)=4\epsilon\left[\frac{\sigma}{R}^{12}-\frac{\sigma}{R}^6\right]
 \end{equation}
 
-\subsection{Tunneleffekt}
-Die Funktionsweise des Rastertunnelmikroskops basiert auf dem quantenmechanischen Phänomen des Tunneleffekts. Ist ein Wellenpaket von einer endlich hohen Potentialbarriere eingeschlossen, kann es diese im klassischen Fall nicht durchdringen. Quantenmechanisch ist dies jedoch möglich, da das Wellepaket durch eine Lösung der Schrödingergleichung beschrieben werden kann, die im Betragsquadrat lediglich Information über die Aufenthaltswahrscheinlichkeit des Wellenpakets liefert. Diese Wahrscheinlichkeit ist außerhalb der Potentialbarriere ungleich null, sodass das Wellenpaket durchaus hinter der Barriere auffindbar sein kann. 
-
-\noindent Bei der STM wird ein elektrisch leitender oder mit einem solchen Material überzogener Festkörper untersucht, indem eine Pt-Ir-Drahtspitze an eine Probe genähert wird, die dann über diese rastert. Es existiert also ein Valenzband in dem sich Elektronen der Fermienergie befinden. Die zu überwindende Potentialbarriere für den Tunneleffekt in diesem Versuch ist das Vakuum. Der Effekt ist nur für Abstände in atomischer Skala relevant, weswegen eine typische Probe der Größenordnung 100\,\r{A}\(^2\) ist und der Versuchsaufbau dementsprechend sensitiv gegenüber dem Abstand zwischen Spitze und Probe ist. Eine Genauigkeit von 1\,\r{A} für die Spitze kann beim Anlegen einer Spannung von \(0,1\)V erreicht werden.
-
-\noindent Wird eine Spitze in die Nähe einer Probe mit diesen Eigenschaften gebracht, kann der Tunneleffekt für die Elektronen der Spitze oder für die der Probe eintreten, was davon abhänging ist, welches Vorzeichen die an die Spitze angelegte Spannung hat. Es entsteht ein Tunnelstrom, der gemessen werden kann.
-
-\noindent Der Tunnelstrom fällt exponentiell mit dem Abstand \(d\) und der Wurzel der Austrittsarbeit \(\Phi\) des Festkörpers. Dies ist die Energie, die mindestens aufgewandt werden muss, um ein Elektron aus einem ungeladenen Festkörper zu lösen. 
-
-\begin{equation}
-I_\text{T}=\frac{U}{d}\exp{(-Kd\sqrt{\Phi})},\quad K\approx1,025\frac{1}{\text{\r{A}}\,\text{eV}^\frac12}
-\end{equation}
-
-\noindent Daraus ergeben sich direkt die zwei Hauptschwierigkeiten dieses Versuchs. Zum einen muss der gesamte Versuchsaufbau bezüglich mechanischer Vibrationen in der Größenordnung von \(<1\)\,\r{A} gedämpft werden, da der Abstand \(d\approx0,5\)\,\r{A} anfällig auf sehr schwache Schwingungen ist.  
-
-\noindent Zum anderen muss die Drahtspitze möglichst spitz und sauber präpariert sein. Das heißt der Draht wird vor der Benutzung mit 2-Propanol von lipophilem Dreck befreit.
+\noindent Hierbei ist \(R\) der Abstand, \(\epsilon\) ein Skalierungsfaktor, der die Stärke der Wechselwirkung beschreibt und \(\sigma\) der Abstand, bei dem das Lennard-Jones-Potential zwischen anziehend und abstoßend wechselt.
 
 \subsection{Fehlerquellen}
+\label{kap2}
+
+\noindent Bei diesem Versuch entstehen die Messunsicherheiten überwiegend aus den Eigenschaften von Piezokristallen. In diesem Kapitel werden die unterschiedlichen Fehlerquellen erläutert.
+
 \subsubsection{Intrinsische Nichtlinearität}
-Dieser Fehler ergibt sich aus der Längenänderung des Scanners (piezoelektrischer Stab) nach dem Anlegen einer Spannung. Da die Spannung nicht instantan angelegt wird, sondern sich über Zeit aufbaut ist die Längenänderung des Stabes als Funktion der Spannung keine lineare Gerade.
+Liegt eine Spannung an einem Piezokristall, ändert sich dessen Länge. Diese Änderung ist allerdings nicht linear, wie die gestrichelte Linie in Abbildung \ref{fig:nichtlinearität}.  
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.5\textwidth]{nichtlinearitat.png}
+		\includegraphics[width=0.5,scale=0.75\textwidth]{nichtlinearitat.png}
 	\caption{Längenänderung über Spannung}
 	\label{fig:nichtlinearität}
 \end{figure}
 
-\noindent Die intrinsische Nichtlinearität ist also ein Maß für die maximale Auslenkung des Stabes im Verhältnis zu der Auslenkung des Stabes bei fester Spannung. 
+\noindent Die intrinsische Nichtlinearität ist ein Maß für die maximale Abweichung von der linearen Ausdehnung des Piezokristalls bei gegebener Spannung. 
 
-\noindent Dieser Effekt spiegelt sich bei der Abtastung wieder, indem das abgefahrene Muster eine gewisse Verzerrung aufweist, statt einem Rasterschema wie in Abbildung \ref{fig:raster}.
-
-\begin{figure}
-	\centering
-		\includegraphics[width=0.5\textwidth]{raster.png}
-	\caption{Raster des Scanners}
-	\label{fig:raster}
-\end{figure}
-
-\noindent Die Reichweite einer typischen Nichtlinearität erstreckt sich von 2\% bis 25\%.
+\noindent Dieser Effekt spiegelt sich bei der Abtastung wider, da die Messpunkte nicht mehr im gleichen Abstand sind und deswegen eine gewisse Verzerrung auftritt.
 
 \subsubsection{Hysterese}
 Bei der Ausdehnung eines Piezokristalls unter Anlegen einer Spannung tritt Hysterese auf.
