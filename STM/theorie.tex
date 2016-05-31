@@ -6,12 +6,11 @@ Die Funktionsweise des Rastertunnelmikroskops basiert auf dem quantenmechanische
 
 \noindent Wird eine Spitze in die Nähe einer Probe gebracht, kann der Tunneleffekt für die Elektronen der Spitze oder für die der Probe eintreten, was davon abhänging ist, welches Vorzeichen die zwischen Probe und Spitze angelegte Spannung hat. Es entsteht ein Tunnelstrom, der gemessen werden kann.
 
-\noindent Die Sensitivität gegenüber dem Abstand wird in der Formel \eqref{strom} dargestellt. Darin fällt der Strom exponentiell mit dem Abdstand \(d\) .
+\noindent Die Sensitivität gegenüber dem Abstand wird in der Formel \eqref{strom}\cite{hopg} dargestellt. Darin fällt der Strom exponentiell mit dem Abdstand \(d\) .
 
 \begin{equation} 
 \label{strom}
 I_\text{T}=\frac{U}{d}\exp{(-Kd\sqrt{\Phi})},\quad K\approx1,025\frac{1}{\text{\r{A}}\text{eV}^\frac12}
-\cite{hopg}
 \end{equation}
 
 \noindent Daraus ergeben sich direkt die zwei Hauptschwierigkeiten dieses Versuchs. Zum einen muss der gesamte Versuchsaufbau bezüglich mechanischer Vibrationen in der Größenordnung von \(<1\)\,\r{A} gedämpft werden, da der Abstand \(d\approx0,5\)\,\r{A} \cite{hopg} anfällig auf sehr schwache Schwingungen ist.  
@@ -43,13 +42,13 @@ U_\text{LJ}(R)=4\epsilon\left[\frac{\sigma}{R}^{12}-\frac{\sigma}{R}^6\right]
 \noindent Bei diesem Versuch entstehen die Messunsicherheiten überwiegend aus den Eigenschaften von Piezokristallen. In diesem Kapitel werden die unterschiedlichen Fehlerquellen erläutert.
 
 \subsubsection{Intrinsische Nichtlinearität}
-Liegt eine Spannung an einem Piezokristall, ändert sich dessen Länge. Diese Änderung ist allerdings nicht linear, wie die gestrichelte Linie in Abbildung \ref{fig:nichtlinearität}.  
+Liegt eine Spannung an einem Piezokristall, ändert sich dessen Länge. Diese Änderung ist allerdings nicht linear, wie die gestrichelte Linie in Abbildung \ref{fig:nichtlinear}.  
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.5,scale=0.75\textwidth]{nichtlinearitat.png}
+		\includegraphics[width=0.5\textwidth]{nichtlinearitat.png}
 	\caption{Längenänderung über Spannung}
-	\label{fig:nichtlinearität}
+	\label{fig:nichtlinear}
 \end{figure}
 
 \noindent Die intrinsische Nichtlinearität ist ein Maß für die maximale Abweichung von der linearen Ausdehnung des Piezokristalls bei gegebener Spannung. 
