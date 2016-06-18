@@ -1,1 +1,52 @@
 \section{Auswertung}
+
+\subsection{Eichung des Elektromagneten}
+
+Die Messwerte zur Eichung des Elektromagneten sind in Tabelle \ref{tab:ib} dargestellt.
+
+Die Messreihe wurde durch eine Ursprungsgrade genähert.
+Die Fitfunktion lautet:
+
+\begin{align}
+	B = I \cdot \SI{58.9 \pm 0.5}{\milli \tesla \per \ampere}
+\end{align}
+
+Die Messwerte und der Fit sind in Abbildung \ref{fig:ib} geplottet.
+
+\begin{table}
+	\centering
+	\caption{Messreihe zur Eichung des Elektromagneten}
+	\label{tab:ib}
+	\sisetup{table-format=1.3}
+	\begin{tabular}{S S}
+		\toprule
+		$I / \mathrm{A}$ & $B / \mathrm{mT}$ \\
+		\midrule	
+		1  & 70\\ 
+		2 & 128\\ 
+		3 & 184\\ 
+		4 & 247\\ 
+		5 & 313\\ 
+		6 & 378\\ 
+		7 & 437\\ 
+		8 & 495\\ 
+		9 & 552\\ 
+		10 & 613\\ 
+		11 & 653\\ 
+		12 & 711\\ 
+		13 & 760\\ 
+		14 & 802\\ 
+		15 & 857\\ 
+		16 & 914\\
+	\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/ib.pgf}
+	}
+	\caption{Magnetfeld in Abhängigkeit des Spulenstroms}
+	\label{fig:ib}
+\end{figure}
