@@ -3,45 +3,41 @@
 \subsection{Eichung des Elektromagneten}
 
 Die Messwerte zur Eichung des Elektromagneten sind in Tabelle \ref{tab:ib} dargestellt.
-
-Die Messreihe wurde durch eine Ursprungsgrade genähert.
-Die Fitfunktion lautet:
-
-\begin{align}
-	B = I \cdot \SI{58.9 \pm 0.5}{\milli \tesla \per \ampere}
-\end{align}
-
-Die Messwerte und der Fit sind in Abbildung \ref{fig:ib} geplottet.
-
+Für den Strom wird ein Ablesefehler von \SI{0.2}{\ampere} angenommen.
+Die Hall-Sonde hat einen Fehler von \SI{0.5}{\percent}.
 \begin{table}
 	\centering
-	\caption{Messreihe zur Eichung des Elektromagneten}
-	\label{tab:ib}
-	\sisetup{table-format=1.3}
-	\begin{tabular}{S S}
+	\begin{tabular}{r r}
 		\toprule
 		$I / \mathrm{A}$ & $B / \mathrm{mT}$ \\
 		\midrule	
-		1  & 70\\ 
-		2 & 128\\ 
-		3 & 184\\ 
-		4 & 247\\ 
-		5 & 313\\ 
-		6 & 378\\ 
-		7 & 437\\ 
-		8 & 495\\ 
-		9 & 552\\ 
-		10 & 613\\ 
-		11 & 653\\ 
-		12 & 711\\ 
-		13 & 760\\ 
-		14 & 802\\ 
-		15 & 857\\ 
-		16 & 914\\
-	\bottomrule
+		1\pm 0.2 & 70\pm 0.35\\
+		2\pm 0.2 & 128\pm 0.64\\
+		3\pm 0.2 & 184\pm 0.92\\
+		4\pm 0.2 & 247\pm 1.23\\
+		5\pm 0.2 & 313\pm 1.56\\
+		6\pm 0.2 & 378\pm 1.89\\
+		7\pm 0.2 & 437\pm 2.18\\
+		8\pm 0.2 & 495\pm 2.47\\
+		9\pm 0.2 & 552\pm 2.76\\
+		10\pm 0.2 & 613\pm 3.06\\
+		11\pm 0.2 & 653\pm 3.26\\
+		12\pm 0.2 & 711\pm 3.55\\
+		13\pm 0.2 & 760\pm 3.80\\
+		14\pm 0.2 & 802\pm 4.01\\
+		15\pm 0.2 & 857\pm 4.28\\
+		16\pm 0.2 & 914\pm 4.57\\
+		\bottomrule
 	\end{tabular}
+	\caption{Messreihe zur Eichung des Elektromagneten}
+	\label{tab:ib}
 \end{table}
-
+Die Messreihe wurde durch eine Ursprungsgrade genähert.
+Die Fitfunktion lautet:
+\begin{align}
+	B = I \cdot \SI{60.8 \pm 0.8}{\milli \tesla \per \ampere}
+\end{align}
+Die Messwerte und der Fit sind in Abbildung \ref{fig:ib} geplottet.
 \begin{figure}
 	\centering
 	\resizebox{\pltwidth}{!}{
@@ -50,3 +46,18 @@ Die Messwerte und der Fit sind in Abbildung \ref{fig:ib} geplottet.
 	\caption{Magnetfeld in Abhängigkeit des Spulenstroms}
 	\label{fig:ib}
 \end{figure}
+Mit der Fitfunktion können nun die Feldstärken zu den verwendeten Stromstärken bestimmt werden.
+\begin{table}
+	\centering
+		\begin{tabular}{r r}
+		\toprule
+		$I / \mathrm{A}$ & $B / \mathrm{mT}$ \\
+		\midrule	
+		5\pm 0.2 & 304\pm 13\\
+		10\pm 0.2 & 608\pm 14\\
+		19\pm 0.2 & 1156\pm 19\\
+		\bottomrule
+	\end{tabular}
+	\caption{Verwendete Magnetfeldstärken}
+	\label{tab:b}
+\end{table}
