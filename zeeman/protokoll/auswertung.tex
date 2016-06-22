@@ -61,3 +61,48 @@ Mit der Fitfunktion können nun die Feldstärken zu den verwendeten Stromstärke
 	\caption{Verwendete Magnetfeldstärken}
 	\label{tab:b}
 \end{table}
+
+\subsection{Untersuchung der roten Spektrallinie}
+
+Mit der roten Spektrallinie der Cadmium-Lampe bei $\lambda = \SI{649,8}{\nano \meter}$ wird der normale Zeeman-Effekt untersucht.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/rot-0A.JPG}
+	\caption{Aufnahme der roten Spektrallinie, bei ausgeschaltetem Magnetfeld}
+	\label{fig:rot1}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/rot-10A-ortho.JPG}
+	\caption{Aufnahme der roten Spektrallinie, im \SI{600}{\milli \tesla} Magnetfeld und Polarisationsfilter orthogonal zum Magnetfeld}
+	\label{fig:rot2}
+\end{figure}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/rot-10A-parallel.JPG}
+	\caption{Aufnahme der roten Spektrallinie, im \SI{600}{\milli \tesla} Magnetfeld und Polarisationsfilter parallel zum Magnetfeld}
+	\label{fig:rot3}
+\end{figure}
+
+Die Verschiebung $\delta \lambda$ der Wellenlänge wird gemäß
+\begin{align}
+	\delta \lambda = \frac{1}{2} \frac{\delta s}{\Delta s} \cdot \Delta \lambda_\text{D}
+\end{align}
+für das Intereferenzmuster bestimmt.
+Dabei ist $\Delta s$ der Abstand der Linien im Interferenzmuster ohne Magnetfeld und $\delta s$ der Abstand der beiden $\sigma$-Linien einer Interferenzlinie.
+$\Delta \lambda_\text{D}$ ist das Dispersionsgebiet aus Gleichung \eqref{dispersionsgebiet}.
+Zu der Wellenlängendifferenz $\delta \lambda$ gehört die Energiedifferenz
+\begin{align}
+	\Delta E = \frac{\hbar c}{\lambda^2}\cdot \delta \lambda.
+\end{align}
+Der Energiewert der beiden $\sigma$-Linien ist durch \eqref{e_normal} gegeben.
+Mit $\Delta m_{\sigma-} = -1$ und $\Delta m_{\sigma+} = +1$ gemäß Abbildung \ref{fig:rot} ist der Theoriewert für $\Delta E$
+\begin{align}
+	\Delta E = E_{\sigma-} - E_{\sigma+} = 2 g_\text{J} \mu_\text{B} B.
+\end{align}
+Umgestellt nach dem Landé-Faktor lautet die Gleichung
+\begin{align}
+	g_\text{J} = \frac{\Delta E}{2 \mu_\text{B} B}.
+\end{align}
+Wie im Theorieteil beschrieben, ist der Landé-Faktor beim normalen Zeeman-Effekt $1$.
