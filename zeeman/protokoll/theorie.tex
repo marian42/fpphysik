@@ -127,3 +127,27 @@ Dabei ist $E_0$ die Energie der Spektrallinie, die ohne Magnetfeld beobachtet wi
 
 Die Abbildungen \ref{fig:rot} und \ref{fig:blau} zeigen das Termschema für die rote und blaue Linie des Cadmium-Spektrums, die in diesem Versuch untersucht werden sollen.
 Bei der mittleren Linie der blauen Linie ($m_1 = m_2 = 0$) tritt ein Sonderfall auf, bei dem diese Linie nicht beobachtet wird, obwohl sie nach den oben beschriebenen Auswahlregeln erwartet wird.
+
+\subsection{Lummer-Gehrcke-Platte}
+Um später die genaue Wellenlänge der aufgespaltenen Spektrallinien zu bestimmen, wird eine Lummer-Gehrcke-Platte verwendet.
+Der Lichtstrahl wird wird zwischen zwei planparallele Platten gelenkt und reflektiert an den Platten.
+Dabei verlässt ein Teil des Lichts die Platte.
+Die Lichtstrahlen, die bei den einzelnen Reflektionen entstehen, interferieren miteinander.
+Dies führt zu einem sehr hohen Auflösungsvermögen.
+
+Zwei Wellenlängen können nur aufgelöst werden, wenn die Differenz höchstens
+\begin{align}
+	\Delta \lambda_\text{D} = \frac{\lambda^2}{2 \cdot d} \cdot \sqrt{\frac{1}{n^2 - 1}}
+\end{align}
+beträgt.
+Diese Größe wird Dispersionsgebiet genannt.
+Dabei ist $\lambda$ die Wellenlänge der ursprünglich untersuchten Spektrallinie und $n$ der Brechungskoeffizient.
+Der Plattenabstand der Lummer-Gehrcke-Platte ist $d = \SI{4}{\milli \meter}$.
+
+Für die rote und blaue Linie der Cadmium-Lampe lässt sich das Dispersionsgebiet berechnen:
+\begin{align}
+	&\text{rot} & \quad &\text{blau} \\
+	\lambda &= \SI{643.8}{\nano \meter} & \quad \lambda &= \SI{480}{\nano \meter} \\
+	n &=  \SI{1.4567}{} & \quad n &= \SI{1.4635}{} \\
+	\Delta \lambda_\text{D} &= \SI{48.9}{\pico \meter} & \quad \Delta \lambda_\text{D} &= \SI{27.0}{\pico \meter}
+\end{align}
