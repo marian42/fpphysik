@@ -25,6 +25,6 @@ for i in range(len(Ds)):
 		"%.2f" % (g_J[i].nominal_value) + "\\pm" + "%.2f" % (g_J[i].std_dev) + "\\\\"
 	)
 
-mittelwert = np.mean(g_J)
+mittelwert = ufloat(np.mean([v.nominal_value for v in g_J]), np.std([v.nominal_value for v in g_J]))
 print(" ")
 print(mittelwert)
