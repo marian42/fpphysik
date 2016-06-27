@@ -1,3 +1,4 @@
+from scipy.stats import sem
 import numpy as np
 import matplotlib.pyplot as plt
 import math
@@ -21,10 +22,10 @@ def graph(figure, x, y, title, xlabel, ylabel, savefig):
 ############################
 ### Stabilitätsparameter ###
 ############################
-
+"""
 graph(1, L1 - 8.6, I1, "Resonatorabstand für $r_1=r_2=140\\mathrm{cm}$", '$L/\\mathrm{cm}$', "$I/\mu\\mathrm{A}$", "stabil1")
 graph(2, L2 - 8.6, I2, "Resonatorabstand für $r_1=\infty,r_2=140\\mathrm{cm}$", '$L/\\mathrm{cm}$', "$I/\mu\\mathrm{A}$", "stabil2")
-
+"""
 #################
 ### TEM-Moden ###
 #################
@@ -53,29 +54,34 @@ graph(4, d2, I4, "$\\mathrm{TEM}_{10}$", "$d/\\mathrm{mm}$", "$I/\mu\\mathrm{A}$
 ### Polarisation ###
 ####################
 
-def pol(x, a):
-    return a*(math.sin(x))**2
+def pol(x):
+    return a*(np.sin(x))**2
 
 params = curve_fit(pol, phi, I5)
-x_plot3 = np.linspace(np.min(phi), np.max(phi))
+x_plot3 = np.linspace(0, 360, 1e3)
 plt.figure(5)
 plt.plot(x_plot3, pol(x_plot3, *params), "r-", label="Fit")
 plt.legend(loc="best")
-graph(5, phi, I5, "Polarisationsmessung", "$\phi/°$", "$I/\mu\\mathrm{A}$", "pol")
+plt.show()
+#graph(5, phi, I5, "Polarisationsmessung", "$\phi/°$", "$I/\mu\\mathrm{A}$", "pol")
 
 ###################
 ### Wellenlänge ###
 ###################
-
-s = 200
-g = 80
-alpha1 = math.arctan(10/s)
-alpha2 = math.arctan(20/s)
-alpha3 = math.arctan(30.5/s)
+"""
+g = 1/80000 #Gitterkonstante in m
+alpha1 = math.atan(0.1/2)
+alpha2 = math.atan(0.2/2)
+alpha3 = math.atan(0.305/2)
 welle1 = g*math.sin(alpha1)
 welle2 = g*math.sin(alpha2)/2
 welle3 = g*math.sin(alpha3)/3
+welle = ([welle1, welle2, welle3])
 
 print(welle1)
 print(welle2)
 print(welle3)
+print(np.mean(welle))
+print(sem(welle))
+"""
+#eof
