@@ -1,12 +1,14 @@
 \section{Auswertung}
 \subsection{Stabiltät}
-\subsection{TEM-Moden}
-\subsection{Polarisation}
-\subsection{Wellenlänge}
+Die Stabilitätsbedingung ist gegeben durch:
 
-%%%%%%%%%%%%
-%%% TABELLEN %%%
-%%%%%%%%%%%%
+\begin{equation}
+0\le g_1g_2=1-\frac{L}{r_1}-\frac{L}{r_2}+\frac{L^2}{r_1r_2}<1\quad.
+\end{equation}
+
+Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktion gerade bei \(r_1\). Die Funktion wird für \(L_1=0\land L_2=2r_1\) gleich eins. Da die Funktion von null bis zur Nullstelle monoton fällt und ab da monoton steigt, ist das Intervall, auf dem der Resonator stabil ist gerade \(\mathbb{L}=(0,280)\).
+
+\noindent Die gemessenen Werte sind Tabelle \ref{tab:t1} zu entnehmen.
 
 \begin{table}[H]
 	\begin{center}
@@ -31,10 +33,31 @@
 			194             &943  \\
 			\bottomrule
 		\end{tabular}
-		\caption{Stabilitätsparameter für \(r_1=1,4\text{m}\), \(r_2=1,4\)cm}
-		\label{fig:t1}
+		\caption{Resonatorabstand für \(r_1=1,4\text{m}\), \(r_2=1,4\)cm}
+		\label{tab:t1}
 	\end{center}
 \end{table}
+
+\noindent Hierbei ist \(L+L_0\) der Abstand zwischen den Schienenaufsätzen der Spiegel, da es für die Messung einfacher ist, diese zu Messen; mit \(L_0=8,6\text{cm}\).
+
+\noindent Die graphische Darstellung von \(L\) gegen \(I\) ist in Abbildung \ref{fig:stabil1} gegeben.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.5\textwidth]{stabil1.png}
+	\caption{Resonatorabstand gegen Strom bei gleich gekrümmten Spiegeln}
+	\label{fig:stabil1}
+\end{figure}
+
+\noindent Für Spiegel mit den Krümmungsradien \(r_1\neq r_2\) ist die Nullstelle der Funktion bei \(L=r_1\lor L=r_2\). Die Funktion wird für \(L=r_1+r_2\) gleich eins. Da \(r_1=\infty\) ist (planarer Spiegel), vereinfacht sich die Bedingung zu:
+
+\begin{equation}
+0\le1-\frac{1}{r_2}L<1
+\end{equation}
+
+\noindent was eine Geradengleichung mit negativer Steigung ist. Daraus folgt direkt, dass die Bedingung für das Intervall \(\mathbb{L}=(0,140]\).
+
+\noindent Die gemessenen Werte sind Tabelle \ref{tab:t2} zu entnehmen.
 
 \begin{table}[H]
 	\begin{center}
@@ -50,11 +73,27 @@
 			105             &45 \\
 			\bottomrule
 		\end{tabular}
-		\caption{Stabilitätsparameter für \(r_1=\infty\text{m}\), \(r_2=1,4\)cm}
-		\label{fig:t2}
+		\caption{Resonatorabstand für \(r_1=\infty\text{m}\), \(r_2=1,4\)cm}
+		\label{tab:t2}
 	\end{center}
 \end{table}
 
+\noindent Die graphische Darstellung von \(L\) gegen \(I\) ist in Abbildung \ref{fig:stabil2} gegeben.
+
+\begin{figure}
+	\centering
+		\includegraphics[width=0.5\textwidth]{stabil2.png}
+	\caption{Resonatorabstand gegen Strom mit planarem Spiegel}
+	\label{fig:stabil2}
+\end{figure}
+
+\subsection{TEM-Moden}
+\subsection{Polarisation}
+\subsection{Wellenlänge}
+
+%%%%%%%%%%%%
+%%% TABELLEN %%%
+%%%%%%%%%%%%
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{c c}
