@@ -54,14 +54,18 @@ graph(4, d2, I4, "$\\mathrm{TEM}_{10}$", "$d/\\mathrm{mm}$", "$I/\mu\\mathrm{A}$
 ### Polarisation ###
 ####################
 
-def pol(x):
-    return a*(np.sin(x))**2
+def pol(x, a, b):
+    return a*(np.sin(x / 360 * 3.14159 * 2 - b))**2
 
-params = curve_fit(pol, phi, I5)
+params, covariance = curve_fit(pol, phi, I5)
+print(params[0])
 x_plot3 = np.linspace(0, 360, 1e3)
 plt.figure(5)
-plt.plot(x_plot3, pol(x_plot3, *params), "r-", label="Fit")
+plt.plot(x_plot3, pol(x_plot3, params[0], params[1]), "r-", label="Fit")
+plt.plot(phi, I5, "bx", label="Daten")
 plt.legend(loc="best")
+print(params)
+print(covariance)
 plt.show()
 #graph(5, phi, I5, "Polarisationsmessung", "$\phi/°$", "$I/\mu\\mathrm{A}$", "pol")
 
