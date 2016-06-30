@@ -44,7 +44,7 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.5\textwidth]{stabil1}
+	\includegraphics[width=0.5\textwidth]{plots/stabil1}
 	\caption{Resonatorabstand gegen Strom bei gleich gekrümmten Spiegeln}
 	\label{fig:stabil1}
 \end{figure}
@@ -82,12 +82,45 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 
 \begin{figure}
 	\centering
-		\includegraphics[width=0.5\textwidth]{stabil2.png}
+		\includegraphics[width=0.5\textwidth]{plots/stabil2}
 	\caption{Resonatorabstand gegen Strom mit planarem Spiegel}
 	\label{fig:stabil2}
 \end{figure}
 
 \subsection{TEM-Moden}
+Die Intensitätsverteilung der Grundmode wird durch eine Gaußverteilung beschrieben:
+
+\begin{equation}
+I(d)=I_0\cdot e^{-2\left(\frac{d-d_0}{w}\right)^2}
+\end{equation}
+
+\noindent Dabei ist \(d\) der Abstand zur optischen Achse und \(w\) der Strahlendurchmesser.
+
+\noindent Die Messwerte werden durch nichtlineare Ausgleichsrechnung and die theoretische Kurve angepasst. Für die Parameter ergibt sich dann:
+
+
+\begin{equation*}
+I_0=6,17\pm0,12
+\end{equation*}
+
+\begin{equation*}
+d_0=-3,79\pm0,12
+\end{equation*}
+
+\begin{equation*}
+w=10,58\pm0,24
+\end{equation*}
+
+\noindent Die Messwerte und die Ausgleichskurve ist in Abbildung \ref{fig:TEM00} dargestellt.
+
+\noindent Die Messwerte sind Tabelle \ref{tab:t5} zu entnehmen.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{plots/TEM00}
+	\caption{Messung der TEM\(_{00}\)-Mode}
+	\label{fig:TEM00}
+\end{figure}
 
 \begin{table}[H]
 	\begin{center}
@@ -127,6 +160,25 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 	\end{center}
 \end{table}
 
+\noindent Die theoretische Intensitätsverteilung für die TEM\(_{10}\)-Mode ist:
+
+\begin{equation}
+I_{10}(d)=I_0(d-d_0)^2\cdot e^{-2\left(\frac{d-d_0}{w}\right)^2}
+\end{equation}
+
+\noindent Die Parameter ergeben sich aus der nichtlinearen Ausgleichsrechnung.
+
+\noindent Die Messwerte und die Ausgleichskurve sind in Abbildung \ref{fig:TEM10} dargestellt. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{plots/TEM10}
+	\caption{Messung TEM\(_{10}\)-Mode}
+	\label{fig:TEM10}
+\end{figure}
+
+\noindent Die Messwerte sind Tabelle \ref{tab:t6} zu entnehmen.
+
 \begin{table}[H]
 	\begin{center}
 		\begin{tabular}{c c}
@@ -161,10 +213,36 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 \end{table}
 
 \subsection{Polarisation}
+Die gemessenen Werte werden in einem Diagramm aufgetragen und durch die theoretische Kurve angepasst. Diese hat folgende Gestalt:
 
-\begin{table}[H]
-	\begin{center}
-		\begin{tabular}{c c}
+\begin{equation}
+I=I_0\sin^2{(\phi-\phi_0)}\quad.
+\end{equation}
+
+\noindent Die nichtlineare Ausgleichsrechnung ergibt für die Parameter:
+
+\begin{equation*}
+I_0=453,37\pm8,31
+\end{equation*}
+
+\begin{equation*}
+\phi_0=-88,24\pm0,02
+\end{equation*}
+
+\noindent Die graphische Darstellung der Messwerte und der Ausgleichskurve sind Abbildung \ref{fig:pol} zu entnehmen.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{plots/pol}
+	\caption{Messung der Polarisation}
+	\label{fig:pol}
+\end{figure}
+
+\noindent Die Messwerte sind Tabelle \ref{tab:t4} zu entnehmen.
+
+\begin{longtable}[H]{c c}
+	%\begin{center}
+		%\begin{tabular}{c c}
 			\toprule
 			\(\phi\)/° & \(I\)/\(\mu\)A \\
 			\midrule
@@ -205,11 +283,11 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 			340     &2      \\                                                                                         
 			350     &3  	\\
 			\bottomrule
-		\end{tabular}
+		%\end{tabular}
 		\caption{Strom für verschiedene Winkel des Polfilters}
 		\label{tab:t4}
-	\end{center}
-\end{table}
+	%\end{center}
+\end{longtable}
 
 \subsection{Wellenlänge}
 Die Gitterkonstante des Gitters beträgt \(g=\frac{1}{80}\cdot10^{-3}\text{m}\), der Abstand von der Quelle zum Schirm beträgt \(s=2\text{m}\). Es wurde, um den Fehler zu minimieren, der Abstand \(d\) von Maximum zu Maximum gemessen und das bis zur dritten Ordnung.
