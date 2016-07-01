@@ -15,8 +15,8 @@ def graph(figure, x, y, title, xlabel, ylabel, savefig):
     plt.grid()
     plt.savefig(savefig + ".png")
 
-def TEM10(x, a, b, c):
-    return a*((x-c)**2)*math.e**(-2*(x-c)**2/b**2)
+def TEM10(x, a, b, c, d):
+    return a*((x-c)**2)*math.e**(-2*(x-d)**2/b**2)
 
 params2, covariance2 = curve_fit(TEM10, d2, I4)
 errors2 = np.sqrt(np.diag(covariance2))
