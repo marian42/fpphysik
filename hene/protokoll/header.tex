@@ -24,9 +24,6 @@
 % Erweiterungen für amsmath
 \usepackage{mathtools}
 
-% lange Tabellen (page-breaking)
-\usepackage{longtable}
-
 % Fonteinstellungen
 \usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX}
@@ -85,6 +82,9 @@
 \floatplacement{figure}{htbp}
 \floatplacement{table}{htbp}
 
+% lange Tabellen (page-breaking)
+\usepackage{longtable}
+
 % schöne Tabellen
 \usepackage{booktabs}
 
@@ -99,8 +99,9 @@
 \newcommand{\pltwidth}{13cm}
 
 % Literaturverzeichnis
-\usepackage{biblatex}
+\usepackage[backend=biber]{biblatex}
 % Quellendatenbank
+\bibliography{lit}
 \addbibresource{lit.bib}
 
 % Hyperlinks im Dokument
