@@ -1,8 +1,0 @@
-#Stabilitätsparameter: r_1=\infty, r_2=1.4m, L_0=8.6cm, L=106.4cm
-#L+L_0/cm	I/µA
-55		272
-65		291
-75		120
-85		150
-95		60
-105		45
