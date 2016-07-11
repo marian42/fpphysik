@@ -1,0 +1,73 @@
+Operationsverstärker:
+
+- gleichstromgekoppelter Differenzverstärker
+- Ausgangsspannung ist proportional zur Spannnungsdifferenz an den Eingängen
+- Aussteuerungsbereich:
+-> Bereich, bei dem das Eingangssignal linear verstärkt wird
+-> hierbei: festgelegt durch Betriebsspannungen
+- Außerhalb des Aussteuerungsbereiches, ist die Ausgangsspannung konstant auf dem Wert der Betriebsspannung
+
+(+) nicht-invertierender Eingang (in Phase zur Ausgangsspannung)
+(-) invertierender Eingang (gegenphasig zur Ausgangsspannung)
+
+real:
+- Leerlaufverstärkung V
+-> frequenzabhängig und V>>1
+
+- Eingangswiderstände r_e_p und r_e_N
+-> sehr große Werte
+
+- Ausgangswiderstand r_A
+-> sehr klein
+
+- Gleichtaktverstärkung V_GL
+-> relevant, wenn die Eingangsspannungen gleich sind
+-> wäre 0 beim idealen OP, beim realen ist jedoch ein endlicher Wert zu beobachten wegen Asymmetrien
+-> V_GL := (\Delta U_A)/(\Delta U_GL)
+
+- Eingangsruhestrom I_B
+-> I_B := 1/2 * (I_p + I_N)
+
+- Offsetstrom I_0
+-> I_0 := I_p - I_N (bei U_p=U_N=0)
+
+- Offsetspannung U_0
+-> Differenz der Eingangsspannungen sodass die Ausgsangsspannung 0 wird
+-> hängt von Temperatur, Zeit und Betriebgsspannung ab
+
+ideal:
+=> V=\infty, r_e=\infty, r_a=0
+
+####################################################################################
+
+3a) Linearverstärker
+- sehr schmaler Aussteuerungsbereich
+- zur Vergrößerung dient ein Gegenkopplungszweig (Zunahme von U_A bewirkt Abnahme von U_N)
+-> Ausgangsspannung wird teilweise auf den invertierenden Eingang zurückgegeben
+
+- Verstärkungsgrad hängt nur von Widerstandsverhältnis des Gegenkopplungszweiges ab
+-> gilt nicht für realen OP (wegen Leerlaufverstärkung, Eingangs-, Ausgangswiderstand)
+
+- Ausgangswiderstand wird um den Faktor g := V/V' verkleinert
+- Bandbreite des Verstärkerfrequenzgangs wird um g erhöht
+-> ermöglicht unverzerrte übetragung von Frequenzbändern, die um g vergrößert werden
+
+- Transitfrequenz: V'*B=const. (B ist die Bandbreite)
+-> Frequenz, bei der V auf 1 absinkt (unabh. von Gegenkopplung)
+
+- Nachteil des Linearverstärkers: geringer Eigenwiderstand => Verfälschung der Spannungsmessung bei hochohmigen Spannungsquellen
+- Elektrometerverstärker behebt diesen Nachteil
+
+
+3b) Umkehr-Integrator
+- Erhält man durch einbauen eines Kondensators in den Rückkopplungszweig
+- Integriert Eingangsspannung U_1
+- Bei Sinusspannung sind Integrator Ausgangsspannung und Frequenz antiproportional zueinander
+
+3c) Umkehr-Differentiator
+- Einsetzen des Kondensators an Stelle von R_1 beim Linearverstärker
+- Differenziert Eingangsspannung U_1
+- Bei Sinusspannung ist die Amplitude der Ausgangsspannung proportional zur Frequenz
+
+3d) OP als Schalter (Schmitt-Trigger)
+- 
