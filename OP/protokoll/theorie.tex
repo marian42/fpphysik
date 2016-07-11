@@ -1,1 +1,102 @@
 \section{Theorie}
+
+Der Operationsverstärker ist eine integrierte Schaltung, die aus mehreren Transistoren zusammen gesetzt ist.
+Der Name ergibt sich daraus, dass mit einem Operationsverstärker durch geschickte Beschaltung eine Vielzahl mathematischer Operationen realisiert werden kann.
+
+Die Ausgangsspannung ergibt sich aus der Differenz der Eingangsspannungen, die verstärkt und auf die Betriebsspannungen begrenzt ist.
+
+\subsection{Der ideale Operationsverstärker}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/op.png}
+	\caption{Schaltsymbol des Operationsverstärkers \cite{v51}}
+	\label{fig:op}
+\end{figure}
+
+Das Schaltbild eines Operationsverstärkers is in Abbildung \ref{fig:op} dargestellt.
+Der OP hat zwei Eingänge, an denen die Spannungen $U_p$ und $U_N$ anliegen.
+Die Spannung am Ausgang heißt $U_A$.
+An zwei weiteren Eingängen wird die positive und negative Betriebsspannung $U_B$ angelegt.
+
+Die Ausgangsspannung ist die verstärkte Differenz der Eingangsspannungen, also
+\begin{align}
+	U_A = V \left(U_p - U_N\right).
+\end{align}
+Dabei ist $V$ die Leerlaufverstärkung.
+Eine Erhöhung von $U_n$ führt zu einer Verringerung der Ausgangsspannung.
+Deswegen wird der Eingang von $U_n$ auch invertierender Eingang genannt.
+Der andere Eingang heißt entsprechend nicht-invertierender Eingang.
+
+Die Ausgangsspannung ist auf die Höhe der Betriebsspannung begrenzt, das heißt:
+\begin{align}
+	-U_B < U_A < U_B
+\end{align}
+
+Daraus ergibt sich die Kennlinie des Operationsverstärkers, die in Abbildung \ref{fig:kennlinie} dargestellt ist.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/kennlinie.png}
+	\caption{Kennlinie des Operationsverstärkers \cite{v51}}
+	\label{fig:kennlinie}
+\end{figure}
+
+Beim idealen Bauteil ist $V \rightarrow \infty$.
+Folglich nimmt die Ausgangsspannung immer $\pm U_B$ an und der OP arbeitet als Komparator.
+Weiterhin fließt beim idealen Bauteil kein Strom in die Eingänge.
+Dies entspricht einem unendlich großen Eingangswiderstand $r_e$.
+Der Ausgang hingegen kann einen beliebig großen Strom liefern, entsprechend eines Ausgangswiderstands $r_a$ von $0$.
+
+\subsection{Der reale Operationsverstärker}
+
+Beim realen Operationsverstärker nehmen die Leerlaufverstärkung, die Eingangswiderstände und der Ausgangswiderstand endliche Werte an.
+Es gibt einige weitere Effekte, die im Folgenden beschrieben werden.
+
+\subsubsection{Gleichtaktverstärkung}
+Die Gleichtaktverstärkung ist die Spannung, die am Ausgang gemessen wird, wenn an beiden Eingängen die gleiche Spannung $U_{Gl}$ angelegt wird.
+Sie ist idealerweise $0$.
+\begin{align}
+	V_{Gl} = \frac{\Delta U_A}{\Delta U_{Gl}}
+\end{align}
+
+\subsubsection{Eingangswiderstand}
+
+Da die Eingangswiderstände nicht unendlich sind, fließen in die Eingänge die Ströme $I_p$ und $I_N$.
+Der Differenzeingangswiderstand wird definiert als
+\begin{align}
+	r_D =
+	\begin{cases}
+		\frac{\Delta U_p}{\Delta I_p} \quad & \text{für} \quad U_n = 0\\
+		\frac{\Delta U_N}{\Delta I_N} \quad & \text{für} \quad U_p = 0
+	\end{cases}
+\end{align}
+und der Gleichtakteingangswiderstand als 
+\begin{align}
+	r_{Gl} = \frac{\Delta U_{Gl}}{\Delta I_{Gl}},
+\end{align}
+mit $Up = U_N = U_{Gl}$ und $I_{Gl} = I_p + I_N$.
+
+\subsubsection{Offsetspannung}
+Legt man am realen OP an beiden Eingängen die Spannung $0$ an, ist die Ausgangsspannung nicht wie erwartet $0$.
+Die Offsetspannung ist definiert als die Differenz der Eingangsspannungen wenn die Ausgangsspannung $0$ ist.
+\begin{align}
+	U_0 = U_p - U_N
+\end{align}
+Diese Größe ist von äußeren Faktoren wie der Temperatur, der Zeit und den Betriebsspannungen abhängig.
+
+\subsection{Schaltungen mit Operationsverstärkern}
+
+\subsubsection{Linearverstärker}
+
+\subsubsection{Umkehr-Integrierer}
+
+\subsubsection{Umkehr-Differenzierer}
+
+\subsubsection{Schmitt-Trigger}
+
+\subsubsection{Oszillator}
+
+\subsubsection{Sinusgenerator}
+
+\subsubsection{Logarithmierer und Exponenzierer}
+
