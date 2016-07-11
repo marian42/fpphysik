@@ -1,9 +1,9 @@
 \section{Theorie}
 
-Der Operationsverstärker ist eine integrierte Schaltung, die aus mehreren Transistoren zusammen gesetzt ist.
-Der Name ergibt sich daraus, dass mit einem Operationsverstärker durch geschickte Beschaltung eine Vielzahl mathematischer Operationen realisiert werden kann.
+Der Operationsverstärker ist eine integrierte Schaltung, die aus mehreren Transistoren zusammengesetzt ist.
+Der Name ergibt sich daraus, dass mit einem Operationsverstärker durch geschickte Beschaltung eine Vielzahl mathematischer Operationen realisiert werden können.
 
-Die Ausgangsspannung ergibt sich aus der Differenz der Eingangsspannungen, die verstärkt und auf die Betriebsspannungen begrenzt ist.
+Die Ausgangsspannung ist die Differenz der Eingangsspannungen, die verstärkt und auf die Betriebsspannungen begrenzt ist.
 
 \subsection{Der ideale Operationsverstärker}
 
@@ -25,7 +25,7 @@ Die Ausgangsspannung ist die verstärkte Differenz der Eingangsspannungen, also
 \end{align}
 Dabei ist $V$ die Leerlaufverstärkung.
 Eine Erhöhung von $U_n$ führt zu einer Verringerung der Ausgangsspannung.
-Deswegen wird der Eingang von $U_n$ auch invertierender Eingang genannt.
+Deswegen wird der Eingang von $U_n$ invertierender Eingang genannt.
 Der andere Eingang heißt entsprechend nicht-invertierender Eingang.
 
 Die Ausgangsspannung ist auf die Höhe der Betriebsspannung begrenzt, das heißt:
@@ -86,7 +86,7 @@ Diese Größe ist von äußeren Faktoren wie der Temperatur, der Zeit und den Be
 
 \subsection{Schaltungen mit Operationsverstärkern}
 
-\subsubsection{Linearverstärker}
+\subsubsection{Linearverstärker und Rückkopplung}
 
 \begin{figure}
 	\centering
@@ -94,6 +94,46 @@ Diese Größe ist von äußeren Faktoren wie der Temperatur, der Zeit und den Be
 	\caption{Gegengekoppelter invertierender Linearverstärker \cite{v51}}
 	\label{fig:linamp}
 \end{figure}
+
+Aufgrund der hohen Leerlaufverstärkung des Operationsverstärkers ist der Spannungsbereich, in dem der OP selbst als Verstärker eingesetzt werden kann, sehr klein.
+
+Eine bessere Verstärkung wird erreicht, wenn der OP in Gegenkopplung betrieben wird.
+Dazu wird der Ausgang über einen Widerstand an den invertierenden Eingang angeschlossen.
+Das Anschließen an den nicht-invertierenden Eingang wird entsprechend Mitkopplung genannt.
+Die Gegenkopplung führt dazu, dass eine positive Spannungsdifferenz der Eingänge zu einer Verringerung von $U_A$, und über die Rückkopplung auch von $U_N$.
+Dies führt dazu, dass die Differenz von $U_p$ und $U_N$ verschwindet.
+Für rückgekoppelte Operationsverstärker gilt allgemein, dass die beiden Eingänge auf dem gleichen Potenzial liegen.
+
+Beim Linearverstärker, der in Abbildung \ref{fig:linamp} dargestellt ist, liegen folglich beide Eingänge auf Masse.
+Es folgt
+\begin{align}
+	U_1 &= U_{R_1} \quad \text{und} \\
+	U_A &= U_{R_N}.
+\end{align}
+
+Aufgrund des hohen Eingangswiderstands des OPs wird der Strom $I_N$ vernachlässigt.
+Die Ströme durch $R_1$ und $R_N$ sind gleich.
+\begin{align}
+	I_{R_1} = I_{R_N} \\
+	\frac{U_1}{R_1} = \frac{U_A}{R_N} \\
+	V' = \frac{U_A}{U_1} = \frac{R_N}{R_1}
+\end{align}
+
+Die Verstärkung des gesamten Schaltkreises $V'$ ist somit nur noch von den beiden verwendeten Widerständen abhängig.
+
+Die vorherigen Berechnungen wurden unter Annahme eines idealen OPs gemacht.
+Für das reale Bauteil gilt aufgrund der endlichen Leerlaufverstärkung $V$:
+\begin{align}
+	U_N = -\frac{U_A}{V}
+\end{align}
+Die beiden Widerstände stellen einen Spannungsteiler dar und es gilt
+\begin{align}
+	\frac{U_{R_N} - U_1}{U_A - U_1} = \frac{R_1}{R_1 + R_N}.
+\end{align}
+Daraus ergibt sich für die Gesamtverstärkung
+\begin{align}
+	\frac{1}{V'} = \frac{U_1}{U_A} = \frac{1}{V} + \frac{R_1}{R_N} \left(1 + \frac{1}{V}\right) \approx \frac{1}{V} + \frac{R_1}{R_N}.
+\end{align}
 
 \subsubsection{Umkehr-Integrierer}
 
