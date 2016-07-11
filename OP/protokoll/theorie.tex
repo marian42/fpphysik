@@ -84,7 +84,7 @@ Die Offsetspannung ist definiert als die Differenz der Eingangsspannungen wenn d
 \end{align}
 Diese Größe ist von äußeren Faktoren wie der Temperatur, der Zeit und den Betriebsspannungen abhängig.
 
-\subsection{Schaltungen mit Operationsverstärkern}
+\subsubsection{Schaltungen mit Operationsverstärkern}
 
 \subsubsection{Linearverstärker und Rückkopplung}
 
@@ -102,7 +102,7 @@ Dazu wird der Ausgang über einen Widerstand an den invertierenden Eingang anges
 Das Anschließen an den nicht-invertierenden Eingang wird entsprechend Mitkopplung genannt.
 Die Gegenkopplung führt dazu, dass eine positive Spannungsdifferenz der Eingänge zu einer Verringerung von $U_A$, und über die Rückkopplung auch von $U_N$.
 Dies führt dazu, dass die Differenz von $U_p$ und $U_N$ verschwindet.
-Für rückgekoppelte Operationsverstärker gilt allgemein, dass die beiden Eingänge auf dem gleichen Potenzial liegen.
+Für gegengekoppelte Operationsverstärker gilt allgemein, dass die beiden Eingänge auf dem gleichen Potenzial liegen.
 
 Beim Linearverstärker, der in Abbildung \ref{fig:linamp} dargestellt ist, liegen folglich beide Eingänge auf Masse.
 Es folgt
@@ -135,6 +135,9 @@ Daraus ergibt sich für die Gesamtverstärkung
 	\frac{1}{V'} = \frac{U_1}{U_A} = \frac{1}{V} + \frac{R_1}{R_N} \left(1 + \frac{1}{V}\right) \approx \frac{1}{V} + \frac{R_1}{R_N}.
 \end{align}
 
+\subsection{Elektrometerverstärker}
+TODO
+
 \subsubsection{Umkehr-Integrierer}
 
 \begin{figure}
@@ -143,6 +146,21 @@ Daraus ergibt sich für die Gesamtverstärkung
 	\caption{Umkehr-Integrierer \cite{v51}}
 	\label{fig:int}
 \end{figure}
+
+Die in Abbildung \ref{fig:int} dargestellte Schaltung kann als Integrierer verwendet werden.
+Da die Eingänge auf dem gleichen Potenzial liegen, gilt analog zum Linearverstärker
+\begin{align}
+	U_R = U_C.
+\end{align}
+Die Strom-Spannungs-Beziehung des Kondensators lässt sich darstellen als
+\begin{align}
+	\int I_C \text{d}t = C U_A.
+\end{align}
+Für die Ausgangsspannung gilt
+\begin{align}
+	U_A = -\frac{1}{RC} \int U_1 \text{d}t.
+\end{align}
+
 
 \subsubsection{Umkehr-Differenzierer}
 
@@ -153,7 +171,38 @@ Daraus ergibt sich für die Gesamtverstärkung
 	\label{fig:diff}
 \end{figure}
 
+Die in Abbildung \ref{fig:diff} dargestellte Schaltung differenziert das Eingangssignal.
+Im Gegensatz zum Integrierer wird der Kondensator am Eingang angeschlossen.
+Beim Kondensator gilt
+\begin{align}
+	I_C = C \frac{\text{d}}{\text{d}t} U_1.
+\end{align}
+Das Ausgangssignal ist
+\begin{align}
+	U_A = -RC \frac{\text{d}}{\text{d}t} U_1.
+\end{align}
+
 \subsubsection{Schmitt-Trigger}
+
+Anders als bei den vorherigen Schaltungen wird der Ausgang des Operationsverstärkers beim Schmitt-Trigger auf den nicht-invertierenden Eingang zurückgeführt.
+Es findet also Mitkopplung statt.
+Ist die Differenz der Eingangsspannungen positiv, wird auch die Ausgangsspannung positiv und vergrößert weiterhin die Differenz.
+Der OP nimmt also immer die positive oder negative Eingangsspannung an.
+
+Der Schmitt-Trigger ist in Abbildung \ref{fig:schmitt} dargestellt.
+
+Beim Schmitt-Trigger lässt sich ein Hysterese-Effekt beobachten.
+Die Umschaltschwelle ist unterschiedlich für die beiden Schaltzustände.
+
+Um die Schwellenspannung zu bestimmen, soll der Umschlagfall betrachtet werden, bei dem die Differenzspannung grade $0$ ist, also $U_p = U_N$.
+Beide Eingänge liegen somit auf Masse.
+Da die Eingangsspannung 0 ist, können wieder die Ströme gleichgesetzt werden.
+
+\begin{align}
+	I_{R_1} = I_{R_p} \\
+	\frac{U_S}{R_1} = \frac{\pm U_B}{R_p} \\
+	U_S = \pm \frac{R_1}{R_p}U_B
+\end{align}
 
 \begin{figure}
 	\centering
@@ -171,6 +220,12 @@ Daraus ergibt sich für die Gesamtverstärkung
 	\label{fig:oszi}
 \end{figure}
 
+Die in Abbildung \ref{fig:oszi} dargestellte Schaltung generiert ein Dreieckssignal.
+Die Schaltung ist eine Zusammensetzung aus einem Schmitt-Trigger und einem Integrierer.
+Da der Schmitt-Trigger in einem seiner beiden Zustände anfängt, wird in den Integrierer ein konstantes Signal gegeben.
+Das Integral des konstanten Signals ist eine linear ansteigende bzw. abfallende Spannung.
+Überschreitet das Signal die Schwelle des Schmitt-Triggers, schaltet dieser um und die Richtung der Steigung wird umgekehrt.
+
 \subsubsection{Sinusgenerator}
 
 \begin{figure}
@@ -179,6 +234,11 @@ Daraus ergibt sich für die Gesamtverstärkung
 	\caption{Schaltung für ein gedämpftes Sinussignal \cite{v51}}
 	\label{fig:sin}
 \end{figure}
+
+Die in Abbildung \ref{fig:sin} dargestellte Schaltung generiert ein Sinussignal.
+Die Schaltung ist zusammengesetzt aus zwei Integrierern und einem Linearverstärker.
+
+TODO
 
 \subsubsection{Logarithmierer und Exponenzierer}
 
