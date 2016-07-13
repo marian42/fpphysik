@@ -208,6 +208,29 @@ Da die Eingangsspannung 0 ist, können wieder die Ströme gleichgesetzt werden.
 	\label{fig:schmitt}
 \end{figure}
 
+
+\subsubsection{Exponenzierer}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.5\textwidth]{img/exp.png}
+	\caption{Exponenzierer \cite{v51}}
+	\label{fig:exp}
+\end{figure}
+
+Eine Diode hat eine nicht-lineare Kennlinie.
+Die Strom-Spannung-Beziehung lautet
+\begin{align}
+	I = I_0 \left( e^{\frac{e_0}{kT}U} - 1 \right) \approx I_0 e^{\frac{e_0}{kT} U} \quad \text{für große U.}
+	\label{diode}
+\end{align}
+
+Analog zu den bisherigen rückgekoppelten Operationsverstärkerschaltungen gilt für die Ausgangsspannung:
+\begin{align}
+	U_A = R I = R I_0 e^{\frac{e_0}{kT} U_1}
+\end{align}
+Die Schaltung zum Exponenzierer ist in Abbildung \ref{fig:exp} dargestellt.
+
 \subsubsection{Logarithmierer}
 
 \begin{figure}
@@ -217,11 +240,16 @@ Da die Eingangsspannung 0 ist, können wieder die Ströme gleichgesetzt werden.
 	\label{fig:log}
 \end{figure}
 
-\subsubsection{Exponenzierer}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{img/exp.png}
-	\caption{Exponenzierer \cite{v51}}
-	\label{fig:ep}
-\end{figure}
+Die Diodenkennlinie \eqref{diode} ist äquivalent zu
+\begin{align}
+	U = \frac{kT}{e_0} \ln \frac{I}{I_0}.
+\end{align}
+Der Strom in der Schaltung in Abbildung \ref{fig:log} beträgt
+\begin{align}
+	I = \frac{U_e}{R}.
+\end{align}
+Somit lautet die Ausgangsspannung
+\begin{align}
+	U_a = \frac{kT}{e_0} \ln \frac{U_e}{I_0 R}.
+\end{align}
+Die dargestellte Schaltung bildet also einen Logarithmierer ab.
