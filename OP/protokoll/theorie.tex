@@ -135,9 +135,6 @@ Daraus ergibt sich für die Gesamtverstärkung
 	\frac{1}{V'} = \frac{U_1}{U_A} = \frac{1}{V} + \frac{R_1}{R_N} \left(1 + \frac{1}{V}\right) \approx \frac{1}{V} + \frac{R_1}{R_N}.
 \end{align}
 
-\subsection{Elektrometerverstärker}
-TODO
-
 \subsubsection{Umkehr-Integrierer}
 
 \begin{figure}
@@ -211,36 +208,7 @@ Da die Eingangsspannung 0 ist, können wieder die Ströme gleichgesetzt werden.
 	\label{fig:schmitt}
 \end{figure}
 
-\subsubsection{Oszillator}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{img/oszi.png}
-	\caption{Dreiecks- und Rechteckgenerator \cite{v51}}
-	\label{fig:oszi}
-\end{figure}
-
-Die in Abbildung \ref{fig:oszi} dargestellte Schaltung generiert ein Dreieckssignal.
-Die Schaltung ist eine Zusammensetzung aus einem Schmitt-Trigger und einem Integrierer.
-Da der Schmitt-Trigger in einem seiner beiden Zustände anfängt, wird in den Integrierer ein konstantes Signal gegeben.
-Das Integral des konstanten Signals ist eine linear ansteigende bzw. abfallende Spannung.
-Überschreitet das Signal die Schwelle des Schmitt-Triggers, schaltet dieser um und die Richtung der Steigung wird umgekehrt.
-
-\subsubsection{Sinusgenerator}
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.5\textwidth]{img/sinus.png}
-	\caption{Schaltung für ein gedämpftes Sinussignal \cite{v51}}
-	\label{fig:sin}
-\end{figure}
-
-Die in Abbildung \ref{fig:sin} dargestellte Schaltung generiert ein Sinussignal.
-Die Schaltung ist zusammengesetzt aus zwei Integrierern und einem Linearverstärker.
-
-TODO
-
-\subsubsection{Logarithmierer und Exponenzierer}
+\subsubsection{Logarithmierer}
 
 \begin{figure}
 	\centering
@@ -248,6 +216,8 @@ TODO
 	\caption{Logarithmierer \cite{v51}}
 	\label{fig:log}
 \end{figure}
+
+\subsubsection{Exponenzierer}
 
 \begin{figure}
 	\centering
