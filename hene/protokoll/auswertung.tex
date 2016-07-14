@@ -21,19 +21,19 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 			74             & 899\\
 			84              &845\\
 			94              &850\\
-			104             &840 \\                                                                                    
-			114             &711   \\                                                                                  
-			124             &387     \\                                                                                
-			134             &509       \\                                                                              
-			144             &360         \\                                                                            
-			154             &410           \\                                                                          
-			164             &684             \\                                                                        
-			174             &756               \\                                                                      
-			184             &528                 \\                                                                    
-			194             &943  \\
+			104             &840\\                                                                                    
+			114             &711\\                                                                                  
+			124             &387\\                                                                                
+			134             &509\\                                                                              
+			144             &360\\                                                                            
+			154             &410\\                                                                          
+			164             &684\\                                                                        
+			174             &756\\                                                                      
+			184             &528\\                                                                    
+			194             &943\\
 			\bottomrule
 		\end{tabular}
-		\caption{Resonatorabstand für \(r_1=1,4\text{m}\), \(r_2=1,4\)cm}
+		\caption{Resonatorlänge und Photostrom für \(r_1=1,4\)m, \(r_2=1,4\)m}
 		\label{tab:t1}
 	\end{center}
 \end{table}
@@ -45,11 +45,13 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 \begin{figure}
 	\centering
 	\includegraphics[width=0.5\textwidth]{plots/stabil1}
-	\caption{Resonatorabstand gegen Strom bei gleich gekrümmten Spiegeln}
+	\caption{Resonatorlänge gegen Strom bei gleich gekrümmten Spiegeln \(r_1=r_2=1,4\)m}
 	\label{fig:stabil1}
 \end{figure}
 
-\noindent Für Spiegel mit den Krümmungsradien \(r_1\neq r_2\) ist die Nullstelle der Funktion bei \(L=r_1\lor L=r_2\). Die Funktion wird für \(L=r_1+r_2\) gleich eins. Da \(r_1=\infty\) ist (planarer Spiegel), vereinfacht sich die Bedingung zu:
+\noindent Für Spiegel mit den Krümmungsradien \(r_1\neq r_2\) ist die Nullstelle der Funktion bei \(L=r_1\lor L=r_2\). Die Funktion wird für \(L=r_1+r_2\) gleich eins.
+
+\noindent Da bei der zweiten Spiegelkombination \(r_1=\infty\) ist (planarer Spiegel), vereinfacht sich die Bedingung zu:
 
 \begin{equation}
 0\le1-\frac{1}{r_2}L<1
@@ -65,15 +67,15 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 			\toprule
 			\(L+L_0\)/cm & \(I\)/\(\mu\)A \\
 			\midrule
-			55              &272          \\                                                                           
-			65              &291        \\                                                                             
-			75              &120      \\                                                                               
-			85              &150    \\                                                                                 
-			95              &60    \\                                                                                  
-			105             &45 \\
+			55              &272\\                                                                           
+			65              &291\\                                                                             
+			75              &120\\                                                                               
+			85              &150\\                                                                                 
+			95              &60\\                                                                                  
+			105             &45\\
 			\bottomrule
 		\end{tabular}
-		\caption{Resonatorabstand für \(r_1=\infty\text{m}\), \(r_2=1,4\)cm}
+		\caption{Resonatorlänge und Photostrom für \(r_1=\infty\)m, \(r_2=1,4\)m}
 		\label{tab:t2}
 	\end{center}
 \end{table}
@@ -83,7 +85,7 @@ Für Spiegel mit den Krümmungsradien \(r_1=r_2\) ist die Nullstelle der Funktio
 \begin{figure}
 	\centering
 		\includegraphics[width=0.5\textwidth]{plots/stabil2}
-	\caption{Resonatorabstand gegen Strom mit planarem Spiegel}
+	\caption{Strom gegen Resonatorlänge mit planarem Spiegel \(r_1=\infty\)m, \(r_2=1,4\)m}
 	\label{fig:stabil2}
 \end{figure}
 
@@ -96,7 +98,7 @@ I(d)=I_0\cdot e^{-2\left(\frac{d-d_0}{w}\right)^2}
 
 \noindent Dabei ist \(d\) der Abstand zur optischen Achse und \(w\) der Strahlendurchmesser.
 
-\noindent Die Messwerte werden durch nichtlineare Ausgleichsrechnung and die theoretische Kurve angepasst. Für die Parameter ergibt sich dann:
+\noindent Die theoretische Kurve wird durch nichtlineare Ausgleichsrechnung and die Messwerte angepasst. Für die Parameter ergibt sich dann:
 
 
 \begin{equation*}
@@ -111,7 +113,7 @@ d_0=-3,79\pm0,12
 w=10,58\pm0,24
 \end{equation*}
 
-\noindent Die Messwerte und die Ausgleichskurve ist in Abbildung \ref{fig:TEM00} dargestellt.
+\noindent Die Messwerte und die Ausgleichskurve sind in Abbildung \ref{fig:TEM00} dargestellt.
 
 \noindent Die Messwerte sind Tabelle \ref{tab:t5} zu entnehmen.
 
@@ -129,19 +131,19 @@ w=10,58\pm0,24
 			\(d\)/mm & \(I\)/\(\mu\)A \\
 			\midrule
 			-15  &  0,46\\                                                                                            
-			-14     &0,77  \\                                                                                          
-			-13     &1,21    \\                                                                                        
-			-12     &1,68      \\                                                                                      
-			-11     &2,17        \\                                                                                    
-			-10     &3,08          \\                                                                                  
-			-9      &3,93             \\                                                                               
-			-8      &4,56               \\                                                                             
-			-7      &5,42                 \\
-			-6      &5,80                   \\                                                                         
-			-5      &6,61                     \\                                                                       
-			-4      &5,88                       \\                                                                     
-			-3      &6,01                         \\                                                                   
-			-2      &5,33                           \\
+			-14     &0,77\\                                                                                          
+			-13     &1,21\\                                                                                        
+			-12     &1,68\\                                                                                      
+			-11     &2,17\\                                                                                    
+			-10     &3,08\\                                                                                  
+			-9      &3,93\\                                                                               
+			-8      &4,56\\                                                                             
+			-7      &5,42\\
+			-6      &5,80\\                                                                         
+			-5      &6,61\\                                                                       
+			-4      &5,88\\                                                                     
+			-3      &6,01\\                                                                   
+			-2      &5,33\\
 			-1      &4,93\\
 			0       &5,27\\
 			1       &3,60\\
@@ -155,7 +157,7 @@ w=10,58\pm0,24
 			9       &0,29\\
 			\bottomrule
 		\end{tabular}
-		\caption{\(\text{TEM}_{00} Grundmode\)}
+		\caption{Position der Photodiode bei transversaler Verschiebung und zugehörigem Photostrom}
 		\label{tab:t5}
 	\end{center}
 \end{table}
@@ -163,7 +165,7 @@ w=10,58\pm0,24
 \noindent Die theoretische Intensitätsverteilung für die TEM\(_{10}\)-Mode ist:
 
 \begin{equation}
-I_{10}(d)=I_0(d-d_0)^2\cdot e^{-2\left(\frac{d-d_0}{w}\right)^2}
+I_{10}(d)=I_0(d-d_0)^2\cdot e^{-2\left(\frac{d-d_1}{w}\right)^2}
 \end{equation}
 
 \noindent Die Parameter ergeben sich aus der nichtlinearen Ausgleichsrechnung.
@@ -178,6 +180,10 @@ w=(10,052\pm0,235)
 
 \begin{equation*}
 d_0=(-2,480\pm0,186)
+\end{equation*}
+
+\begin{equation*}
+d_1=(-3,49\pm0,18)
 \end{equation*}
 
 \noindent Die Messwerte und die Ausgleichskurve sind in Abbildung \ref{fig:TEM10} dargestellt. 
@@ -219,7 +225,7 @@ d_0=(-2,480\pm0,186)
 			14      &0,04\\
 			\bottomrule
 		\end{tabular}
-		\caption{\(\text{TEM}_{10} Mode\)}
+		\caption{Position der Photodiode bei transversaler Verschiebung und zugehörigem Photostrom}
 		\label{tab:t6}
 	\end{center}
 \end{table}
@@ -291,12 +297,12 @@ I_0=453,37\pm8,31
 			300     &200\\
 			310     &127\\
 			320     &60\\
-			330     &23  \\                                                                                            
-			340     &2      \\                                                                                         
-			350     &3  	\\
+			330     &23\\                                                                                            
+			340     &2\\                                                                                         
+			350     &3\\
 			\bottomrule
 		%\end{tabular}
-		\caption{Strom für verschiedene Winkel des Polfilters}
+		\caption{Photostrom für verschiedene Winkel des Polfilters}
 		\label{tab:t4}
 	%\end{center}
 \end{longtable}
@@ -318,9 +324,9 @@ Die Gitterkonstante des Gitters beträgt \(g=\frac{1}{80}\cdot10^{-3}\text{m}\),
 			\toprule
 			Ordnung & \(d/\)m & \(\lambda/\)nm \\
 			\midrule
-			1 & 20 & 624,2 \\
-			2 & 40 & 621,8 \\
-			3 & 61 & 628,2 \\
+			1 & 20 & 624,2\\
+			2 & 40 & 621,8\\
+			3 & 61 & 628,2\\
 			\bottomrule
 		\end{tabular}
 		\caption{Messwerte des Interferenzmusters}
@@ -331,5 +337,5 @@ Die Gitterkonstante des Gitters beträgt \(g=\frac{1}{80}\cdot10^{-3}\text{m}\),
 \noindent Die Wellenlänge ergibt sich daraus zu
 
 \begin{equation*}
-\lambda=(624,8\pm1,8)\cdot10^{-9}\quad.
+\lambda=(624,8\pm1,8)\text{nm}.
 \end{equation*}
