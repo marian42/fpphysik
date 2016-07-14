@@ -1,0 +1,4 @@
+Aufgabe f)
+R_p = 100 k\Ohm,	R_1 = 960\Ohm
+U_{1\text{kipp}} = 203mV
+2U_B = 139V
