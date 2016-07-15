@@ -1,1 +1,148 @@
 \section{Auswertung}
+
+\subsection{Verstärkungsfaktor des Linearverstärkers}
+
+Bei diesem Versuchsteil wurde ein Linearverstärker gemäßt Schaltung \ref{fig:linamp} aufgebaut.
+Es wurden Messreihen von vier Konfigurationen von Widerständen gemessen.
+Die Messreihen wurden bei
+\begin{align}
+	R_1 &= \SI{100}{\ohm} \\
+	U_1 &= \SI{100}{\milli \volt}
+\end{align}
+aufgenommen.
+Tabelle \ref{tab:rn} zeigt die verwendeten Widerstände $R_N$.
+\begin{table}
+	\centering
+	\begin{tabular}{c r}
+		\toprule
+		Messung & $R_N$ \\
+		\midrule
+		1 & \SI{1}{\kilo \ohm} \\
+		2 & \SI{330}{\ohm} \\
+		3 & \SI{10}{\kilo \ohm} \\
+		4 & \SI{480}{\ohm} \\
+		\bottomrule
+	\end{tabular}
+	\caption{Verwendete Widerstände}
+	\label{tab:rn}
+\end{table}
+Die gemessenen Verstärkungsfaktoren $V' = \frac{U_A}{U_1}$ sind in Abhängigkeit der Frequenz in den Abbildungen \ref{fig:lin1} bis \ref{fig:lin4} dargestellt.
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/lin1.pgf}
+	}
+	\caption{Verstärkungsfaktor des Linearverstärkers in Abhängigkeit der Frequenz bei $R_N = \SI{1}{\kilo \ohm}$}
+	\label{fig:lin1}
+\end{figure}
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/lin2.pgf}
+	}
+	\caption{Verstärkungsfaktor des Linearverstärkers in Abhängigkeit der Frequenz bei $R_N = \SI{330}{\ohm}$}
+	\label{fig:lin2}
+\end{figure}
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/lin3.pgf}
+	}
+	\caption{Verstärkungsfaktor des Linearverstärkers in Abhängigkeit der Frequenz bei $R_N = \SI{10}{\kilo \ohm}$}
+	\label{fig:lin3}
+\end{figure}
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/lin3.pgf}
+	}
+	\caption{Verstärkungsfaktor des Linearverstärkers in Abhängigkeit der Frequenz bei $R_N = \SI{480}{\ohm}$}
+	\label{fig:lin4}
+\end{figure}
+
+\subsubsection{Verstärkung-Bandbreite-Produkt}
+Zunächst soll das Verstärkung-Bandbreite-Produkt bestimmt werden.
+Für die Gleichstromverstärkung $V'$ wird jeweils der erste Messwert der Messreihe verwendet.
+Anschließend wird die Grenzfrequenz $\nu_g$ bestimmt.
+Sie ist definiert als die Frequenz, bei der die Verstärkung den Wert $\frac{V'}{\sqrt{2}}$ annimmt.
+In den Plots ist diese Verstärkung als horizontale Linie dargestellt.
+Die zugehörige Frequenz wurde berechnet, indem zwischen den beiden benachbarten Messpunkten linear interpoliert wurde.
+Die so bestimmte Grenzfrequenz $\nu_g$ ist als vertikale Linie eingezeichnet.
+Die bestimmten Werte und das Verstärkung-Bandbreite-Produkt ist in Tabelle \ref{tab:vbp} dargestellt.
+
+\begin{table}
+	\centering
+	\begin{tabular}{c r r r r}
+		\toprule
+		Messung & $R_N$ & $V'_\text{DC}$ & $\nu_g / \SI{}{\kilo \hertz}$ & $\nu_g \cdot V' / \SI{}{\kilo \hertz}$ \\
+		\midrule
+		1 & \SI{1}{\kilo \ohm} & 5,2 & 46,7 & 242,8 \\
+		2 & \SI{330}{\ohm} & 1,9 & 106,6 & 202,6 \\
+		3 & \SI{10}{\kilo \ohm} & 51,5 & 5,6 & 288,9 \\
+		4 & \SI{480}{\ohm} & 2,6 & 81,7 & 212,0 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Verstärkung-Bandrbeite-Produkt}
+	\label{tab:vbp}
+\end{table}
+
+\subsubsection{Steigung der fallenden Gerade}
+Im nächsten Schritt wird die fallende Gerade im Diagramm untersucht.
+Dazu werden die in Frage kommenden Messpunkte durch eine Gerade genähert.
+In der doppelt logarithmischen Darstellung hat eine Gerade die Form
+\begin{align}
+	\ln V' = -m \cdot \ln \nu + b.
+\end{align}
+Die zu fittende Funktion lautet folglich
+\begin{align}
+	V' = \text{e}^{-m \ln \nu} \cdot \text{e}^b.
+\end{align}
+Die gefittetten Funktionen sind in den Plots eingezeichnet.
+Die berechnete Steigung $m$ ist in Tabelle \ref{tab:m} dargestellt.
+\begin{table}
+	\centering
+	\begin{tabular}{c r r}
+		\toprule
+		Messung & $R_N$ & $m$ \\
+		\midrule
+		1 & \SI{1}{\kilo \ohm} & \SI{0.78 \pm 0.04}{} \\
+		2 & \SI{330}{\ohm} & \SI{0.67 \pm 0.03}{} \\
+		3 & \SI{10}{\kilo \ohm} & \SI{0.921 \pm 0.008}{} \\
+		4 & \SI{480}{\ohm} & \SI{0.29 \pm 0.07}{} \\
+		\bottomrule
+	\end{tabular}
+	\caption{Steigung der fallenden Gerade}
+	\label{tab:m}
+\end{table}
+
+\subsubsection{Leerlaufverstärkung}
+Unter Annahme eines idealen Operationsverstärkers lautet die Verstärkung
+\begin{align}
+	V' = \frac{R_N}{R_1}.
+\end{align}
+Abweichungen von diesem Wert können durch die Berücksichtigung der Leerlaufverstärkung $V$ erklärt werden.
+Wie oben hergeleitet gilt dann
+\begin{align}
+	\frac{1}{V'} \approx \frac{1}{V} + \frac{R_N}{R_1}.
+\end{align}
+Umgestellt nach der Leerlaufverstärkung lautet der Zusammenhang
+\begin{align}
+	V = \frac{1}{\frac{1}{V'_\text{real}} - \frac{1}{V'_\text{ideal}}}.
+\end{align}
+
+Die so bestimmten Werte sind in Tabelle \ref{tab:leerlauf} dargestellt.
+\begin{table}
+	\centering
+	\begin{tabular}{c r r r r}
+		\toprule
+		Messung & $R_N$ & $V'_\text{gemessen}$ & $V'_\text{ideal}$ & $V$ \\
+		\midrule
+		1 & \SI{1}{\kilo \ohm} & 5,2 & 10 & 10,8 \\
+		2 & \SI{330}{\ohm} & 1,9 & 3,3 & 4,5 \\
+		3 & \SI{10}{\kilo \ohm} & 51,5 & 100 & 106 \\
+		4 & \SI{480}{\ohm} & 2,6 & 4,8 & 5,6 \\
+		\bottomrule
+	\end{tabular}
+	\caption{Leerlaufverstärkung}
+	\label{tab:leerlauf}
+\end{table}
