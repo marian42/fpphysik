@@ -1,1 +1,19 @@
 \section{Diskussion}
+Bei der Messung zum Verstärkungsfaktor fällt im Fall $R_N = \SI{1}{\kilo \ohm}$ (Abbildung \ref{fig:lin1}) auf, dass die letzten fünf Werte um einen festen Faktor größer als die erwartete Kurve sind.
+Abgesehen davon hat die Kurve den gleichen Verlauf wie der aus der  Literatur bekannte Frequenzgang des Linearverstärkers.
+
+Der Frequenzgang lässt sich in drei Bereiche aufteilen.
+Bis etwa zur Grenzfrequenz ist der Verstärkungsfaktor konstant.
+Daraufhin fällt er exponenziell ab und wird letzendlich wieder konstant.
+Die konstante Verstärkungsfaktor deckt sich mit den Erwartungen für einen idealen Operationsverstärker.
+Der Ausdruck $\frac{R_N}{R_1}$ wird frequenzabhängig, wenn man annimmt, dass der Widerstand $R_N$ eine parasitäre Kapazität hat.
+In diesem Fall wäre $V' \propto \frac{1}{\nu}$.
+In einem Ersatzschaltbild würde ein Kondensator parallel zum Widerstand $R_N$ geschaltet.
+
+Die bestimmten Werte für das Verstärkung-Bandbreite-Produkt in Tabelle \ref{tab:vbp} sind mit einer gewissen Abweichung gleich groß.
+Dies bestätigt den erwarteten Zusammenhang, dass das Verstärkung-Bandbreite-Produkt konstant ist.
+
+Weiterhin wurde der reale Operationsverstärker durch die Berücksichtigung einer Leerlaufverstärkung angenähert.
+Es fällt auf, dass die in Tabelle \ref{tab:leerlauf} dargestellten Werte für $V$ proportional zu der Verstärkung der Schaltung sind.
+Das ist ein unerwartetes Ergebnis, da die Leerlaufverstärkung eine Kenngröße des OPs ist und unabhängig von der Beschaltung sein sollte.
+Die Abweichung vom theoretischen Wert, die proportional zur Verstärkung, könnte besser durch den endlichen Ausgangswiderstand des OPs erklärt werden.
