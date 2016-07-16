@@ -225,3 +225,51 @@ Das grüne Signal ist die Eingangsspannung und das gelbe Signal ist die Ausgangs
 	\caption{Thermodruck einer integrierten Sinusspannung}
 	\label{fig:intsin}
 \end{figure}
+
+\subsection{Umkkehr-Differenzierer}
+In diesen Versuchsteil wird ein Umkehr-Differenzierer untersucht.
+Die Schaltung wird gemäß Abbildung \ref{fig:diff} aufgebaut.
+Die Parameter der Schaltung lauten
+\begin{align}
+	C &= \SI{22}{\nano \farad} \\
+	R &= \SI{10}{\kilo \ohm} \\
+	U_1 &= \SI{36}{\milli \volt}.
+\end{align}
+
+Zunächst wird der Frequenzbereich der Ausgangsamplitude untersucht.
+Abbildung \ref{fig:plotdiff} die Messreihe.
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/diff.pgf}
+	}
+	\caption{Frequenzabhängige Verstärkung des Umkehr-Integrierers}
+	\label{fig:plotdiff}
+\end{figure}
+
+Im Folgenden wird der Differenzierer bei einer Frequenz von $\nu = \SI{73}{\kilo \hertz}$ betrieben.
+Am Eingang wurden eine Rechteckspannung, eine Dreieckspannung und eine Sinusspannung angelegt.
+Das Ausgangssignal wurde mit einem Oszilloskop visualisiert.
+Die Thermodrucke des Oszilloskops sind in den Abbildungen \ref{fig:diffsin} bis \ref{fig:diffdreieck} dargestellt.
+Das grüne Signal ist die Eingangsspannung und das gelbe Signal ist die Ausgangsspannung.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_4_diff_sin.png}
+	\caption{Thermodruck einer differenzierten Sinusspannung}
+	\label{fig:diffsin}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_5_diff_rechteck.png}
+	\caption{Thermodruck einer differenzierten Rechteckspannung}
+	\label{fig:diffrechteck}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_6_diff_dreieck.png}
+	\caption{Thermodruck einer differenzierten Dreieckspannung}
+	\label{fig:diffdreieck}
+\end{figure}

@@ -1,4 +1,4 @@
-#Aufgabe e) R_1 = 100\Ohm, R_N = 330\Ohm, U_1 = 100mV
+#Aufgabe e)
 #f/Hz	U_A/mV
 1	23
 2	27
