@@ -166,3 +166,62 @@ Die geplottete Messreihe ist in Abbildung \ref{fig:phase} dargestellt.
 	\caption{Frequenzabhängige Phasenverschiebung des Linearverstärkers}
 	\label{fig:phase}
 \end{figure}
+
+\subsection{Umkkehr-Integrierer}
+In diesen Versuchsteil wird ein Umkehr-Integrator untersucht.
+Die Schaltung wird gemäß Abbildung \ref{fig:int} aufgebaut.
+Die Parameter der Schaltung lauten
+\begin{align}
+	C &= \SI{2}{\nano \farad} \\
+	R &= \SI{10}{\kilo \ohm} \\
+	U_1 &= \SI{400}{\milli \volt}.
+\end{align}
+
+Zunächst wird der Frequenzbereich der Ausgangsamplitude untersucht.
+Abbildung \ref{fig:plotint} zeigt eine Messreihe für die Spannung in dem Frequenzbereich, in dem die Schaltung als Integrierer arbeitet.
+Der Frequenzbereich geht von $\SI{200}{\hertz}$ bis \SI{50}{\kilo \hertz}.
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/int.pgf}
+	}
+	\caption{Frequenzabhängige Verstärkung des Umkehr-Integrierers}
+	\label{fig:plotint}
+\end{figure}
+Um die Beziehung $U_A \propto \frac{1}{\omega}$ zu überprüfen, wurde für die Messreihe die Funktion 
+\begin{align}
+	U_A = a \cdot \frac{1}{2 \pi \nu}
+\end{align}
+gefittet.
+Für den Fit wurde der letzte Messwert außer Acht gelassen.
+Der so bestimmte Parameter lautet
+\begin{align}
+	a = \SI{7.8 \pm 0.02}{\kilo \hertz \volt}. 
+\end{align}
+
+Im Folgenden wird der Integrierer bei einer Frequenz von $\nu = \SI{400}{\hertz}$ betrieben.
+Am Eingang wurden eine Rechteckspannung, eine Dreieckspannung und eine Sinusspannung angelegt.
+Das Ausgangssignal wurde mit einem Oszilloskop visualisiert.
+Die Thermodrucke des Oszilloskops sind in den Abbildungen \ref{fig:intrechteck} bis \ref{fig:intsin} dargestellt.
+Das grüne Signal ist die Eingangsspannung und das gelbe Signal ist die Ausgangsspannung.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_1_int_rechteck.png}
+	\caption{Thermodruck einer integrierten Rechteckspannung}
+	\label{fig:intrechteck}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_2_int_dreieck.png}
+	\caption{Thermodruck einer integrierten Dreiecksspannung}
+	\label{fig:intdreieck}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_3_int_sin.png}
+	\caption{Thermodruck einer integrierten Sinusspannung}
+	\label{fig:intsin}
+\end{figure}
