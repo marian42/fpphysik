@@ -17,3 +17,15 @@ Weiterhin wurde der reale Operationsverstärker durch die Berücksichtigung eine
 Es fällt auf, dass die in Tabelle \ref{tab:leerlauf} dargestellten Werte für $V$ proportional zu der Verstärkung der Schaltung sind.
 Das ist ein unerwartetes Ergebnis, da die Leerlaufverstärkung eine Kenngröße des OPs ist und unabhängig von der Beschaltung sein sollte.
 Die Abweichung vom theoretischen Wert, die proportional zur Verstärkung, könnte besser durch den endlichen Ausgangswiderstand des OPs erklärt werden.
+
+Bei dem Integrierer wurde die Beziehung $U_A \propto \frac{1}{\omega}$ überprüft.
+Eine Fitfunktion mit sehr kleinem Fehler konnte bestimmt werden.
+Die mit dem Oszilloskop untersuchte integrierte Rechteckspannung ist wie erwartet ein Dreieckssignal.
+Das Signal ist unten abgeschnitten, was dadurch zu erklären ist, dass der OP in Sättigung geht.
+Die Amplitude der Ausgangsspannung ist in der Größenordnung der Betriebsspannung des OPs.
+Die anderen untersuchten Spannungen entsprechen nur grob den erwarteten Signalen.
+Es fällt auf, dass der Integrierer für die Dreieck- und Sinusspannung das gleiche Signal ausgibt.
+
+Die Sinusspannung wird vom Differenzierer korrekterweise in eine phasenverschobene Sinusspannung umgewandelt.
+Allerdings wird die Rechteckspannung nicht korrekt differenziert.
+Die Dreieckspannung hingegen führt zu einem stark rauschenden, aber korrekten Signal.
