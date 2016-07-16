@@ -97,7 +97,7 @@ Die zu fittende Funktion lautet folglich
 \begin{align}
 	V' = \text{e}^{-m \ln \nu} \cdot \text{e}^b.
 \end{align}
-Die gefittetten Funktionen sind in den Plots eingezeichnet.
+Die gefitteten Funktionen sind in den Plots eingezeichnet.
 Die berechnete Steigung $m$ ist in Tabelle \ref{tab:m} dargestellt.
 \begin{table}
 	\centering
@@ -146,3 +146,23 @@ Die so bestimmten Werte sind in Tabelle \ref{tab:leerlauf} dargestellt.
 	\caption{Leerlaufverstärkung}
 	\label{tab:leerlauf}
 \end{table}
+
+\subsection{Phasenverschiebung des Linearverstärkers}
+Bei dieser Messreihe wird der Phasenunterschied zwischen Ein- und Ausgangsspannung des Linearverstärkers in Abhängigkeit der Frequenz untersucht.
+Es wird der gleiche Aufbau verwendet wie bei den vorherigen Messungen.
+Die Parameter des Aufbaus lauten:
+\begin{align}
+	R_1 &= \SI{100}{\ohm} \\
+	R_N &= \SI{330}{\ohm} \\
+	U_1 &= \SI{100}{\milli \volt}
+\end{align}
+Die geplottete Messreihe ist in Abbildung \ref{fig:phase} dargestellt.
+
+\begin{figure}
+	\centering
+	\resizebox{\pltwidth}{!}{
+		\input{plot/phase.pgf}
+	}
+	\caption{Frequenzabhängige Phasenverschiebung des Linearverstärkers}
+	\label{fig:phase}
+\end{figure}
