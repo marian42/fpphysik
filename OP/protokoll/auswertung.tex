@@ -273,3 +273,30 @@ Das grüne Signal ist die Eingangsspannung und das gelbe Signal ist die Ausgangs
 	\caption{Thermodruck einer differenzierten Dreieckspannung}
 	\label{fig:diffdreieck}
 \end{figure}
+
+\subsection{Schmitt-Trigger}
+In diesem Versuchsteil wurde ein Schmitt-Trigger gemäß Abbildung \ref{fig:schmitt} aufgebaut.
+Die Parameter des Aufbaus lauten
+\begin{align}
+	R_p &= \SI{100}{\kilo \ohm} \\
+	R_1 &= \SI{960}{\ohm} \\
+	2U_B &= \SI{13.9}{\volt}.
+\end{align}
+Am Schmitt-Trigger wurde eine Sinusspannung angelegt und das Ausgangssignal mit einem Oszilloskop untersucht.
+Die Amplitude wurde solange erhöht, bis der Schmitt-Trigger gerade eben umkippt.
+Sie sollte also der Schwellenspannung entsprechen.
+Die gemessene Amplitude lautet
+\begin{align}
+	U_\text{S, gemessen} = \SI{203}{\milli \volt}.
+\end{align}
+Mit \eqref{eq:schmitt} lässt sich die theoretische Schwellenspannung berechnen:
+\begin{align}
+	U_\text{S, theoretisch} = \SI{66,7}{\milli \volt}
+\end{align}
+Die Ein- und Ausgangsspannung der Schaltung sind in Abbildung \ref{fig:schmittscope} dargestellt.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_7_schmitt.png}
+	\caption{Thermodruck zum Schmitt-Trigger}
+	\label{fig:schmittscope}
+\end{figure}
