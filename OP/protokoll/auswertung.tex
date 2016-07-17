@@ -168,7 +168,7 @@ Die geplottete Messreihe ist in Abbildung \ref{fig:phase} dargestellt.
 \end{figure}
 
 \subsection{Umkkehr-Integrierer}
-In diesen Versuchsteil wird ein Umkehr-Integrator untersucht.
+In diesen Versuchsteil wird ein Umkehr-Integrierer untersucht.
 Die Schaltung wird gemäß Abbildung \ref{fig:int} aufgebaut.
 Die Parameter der Schaltung lauten
 \begin{align}
@@ -243,7 +243,7 @@ Abbildung \ref{fig:plotdiff} die Messreihe.
 	\resizebox{\pltwidth}{!}{
 		\input{plot/diff.pgf}
 	}
-	\caption{Frequenzabhängige Verstärkung des Umkehr-Integrierers}
+	\caption{Frequenzabhängige Verstärkung des Umkehr-Differenzierers}
 	\label{fig:plotdiff}
 \end{figure}
 
@@ -299,4 +299,24 @@ Die Ein- und Ausgangsspannung der Schaltung sind in Abbildung \ref{fig:schmittsc
 	\includegraphics[width=0.6\textwidth]{img/scope_7_schmitt.png}
 	\caption{Thermodruck zum Schmitt-Trigger}
 	\label{fig:schmittscope}
+\end{figure}
+
+\subsection{Logarithmierer und Exponenzierer}
+Mit einer Diode wurden schließlich ein Exponenzierer und ein Logarithmierer gebaut.
+Der verwendete Widerstand ist $\SI{10}{\kilo \ohm}$.
+Um die Beziehung zwischen Ein- und Ausgangsspannung aufzunehmen, wird ein Rechtecksignal angelegt.
+Das Ausgangssignal sollte dann eine Logarithmus- bzw. Exponentialfunktion sein.
+Die Aufnahmen des Oszilloskops sind in den Abbildungen\ref{fig:expscope} und \ref{fig:logscope} dargestellt.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_8_exp.png}
+	\caption{Thermodruck zum Exponenzierer}
+	\label{fig:expscope}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.6\textwidth]{img/scope_9_log.png}
+	\caption{Thermodruck zum Logarithmierer}
+	\label{fig:logscope}
 \end{figure}
