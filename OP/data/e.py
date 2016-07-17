@@ -14,16 +14,16 @@ UA = UA / 2
 plt.plot(freq, UA, "bx", label = "Messwerte")
 
 def f(nu, a):
-	return a / (2 * np.pi * nu)
+	return a * (2 * np.pi * nu)
 
-fit_freq = freq[:-1]
-fit_UA = UA[:-1]
+fit_freq = freq[8:13]
+fit_UA = UA[8:13]
 
 params, covariance = curve_fit(f, fit_freq, fit_UA)
 errors = np.sqrt(np.diag(covariance))
 
 fitted = [f(nu, params[0]) for nu in fit_freq]
-#plt.plot(fit_freq, fitted, "r-", label = "Fit")
+plt.plot(fit_freq, fitted, "r-", label = "Fit")
 print "a", ufloat(params[0], errors[0])
 
 plt.xscale('log')

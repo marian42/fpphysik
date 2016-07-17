@@ -237,7 +237,7 @@ Die Parameter der Schaltung lauten
 \end{align}
 
 Zunächst wird der Frequenzbereich der Ausgangsamplitude untersucht.
-Abbildung \ref{fig:plotdiff} die Messreihe.
+Abbildung \ref{fig:plotdiff} zeigt die Messreihe.
 \begin{figure}
 	\centering
 	\resizebox{\pltwidth}{!}{
@@ -246,6 +246,16 @@ Abbildung \ref{fig:plotdiff} die Messreihe.
 	\caption{Frequenzabhängige Verstärkung des Umkehr-Differenzierers}
 	\label{fig:plotdiff}
 \end{figure}
+Um die Beziehung $U_A \propto \omega$ zu überprüfen, wurde für die Messreihe die Funktion 
+\begin{align}
+	U_A = a 2 \pi \nu
+\end{align}
+gefittet.
+Für den Fit wurden die konstanten Messwerte am Anfang und die Werte nach dem Maximum außer Acht gelassen.
+Der so bestimmte Parameter lautet
+\begin{align}
+	a = \SI{5.6 \pm 0.2}{\milli\volt \per \hertz}. 
+\end{align}
 
 Im Folgenden wird der Differenzierer bei einer Frequenz von $\nu = \SI{73}{\kilo \hertz}$ betrieben.
 Am Eingang wurden eine Rechteckspannung, eine Dreieckspannung und eine Sinusspannung angelegt.
