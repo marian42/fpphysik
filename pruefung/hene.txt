@@ -1,0 +1,99 @@
+Stichpunkte zum Versuch HeNe-Laser:
+
+- He: Helium, Ne: Neon
+- L.A.S.E.R.: Light Amplification by Stimulated Emission of Radiation
+- Definition: Emission von monochromatischem Licht hoher Intensität und Kohärenz
+- Kohärenz: maximiert Kontrast der Interferenzmuster
+- Neonatome besitzen Geschwindigkeit (nach Maxwellscher Gschwindigkeitsverteilung) => Dopplereffekt tritt ein => in Realität nicht perfekt monochromatisch
+- Arten der Emission: Stimulierte und spontane Emission
+- Spontane Emission: Fluktuation in der Ladungsverteilung der Atome
+- Auf welcher Emission basiert die Funktion des Lasers: Stimulierte Emission
+- Vorteil der stimulierten Emission: Kein statistisches Ereigniss (=kann kontrolliert werden)
+
+Wie funktioniert stimulierte Emission:
+-> Photon trifft auf Atom
+-> Übergang des Atoms in einen Zustand geringerer Energie wird ermöglicht
+-> Das einfallende Photon bewegt sich ungehindert hindurch
+-> Es wird ein Photon mit der selben Energie, Ausbreitungsrichtung, Phase emittiert
+
+Voraussetzung für einfallendes Photon für stimulierte Emission:
+-> Das einfallende Photon muss die Energie der Energiedifferenz zwischen aktuellem Zustand und dem energetisch günstigerem haben
+
+Voraussetzung für hoch intensives Licht im Laser bzgl. Emission?
+-> Stimulierte muss deer Spontanen Emission überwiegen
+
+Laser besteht aus 3 Komponenten:
+-> aktives Lasermedium
+-> Pumpquelle
+-> Resonator
+
+- Aktives Lasermedium: Gas/Festkörper/Flüssigkeit; aktiv bedeutet: Fähigkeit zur Besetzungsinversion
+- Pumpquelle: Spannungsquelle, die das Pumpgas durch elektrische Entladung in metastabile Zustände anregt
+- Energie wird vom Pumpgas auf das Lasermedium durch Stöße 2. Art übetragen
+
+Stöße 2. Art:
+-> Stoß zweier Atome, von denen eines im angeregten und das andere im Grundzustand ist
+-> Wahrscheinlichkeit, das Angeregte in den Grundzustand zu bringen und andersrum
+
+Resonator:
+-> Vollständig reflektierender Spiegel
+-> Teilreflektierender Spiegel
+-> Laserrohr
+
+- Laserrohr: Zylinderförmiges Rohr, das das Lasermedium beinhaltet und in Brewsterfenstern mündet
+
+Wozu dienen die Spiegel eines Resonators: 
+-> Durch optische Rückkopplung durchläuft das Licht das Lasermedium möglichst oft
+-> Es entsteht ein selbsterregender Oszillator
+
+- Konfokal: Eigenschaft eines Resontars, bei der die Spiegel so gekrümmt sind, dass die Brennpunkte zusammenfallen
+
+- Stabilitätsbedinung (Formel)
+- Intensitätsverteilung der TEM00 Grundmode (Formel)
+- TEM00-Grundmode: Mode mit höchster Symmetrie und wenigsten Verlusten
+- Wie viele Frequenzen erfüllen die Resonanzbedingung (Formel)
+- TEM: transverse electromagnetic mode
+- Wodurch entstehen transversale Moden im Laser: Unebeneheiten/Verkippungen der Spiegel
+- Was sind TEM-Moden: Intensitätsverteilungen von elektromagnetischen Wellen, dessen Anteil in Ausbreitungsrichtung verschwindet
+
+TEM Moden lpq:
+l, p: Knoten in x- und y-Richtung (Transversale Modenzahl)
+q: Longitudinale Modenzahl = Anzahl der Wellenlängen im Resonator
+
+- Wie werden TEM-Moden isoliert/gemessen: Linse zur Aufweitung des Strahls + Modenblende
+- Stabilität des Lasers (Verluste) hängen von Resonatortyp und Form der Spiegel ab
+- Lasermedium bestimmt Strahlungsspektrum (UV - IR)
+- Einsteinkoeffizienten: Maß für Übergangswahrscheinlichkeit von einem Zustand zum anderen
+
+Besetzungsinversion:
+-> Im 2-Niveau-System nicht möglich (=> Herleitung angucken)
+-> Höhere Besetzung des angeregten Zusdandes als des Grundzustandes
+
+- Atomzustände ohne Einwirkung Boltzmannverteilt (Formel)
+
+Gauß'scher Strahl:
+-> Konzept der paraxialen Optik (achsennahe Strahlen => geom. Optik)
+-> Hat im Querschnitt eine Gauß-Kurve als Profil
+-> Breite der Gauß-Kurve variiert längst der Ausbreitungsrichtung
+
+- HeNe-Laser: 5He + 1Ne Atome
+- Druck ca. 133 Pa
+
+Brewsterfenster:
+-> Fensterflächen stehen zur optischen Achse im Brewster-Winkel
+-> Zur Einfallsebene parallel polarisiertes Licht wird nicht durch Reflexion geschwächt
+-> Senkrecht polarisiertes Licht wird zum Teil reflektiert
+-> ermöglicht verlustfreien Durchtritt von Licht
+-> Brewster-Winkel: theta_B=arctan(n_2/n_1) (Formel)
+
+Modenblende:
+-> unterdrückt unerwünschte transversale Moden
+-> Für 10(=01) ist es ein Draht (Wolfram 5µm) der genau an der Stelle positioniert wird, wo das Maximum der Grundmode ist (in der Mitte des Gauß-Peaks)
+
+Was wurde gemessen:
+-> Resonatorlänge (Stabilität)
+-> TEM-Moden (Modenblende + Linse)
+-> Polarisation (Polfilter)
+-> Wellenlänge (Gitter+ Schirm)
+
+Thermschema?
