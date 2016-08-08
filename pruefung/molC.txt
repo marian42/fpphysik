@@ -1,0 +1,72 @@
+Molwärme von Cu:
+
+- Molwärme im Allgemeinen: Änderung der Energie bezüglich der Temperatur
+
+Klassisches-Modell:
+-> Energie ist über alle Atome gleichverteilt (Äquipartitionstheorem) (Formel)
+-> 6 Freiheitsgrade, 3 durch kin. Energie und 3 durch pot. Energie
+-> Spezifische Wärme liefert keine Temperatur- und Materialabhängigkeit (entspricht nicht Erfahrung)
+-> Spezifische (isochore) Wärme C=3R
+-> Dieses Modell lässt die Quantelung der Schwingungsenergie der atomaren Oszillatoren außer Acht
+
+Einstein-Modell:
+-> In dieser Theorie ist die Energie Boltzmann-verteilt
+-> Alle Atome schwingen mit (einheitlicher) Kreisfrequenz (Einsteinfrequenz)
+-> Atome können nur Energien in Beträgen von ganzzahligen Vielfachen von hbar*omega aufnehmen/abgeben
+-> Beschreibt Beitrag der optischen Phononen zur spezifischen Wärme
+-> Besetzungswahrscheinlichkeit eines Zustandes wird über Bose-Einstein-Verteilung beschrieben (Formel)
+-> T->unendlich: C=3R
+-> T->0: C->0 (exponentiell; Formel)
+-> Limes-Verhalten für T erhält man aus Vergleich von T mit Einstein-Temperatur
+-> Abweichungen zur experimentellen Kurve besonders bei tiefen Temperaturen, wegen Annahme, dass alle Atome die gleiche Frequenz haben
+
+Debye-Modell:
+-> Eigenschwingungen aller Oszillatoren besitzen spektrale Verteilung der Frequenzen Z(w)
+-> Annahme: Phasengeschwindigkeit einer elastischen Welle hängt nicht von ihrer Frequenz und Ausbreitungsrichtung ab
+-> T->unendlich: C->3R
+-> Für kleine T ist C temperaturabhängig: C~T³
+
+- Debye-Frequenz: Zustandsdichte über alle Frequenzen von 0 bis zur Debye-Frequenz integriert ergibt 3N (Freiheitsgrade)
+- Exakte Lösung kann durch Berechnen des Frequenzspektrums Z(w) unter Berücksichtigung der Dispersionsrelation für Longitudinal- und Transversalwellen erzielt werden
+- Leitungselektronen spielen erst bei ganz tiefen Temperaturen eine Rolle bei der Molwärme, da Molwärme der Ionenrümpfe praktisch verschwindet (Beitrag proportional zu T <= Fermi-Dirac-Statistik)
+- C aus Korrekturformel berechnen (Formel, s. 5b))
+
+Was wurde gemessen?
+-> Isobare Molwärme von Cu in Abh. von der Temperatur von 80 - 300K
+-> Strom, Spannung, Widerstand, Zeit
+-> Debye-Frequenz/Temperatur berechnet aus Forderung (Formel, s.5d))
+
+Allgemeines zu Kupfer (Cu):
+-> Ordnungszahl 29
+-> Spezifische Wärmekapazität: 385 J/(kg * K)
+
+Durchführung:
+-> Rezipienten evakuieren -> bei Luftdruck (Atmosphärendruck) mit Helium auffüllen -> auf ca. 80K abkühlen (durch auffüllen des Dewar-Gefäßes mit flüssigem Stickstoff)
+-> Endtemperatur ca. nach 1h erreicht => Vakuumpumpe wieder einschalten + Innendruck verringern (möglichst niedrig)
+
+- Wieso wird Helium eingefüllt? Um den Wärmeübertrag zu erleichtern -> später wieder Vakuum
+- Eine Heizwicklung ist im Inneren der Probe installiert (zum Messen der Temperaturerhöhung), Probe wiegt ca. 342g
+- Temperaturänderung sollte zwischen 7°-11° liegen (Messintervalle)
+- Elektrische Energie soll nur zur Erwärmung der Probe verbraucht werden
+- Rezipient wird mit weiterer Heizwicklung erhitzt, damit der Temperaturunterschied zwischen Probe und Rezipient nicht groß ist
+- Energieverluste -> Konvektion, Wärmestrahlung, Wärmeleitung => Vermeidung durch Punkt eins
+- Konvektion: Transport von Teilchen (makroskopischer Teilchenfluss) -> Tritt nicht in Festkörpern auf (dort nur Wärmeleitung)
+- Wärmestrahlung: im Vakuum der einzige Übertragungsweg, kann nie komplett verhindert/isoliert werden
+- Thermometer: Pt-100-Widerstand, Widerstand ist monotone Funktion der Temperatur (gilt nur im Bereich der Messintervalle s.o. => kann linear interpoliert werden) (Formel)
+
+Rezipient:
+- Gefäß aus der Vakuumtechnik
+- Es werden Gase durch Pumpen abgesaugt und ein Vakuum im Inneren geschaffen
+- Besteht aus Edelstahl
+- Abgedichtet durch Indiumdichtungen für tiefe Temperaturen (zur Stabilisierung des Vakuums)
+
+Dewargefäß:
+- Verspiegeltes doppelwandiges evakuiertes Edelstahlgefäß (in Thermoskannen verwendet)
+- Dient der guten thermischen Isolierung
+- Beinhaltet kalte oder heiße Flüssigkeiten
+
+Heizwicklung:
+- Elektrisches Bauelement, das elektrische Energie in thermische Energie umwandelt (im Wesentlichen lediglich ein Widerstand)
+
+-Pt-100-Widerstand:
+- Platin-Messwiderstand, 100 Ohm

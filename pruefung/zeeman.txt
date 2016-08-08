@@ -1,0 +1,51 @@
+Zeeman-Effekt:
+
+- Drehimpulse eines Hüllenelektrons: Bahndrehimpuls l, Eigendrehimpuls s
+- Drehimpulse sind wegen Ladung des Elektrons mit magnetischen Momenten verknüpft
+- Bohrsches Magneton (Formel)
+- Nach dem Stern-Gerlach-Experiment existiert ein magnetisches Moment zum Spin des Elektrons
+- Landé-Faktor wird im magnetischen Moment des Spins eingeführt (Formel)
+- Magnetomechanische Anomalie des Elektrons: Magnetisches Moment bzgl. Spin ist doppelt so groß wie sich aus der klassischen Betrachtung ergeben würde (Landé-Faktor = 2)
+
+Mehrelektronenatome:
+1. Atome mit niedriger Ordnungszahl:
+-> WW zwischen Bahndrehimpulsen ist so groß, dass sich diese vektoriell zu einem Gesamtdrehimpuls L zusammensetzen
+-> Bahndrehimpuls einer abgeschlossenen Schale ist null
+-> Gesamtdrehimpulsquantenzahl L nimmt nur ganzzahlige Werte an (0=S, 1=P, 2=D, 3=F)
+-> Einzelspins setzen sich analog zum Gesamtspin S zusammen
+-> Gesamtspinquantenzahl nimmt die Werte N/2, N/2 - 1, ..., 1/2, 0 an (N: #Elektronen in unabgeschlossenen Schalen)
+-> Bei nicht all zu hohem Magnetfeld: J = L + S (Drehimpulse setzen sich zur LS-Kopplung zusammen)
+-> Quantenzahl J ist entweder ganz- oder halbzahlig (abhängig von S)
+
+2. Schwere Atome:
+-> WW zwischen Bahndrehimpuls und Spin ist groß gegenüber der WW der Drehimpulse mehrerer Elektronen untereinander
+-> Es setzen sich Gesamtdrehimpulse aus den Drehimpulsen der Einzelelektronen zusammen (kein Gesamtdrehimpuls/spin mehr)
+-> Es existiert nur noch ein Gesamtdrehimpuls J der Hülle (Summe über alle Gesamtdrehimpulse der Einzelelektronen)
+-> j-j-Kopplung
+
+=> Fließender Übergang zwischen 1. und 2.
+
+Notation für Termschema:
+-> L steht in der Mitte (S,P,D,F)
+-> M steht oben links als Index (M = 2S + 1)
+-> J steht unten rechts als Index
+
+- Zum Gesamtdrehimpuls J gehörendes magnetisches Moment ergibt sich aus Addition der Momente des Bahndrehimpulses und des Spins
+- Richtung von µ_J und J fällt nicht zusammen (µ präzediert um J, daher fällt die senkrechte Komponente weg)
+- Landé-Faktor bzgl. J (Formel) !wichtig!
+- Richtungsquantelung bei Einschalten eines äußeren Magnetfeldes (Formel), m ist die Orientierungquantenzahl
+- m nimmt Werte von -J bis J an => 2J + 1 Einstellmöglichkeiten eines atomaren magnetischen Momentes relativ zu einer äußeren Feldrichtung
+- Allgemeine magnetische Energie (Formel)
+- Aus der magnetischen Energie folgt, dass bei einem Magnetfeld ungleich 0 ein Energienivau in 2J+1 äuidistande Niveaus aufgespalten wird
+
+Auswahlregel für Übergänge zwischen zeemanaufgespaltenen Energienivaus:
+-> Orientierungsquantenzahlen der beiden Zustände müssen gleich sein oder sich um +/-1 unterscheiden
+
+- Für Delta m=0 Schwingt der Dipol in Magnetfeldrichtung, stärkste Emission ist senkrecht zur B-Feld-Richtung, in B-Feld-Richtung strahlt er gar nicht => Strahlung ist linear-polarisiert (parallel zu B)
+- Für Delta m=+/-1 erzeugt der Dipol eine um die z-Achse zirkularpolarisierte Schwingung (jeweils mit entgegengesetzter Drehrichtung)
+ 
+Normaler Zeeman-Effekt:
+-> S=0, da in der Ausgangsgleichung (Schrödingergl.) kein Spin vorkommt
+-> Landé-Faktor = 0 => Verschiebung der Energieniveaus unabhängig von den Quantenzahlen
+-> Generelle Aufspaltung der Spektrallinien in 3 Komponenten (Zeeman-Triplett)
+-> 
