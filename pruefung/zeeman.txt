@@ -30,15 +30,18 @@ Notation für Termschema:
 -> M steht oben links als Index (M = 2S + 1)
 -> J steht unten rechts als Index
 
-- Zum Gesamtdrehimpuls J gehörendes magnetisches Moment ergibt sich aus Addition der Momente des Bahndrehimpulses und des Spins
-- Richtung von µ_J und J fällt nicht zusammen (µ präzediert um J, daher fällt die senkrechte Komponente weg)
-- Landé-Faktor bzgl. J (Formel) !wichtig!
-- Richtungsquantelung bei Einschalten eines äußeren Magnetfeldes (Formel), m ist die Orientierungquantenzahl
-- m nimmt Werte von -J bis J an => 2J + 1 Einstellmöglichkeiten eines atomaren magnetischen Momentes relativ zu einer äußeren Feldrichtung
-- Allgemeine magnetische Energie (Formel)
-- Aus der magnetischen Energie folgt, dass bei einem Magnetfeld ungleich 0 ein Energienivau in 2J+1 äuidistande Niveaus aufgespalten wird
+Zur Aufspaltung der Energienivaus:
+-> Zum Gesamtdrehimpuls J gehörendes magnetisches Moment ergibt sich aus Addition der Momente des Bahndrehimpulses und des Spins
+-> Richtung von µ_J und J fällt nicht zusammen (µ präzediert um J, daher fällt die senkrechte Komponente weg)
+-> Landé-Faktor bzgl. J (Formel) !wichtig!
+-> Richtungsquantelung bei Einschalten eines äußeren Magnetfeldes (Formel), m ist die Orientierungquantenzahl
+-> m nimmt Werte von -J bis J an => 2J + 1 Einstellmöglichkeiten eines atomaren magnetischen Momentes relativ zu einer äußeren Feldrichtung
+-> Allgemeine magnetische Energie (Formel)
+-> Aus der magnetischen Energie folgt, dass bei einem Magnetfeld ungleich 0 ein Energienivau in 2J+1 äuidistande Niveaus aufgespalten wird
 
 Auswahlregel für Übergänge zwischen zeemanaufgespaltenen Energienivaus:
+-> Ausgehend von der zeitabhängigen Schrödinger-Gleichung ergibt sich eine zeitabhängige Dichteverteilung => Elektron schwingt mit Frequenz (Formel)
+-> Dann: Bestimmung des elektrischen Dipolmoments
 -> Orientierungsquantenzahlen der beiden Zustände müssen gleich sein oder sich um +/-1 unterscheiden
 
 - Für Delta m=0 Schwingt der Dipol in Magnetfeldrichtung, stärkste Emission ist senkrecht zur B-Feld-Richtung, in B-Feld-Richtung strahlt er gar nicht => Strahlung ist linear-polarisiert (parallel zu B)
@@ -46,6 +49,19 @@ Auswahlregel für Übergänge zwischen zeemanaufgespaltenen Energienivaus:
  
 Normaler Zeeman-Effekt:
 -> S=0, da in der Ausgangsgleichung (Schrödingergl.) kein Spin vorkommt
--> Landé-Faktor = 0 => Verschiebung der Energieniveaus unabhängig von den Quantenzahlen
+-> Landé-Faktor = 1 => Verschiebung der Energieniveaus unabhängig von den Quantenzahlen
 -> Generelle Aufspaltung der Spektrallinien in 3 Komponenten (Zeeman-Triplett)
--> 
+-> Delta m = 0 ist die pi-Linie (nur mit maximaler Intensität sichtbar, wenn transversal beobachtet (senkrecht zum B-Feld))
+-> Delta m =+/-1 ist um die Feldachse zirkular polarisiert (erscheinen bei transversaler Betrachtung linear polarisiert) => sigma-Linien
+
+Anomaler Zeeman-Effekt:
+-> S ungleich 0, Auswahlregeln gelten auch hier
+-> Landé-Faktor hängt von J, S, L ab (nicht mehr konstant 1)
+-> Aufspaltung wird linienreicher
+
+Lummer-Gehrcke-Platte:
+-> Erzielt hohes Auflösungsvermögen von (10⁵)
+-> Auflösungsvermögen hängt von Länge, Brechungsindex und Wellenlänge ab
+
+Dispersionsgebiet:
+-> Bereich, in dem sich zwei Wellenlängen nicht überlagern
